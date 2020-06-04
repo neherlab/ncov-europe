@@ -160,6 +160,11 @@ builds:
     geographic_scale: country
     region: Europe
     country: Greece
+  ecdc-israel:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: israel
 
 
 traits:
