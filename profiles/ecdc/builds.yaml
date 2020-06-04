@@ -164,7 +164,7 @@ builds:
     subsampling_scheme: country
     geographic_scale: country
     region: Europe
-    country: israel
+    country: Israel
 
 
 traits:
