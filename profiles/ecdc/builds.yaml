@@ -1,0 +1,177 @@
+# Define locations for which builds should be created.
+# For each build we specify a subsampling scheme via an explicit key.
+# If the name of the focal geography differs from the build name this needs to
+# be specified explicity as geographic_name. In addition, we require the
+# geographic scale the build focuses on. Together name and scale serve a look-up
+# in the geo_hierarchy to define region, country, division, etc
+builds:
+  europe:
+    subsampling_scheme: region
+    geographic_scale: region
+    region: Europe
+
+  russia:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Russia
+  serbia:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Serbia
+  latvia:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Latvia
+  slovakia:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Slovakia
+  slovenia:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Slovenia
+  poland:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Poland
+  belarus:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Belarus
+  estonia:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Estonia
+  lithuania:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Lithuania
+  hungary:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Hungary
+  croatia:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Croatia
+  france:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: France
+  iceland:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Iceland
+  norway:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Norway
+  denmark:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Denmark
+  netherlands:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Netherlands
+  belgium:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Belgium
+  luxembourg:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Luxembourg
+  germany:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Germany
+  austria:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Austria
+  switzerland:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Switzerland
+  italy:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Italy
+  spain:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Spain
+  czech-republic:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Czech Republic
+  united-kingdom:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: United Kingdom
+  ireland:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Ireland
+  finland:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Finland
+  sweden:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Sweden
+  portugal:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Portugal
+  greece:
+    subsampling_scheme: country
+    geographic_scale: country
+    region: Europe
+    country: Greece
+
+
+traits:
+  default:
+    sampling_bias_correction: 2.5
+    columns: ["region_exposure"]
+
+exposure:
+  default:
+    trait: "country"
+    exposure: "region_exposure"
+
+files:
+  colors: "profiles/ecdc/colors.tsv"
+  auspice_config: "profiles/ecdc/auspice_config_ecdc.json"
