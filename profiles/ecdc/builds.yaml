@@ -166,6 +166,7 @@ builds:
     region: Europe
     country: Israel
 
+title: "Phylogenetic analysis of SARS-CoV-2 diversity in Europe"
 
 traits:
   default:
@@ -174,30 +175,15 @@ traits:
 
 exposure:
   default:
-    trait: "country"
+    trait: "region"
     exposure: "region_exposure"
+
 
 files:
   colors: "profiles/ecdc/colors.tsv"
   auspice_config: "profiles/ecdc/auspice_config_ecdc.json"
+  description: "profiles/ecdc/description.md"
 
-
-subsampling:
-  # Default subsampling logic for regions
-  region:
-    # Focal samples for region
-    region:
-      group_by: "division year month"
-      seq_per_group: 96
-      exclude: "--exclude-where 'region!={region}'"
-    # Contextual samples for region from the rest of the world
-    global:
-      group_by: "country year month"
-      seq_per_group: 10
-      exclude: "--exclude-where 'region={region}'"
-      priorities:
-        type: "proximity"
-        focus: "region"
 
 subsampling:
   # Custom subsampling logic for regions like Europe where grouping by country
