@@ -8,8 +8,8 @@
   ],
   "colorings": [
     {
-      "key": "location",
-      "title": "Location",
+      "key": "country",
+      "title": "Country",
       "type": "categorical"
     },
     {
@@ -18,8 +18,13 @@
       "type": "categorical"
     },
     {
-      "key": "country",
-      "title": "Country",
+      "key": "pangolin_lineage",
+      "title": "Pangolin Lineage",
+      "type": "categorical"
+    },
+    {
+      "key": "legacy_clade_membership",
+      "title": "Old Nextstrain clades",
       "type": "categorical"
     },
     {
@@ -93,11 +98,12 @@
     "region"
   ],
   "display_defaults": {
-    "color_by": "country",
+    "color_by": "clade_membership",
     "distance_measure": "num_date",
     "geo_resolution": "country",
     "map_triplicate": true,
-    "branch_label": "clade"
+    "branch_label": "clade",
+    "transmission_lines": false
   },
   "filters": [
     "recency",
