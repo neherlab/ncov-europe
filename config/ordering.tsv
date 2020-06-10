@@ -1,5 +1,4 @@
 
-
 location	Wuhan
 location	Tianmen
 location	Hefei
@@ -140,6 +139,7 @@ location	Heinsberg District
 location	Heinsberg
 location	Munich
 location	Duesseldorf
+location	Münster
 location	Delft
 location	Utrecht
 location	Zeeland
@@ -821,6 +821,20 @@ location	Trempealeau County
 location	Juneau County
 location	Saukville
 location	Hartford
+location	Meriden
+location	Madison CT
+location	New Haven
+location	Bethany
+location	Newtown
+location	Wallingford
+location	West Haven
+location	Woodbridge
+location	Branford
+location	North Haven
+location	Hamden
+location	Seymour
+location	East Haven
+location	Northford
 location	Campbellsport
 location	Jackson
 location	Oak Creek
