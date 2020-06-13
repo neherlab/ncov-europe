@@ -23,6 +23,11 @@
       "type": "categorical"
     },
     {
+      "key": "gisaid_clade_membership",
+      "title": "GISAID clade",
+      "type": "categorical"
+    },
+    {
       "key": "legacy_clade_membership",
       "title": "Old Nextstrain clades",
       "type": "categorical"
