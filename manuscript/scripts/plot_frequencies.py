@@ -42,20 +42,21 @@ num_date_points = np.array([numeric_date(x) for x in date_points])
 
 
 
-for attr in ["clade_membership", "gisaid_clade_membership"]:
+fs=12
+fig, axs = plt.subplots(3, 1, figsize = (10,10), sharex=True)
+for ax, attr in zip(axs, ["clade_membership", "GISAID_clade", "pangolin_lineage"]):
     frequencies = get_frequencies(nodes_europe, attr,
                                   num_date_points, width_days=10)
 
-    fs=16
-    plt.figure(figsize = (12,6))
     for clade in sorted(frequencies.keys()):
-        plt.plot(date_points, frequencies[clade], label=clade, lw=3)
+        if frequencies[clade].max() > 0.05:
+            ax.plot(date_points, frequencies[clade], label=clade, lw=3)
 
-    plt.legend(fontsize=fs)
-    plt.ylabel("frequency in Europe", fontsize=fs)
-    plt.ylim([0,1])
-    plt.tick_params(labelsize=fs)
-    plt.tick_params('x', rotation=30)
-    plt.tight_layout()
+    ax.legend(fontsize=fs, ncol=3)
+    ax.set_ylabel("frequency in Europe", fontsize=fs)
+    ax.set_ylim([0,.8])
+    ax.tick_params(labelsize=fs)
+    ax.tick_params('x', rotation=30)
 
-    plt.savefig(f"figures/{attr}.png")
+plt.tight_layout()
+plt.savefig(f"figures/clade_frequencies.png")
