@@ -1,6 +1,6 @@
 {
-  "title": "Genomic epidemiology of novel coronavirus in Europe",
-  "build_url": "https://github.com/nextstrain/ncov",
+  "title": "Genomic epidemiology of SARS-CoV-2 in Europe",
+  "build_url": "https://github.com/neherlab/ncov-ecdc",
   "maintainers": [
     {"name": "Emma Hodcroft", "url": "https://neherlab.org"},
     {"name": "Richard Neher", "url": "https://neherlab.org"},
@@ -23,8 +23,8 @@
       "type": "categorical"
     },
     {
-      "key": "gisaid_clade_membership",
-      "title": "GISAID clade",
+      "key": "GISAID_clade",
+      "title": "GISAID Clade",
       "type": "categorical"
     },
     {
