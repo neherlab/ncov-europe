@@ -10,6 +10,9 @@ rule download:
         aws s3 cp s3://nextstrain-ncov-private/sequences.fasta.gz - | gunzip -cq > {output.sequences:q}
         """
 
+from datetime import date
+from treetime.utils import numeric_date
+
 rule filter:
     message:
         """
@@ -27,7 +30,8 @@ rule filter:
         "logs/filtered.txt"
     params:
         min_length = config["filter"]["min_length"],
-        exclude_where = config["filter"]["exclude_where"]
+        exclude_where = config["filter"]["exclude_where"],
+        date = numeric_date(date.today())
     conda: config["conda_environment"]
     shell:
         """
@@ -35,6 +39,7 @@ rule filter:
             --sequences {input.sequences} \
             --metadata {input.metadata} \
             --include {input.include} \
+            --max-date {params.date} \
             --exclude {input.exclude} \
             --exclude-where {params.exclude_where}\
             --min-length {params.min_length} \
@@ -784,6 +789,37 @@ rule tip_frequencies:
             --narrow-bandwidth {params.narrow_bandwidth} \
             --proportion-wide {params.proportion_wide} \
             --output {output.tip_frequencies_json} 2>&1 | tee {log}
+        """
+
+rule nucleotide_mutation_frequencies:
+    message: "Estimate nucleotide mutation frequencies"
+    input:
+        alignment = rules.combine_samples.output.alignment,
+        metadata = _get_metadata_by_wildcards
+    output:
+        frequencies = "results/{build_name}/nucleotide_mutation_frequencies.json"
+    log:
+        "logs/nucleotide_mutation_frequencies_{build_name}.txt"
+    params:
+        min_date = config["frequencies"]["min_date"],
+        minimal_frequency = config["frequencies"]["minimal_frequency"],
+        pivot_interval = config["frequencies"]["pivot_interval"],
+        stiffness = config["frequencies"]["stiffness"],
+        inertia = config["frequencies"]["inertia"]
+    conda: config["conda_environment"]
+    shell:
+        """
+        augur frequencies \
+            --method diffusion \
+            --alignments {input.alignment} \
+            --gene-names nuc \
+            --metadata {input.metadata} \
+            --min-date {params.min_date} \
+            --minimal-frequency {params.minimal_frequency} \
+            --pivot-interval {params.pivot_interval} \
+            --stiffness {params.stiffness} \
+            --inertia {params.inertia} \
+            --output {output.frequencies} 2>&1 | tee {log}
         """
 
 def export_title(wildcards):

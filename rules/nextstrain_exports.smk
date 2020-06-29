@@ -69,6 +69,9 @@ rule export_all_regions:
             --latlong {input.lat_longs}
         """
 
+rule all_mutation_frequencies:
+    input: expand("results/{build_name}/nucleotide_mutation_frequencies.json", build_name=BUILD_NAMES)
+
 #
 # Rules for custom auspice exports for the Nextstrain team.
 #
@@ -276,6 +279,19 @@ rule deploy_to_staging:
                 --include
         fi
         """
+
+onstart:
+    slack_message = f"Build {deploy_origin} started."
+
+    if SLACK_TOKEN and SLACK_CHANNEL:
+        shell(f"""
+            curl https://slack.com/api/chat.postMessage \
+                --header "Authorization: Bearer $SLACK_TOKEN" \
+                --form-string channel="$SLACK_CHANNEL" \
+                --form-string text={{slack_message:q}} \
+                --fail --silent --show-error \
+                --include
+        """)
 
 onerror:
     slack_message = f"Build {deploy_origin} failed."
