@@ -4,6 +4,30 @@ from datetime import datetime
 from collections import defaultdict
 from augur.utils import numeric_date
 import matplotlib.pyplot as plt
+from scipy.stats import scoreatpercentile
+
+colors = {
+"19B": "#FF8080",
+"A": "#FF8080",
+"O": "#FFD938",
+"V": "#FFEEAA",
+#
+"19A": "#FFB247",
+"B": "#FFB247",
+"L": "#FFB247",
+#
+"20A": "#CDDE87",
+"G": "#CDDE87",
+"B.1": "#CDDE87",
+#
+"20B": "#C6AFE9",
+"B.1.1": "#C6AFE9",
+"GR": "#C6AFE9",
+#
+"20C": "#AAEEFF",
+"GH": "#AAEEFF",
+}
+
 
 with open("data/ncov_europe.json", 'r') as fh:
     tree_json = json.load(fh)
@@ -30,10 +54,23 @@ def get_frequencies(nodes, attribute, pivots, width_days=14):
     norm = np.sum(list(freqs.values()), axis=0)
     return {k:v/norm for k,v in freqs.items()}
 
+
+def resample_countries(nodes_by_country):
+    countries = list(nodes_by_country.keys())
+    new_samples = []
+    for ci in np.random.randint(0,len(countries), size=len(countries)):
+        c = countries[ci]
+        new_samples.extend(nodes_by_country[c])
+    return new_samples
+
+
 nodes = get_terminals(tree_json["tree"])
 
 nodes_europe = [n for n in nodes if n['node_attrs']["region"]["value"]=="Europe"]
 
+nodes_by_country = defaultdict(list)
+for n in nodes_europe:
+    nodes_by_country[n['node_attrs']["country"]["value"]].append(n)
 
 start_date = datetime(2020,2,1).toordinal()
 today = datetime.today().toordinal()
@@ -42,18 +79,30 @@ num_date_points = np.array([numeric_date(x) for x in date_points])
 
 
 
+n_samples=100
 fs=12
 fig, axs = plt.subplots(3, 1, figsize = (10,10), sharex=True)
 for ax, attr in zip(axs, ["clade_membership", "GISAID_clade", "pangolin_lineage"]):
     frequencies = get_frequencies(nodes_europe, attr,
                                   num_date_points, width_days=10)
 
-    for clade in sorted(frequencies.keys()):
-        if frequencies[clade].max() > 0.05:
-            ax.plot(date_points, frequencies[clade], label=clade, lw=3)
+    resampled_frequencies = [get_frequencies(resample_countries(nodes_by_country), attr,
+                                             num_date_points, width_days=10)
+                             for i in range(n_samples)]
 
-    ax.legend(fontsize=fs, ncol=3)
-    ax.set_ylabel("frequency in Europe", fontsize=fs)
+
+    for ci, clade in enumerate(sorted(frequencies.keys())):
+        if frequencies[clade].max() > 0.05:
+            col = colors[clade] if clade in colors else f'C{ci%10}'
+            tmp_samples = np.array([(f[clade] if clade in f else np.zeros_like(num_date_points))
+                                    for f in resampled_frequencies])
+            upper = scoreatpercentile(tmp_samples, 75, axis=0)
+            lower = scoreatpercentile(tmp_samples, 25, axis=0)
+            ax.plot(date_points, frequencies[clade], label=clade, lw=3, c=col)
+            ax.fill_between(date_points, lower, upper, color=col, alpha=0.3)
+
+    ax.legend(fontsize=fs, ncol=3, loc=9)
+    ax.set_ylabel("frequency", fontsize=fs)
     ax.set_ylim([0,.8])
     ax.tick_params(labelsize=fs)
     ax.tick_params('x', rotation=30)
