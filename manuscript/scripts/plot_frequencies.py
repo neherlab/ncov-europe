@@ -83,11 +83,11 @@ num_date_points = np.array([numeric_date(x) for x in date_points])
 
 line_order = {'clade_membership':['19B', '19A', '20A', '20C', '20B'],
               'GISAID_clade':['S', 'L', 'O', 'V', 'G', 'GH', 'GR'],
-              'pangolin_lineage':['A', 'B', 'B.1', 'B.1.5', 'B.1.22', 'B.1.1']}
+              'pangolin_lineage':['A', 'B', 'B.1', 'B.1.5', 'B.1.22', 'B.1.1', 'B.1.1.1']}
 
 panel_labels = {'clade_membership': 'Nextstrain',
               'GISAID_clade': 'GISAID',
-              'pangolin_lineage': 'Rambaut et al'}
+              'pangolin_lineage': 'cov-lineages.org'}
 
 n_samples=100
 fs=12
@@ -102,7 +102,8 @@ for ax, attr in zip(axs, ["clade_membership", "GISAID_clade", "pangolin_lineage"
 
 
     for ci, clade in enumerate(line_order[attr]):
-        if frequencies[clade].max() > 0.075:
+    # for ci, clade in enumerate(sorted(frequencies.keys())):
+        if frequencies[clade].max() > 0.05:
             col = colors[clade]["color"] if clade in colors else f'C{ci%10}'
             ls = colors[clade]["ls"] if clade in colors else f'-'
             tmp_samples = np.array([(f[clade] if clade in f else np.zeros_like(num_date_points))
@@ -112,7 +113,7 @@ for ax, attr in zip(axs, ["clade_membership", "GISAID_clade", "pangolin_lineage"
             ax.plot(date_points, frequencies[clade], label=clade, lw=3, c=col, ls=ls)
             ax.fill_between(date_points, lower, upper, color=col, alpha=0.3)
 
-    ax.text(date_points[0], 0.7, panel_labels[attr], fontsize=fs*1.5)
+    ax.text(date_points[1], 0.7, panel_labels[attr], fontsize=fs*1.4)
     ax.legend(fontsize=fs, ncol=3, loc=9)
     ax.set_ylabel("frequency", fontsize=fs)
     ax.set_ylim([0,.8])
@@ -120,4 +121,4 @@ for ax, attr in zip(axs, ["clade_membership", "GISAID_clade", "pangolin_lineage"
     ax.tick_params('x', rotation=30)
 
 plt.tight_layout()
-plt.savefig(f"figures/clade_frequencies.png")
+plt.savefig(f"figures/clade_frequencies.pdf")
