@@ -180,9 +180,9 @@ exposure:
 
 
 files:
-  colors: "profiles/ecdc/colors.tsv"
-  auspice_config: "profiles/ecdc/auspice_config_ecdc.json"
-  description: "profiles/ecdc/description.md"
+  colors: "ecdc_profile/colors.tsv"
+  auspice_config: "ecdc_profile/auspice_config_ecdc.json"
+  description: "ecdc_profile/description.md"
 
 
 subsampling:
