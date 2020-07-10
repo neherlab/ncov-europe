@@ -1,0 +1,2 @@
+
+localrules: "ecdc_profile/localrules.smk"
