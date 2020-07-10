@@ -3,8 +3,7 @@
   "build_url": "https://github.com/neherlab/ncov-ecdc",
   "maintainers": [
     {"name": "Emma Hodcroft", "url": "https://neherlab.org"},
-    {"name": "Richard Neher", "url": "https://neherlab.org"},
-    {"name": "Erik Alm", "url": "https://ecdc.europe.eu"}
+    {"name": "Richard Neher", "url": "https://neherlab.org"}
   ],
   "colorings": [
     {
