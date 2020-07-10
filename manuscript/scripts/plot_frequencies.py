@@ -20,6 +20,7 @@ colors = {
 "G": {"color": "#CDDE87", "ls":"-"},
 "B.1": {"color": "#CDDE87", "ls":"-"},
 "B.1.5": {"color": "#CDDE87", "ls":"--"},
+"B.1.22": {"color": "#CCCCCC", "ls":"--"},
 #
 "20B": {"color": "#C6AFE9", "ls":"-"},
 "B.1.1": {"color": "#C6AFE9", "ls":"-"},
@@ -80,6 +81,9 @@ date_points = [datetime.fromordinal(x) for x in np.arange(start_date, today, 7)]
 num_date_points = np.array([numeric_date(x) for x in date_points])
 
 
+line_order = {'clade_membership':['19B', '19A', '20A', '20C', '20B'],
+              'GISAID_clade':['S', 'L', 'O', 'V', 'G', 'GH', 'GR'],
+              'pangolin_lineage':['A', 'B', 'B.1', 'B.1.5', 'B.1.22', 'B.1.1']}
 
 n_samples=100
 fs=12
@@ -93,7 +97,7 @@ for ax, attr in zip(axs, ["clade_membership", "GISAID_clade", "pangolin_lineage"
                              for i in range(n_samples)]
 
 
-    for ci, clade in enumerate(sorted(frequencies.keys())):
+    for ci, clade in enumerate(line_order[attr]):
         if frequencies[clade].max() > 0.075:
             col = colors[clade]["color"] if clade in colors else f'C{ci%10}'
             ls = colors[clade]["ls"] if clade in colors else f'-'
