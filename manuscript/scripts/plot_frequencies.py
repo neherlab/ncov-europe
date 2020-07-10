@@ -85,6 +85,10 @@ line_order = {'clade_membership':['19B', '19A', '20A', '20C', '20B'],
               'GISAID_clade':['S', 'L', 'O', 'V', 'G', 'GH', 'GR'],
               'pangolin_lineage':['A', 'B', 'B.1', 'B.1.5', 'B.1.22', 'B.1.1']}
 
+panel_labels = {'clade_membership': 'Nextstrain',
+              'GISAID_clade': 'GISAID',
+              'pangolin_lineage': 'Rambaut et al'}
+
 n_samples=100
 fs=12
 fig, axs = plt.subplots(3, 1, figsize = (10,10), sharex=True)
@@ -108,6 +112,7 @@ for ax, attr in zip(axs, ["clade_membership", "GISAID_clade", "pangolin_lineage"
             ax.plot(date_points, frequencies[clade], label=clade, lw=3, c=col, ls=ls)
             ax.fill_between(date_points, lower, upper, color=col, alpha=0.3)
 
+    ax.text(date_points[0], 0.7, panel_labels[attr], fontsize=fs*1.5)
     ax.legend(fontsize=fs, ncol=3, loc=9)
     ax.set_ylabel("frequency", fontsize=fs)
     ax.set_ylim([0,.8])
