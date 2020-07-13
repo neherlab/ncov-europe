@@ -9,6 +9,7 @@ from scipy.stats import scoreatpercentile
 colors = {
 "19B": {"color": "#FF8080", "ls":"-"},
 "A": {"color": "#FF8080", "ls":"-"},
+"S": {"color": "#FF8080", "ls":"-"},
 #
 "19A": {"color": "#ffb247", "ls":"-"},
 "B": {"color": "#ffb247", "ls":"-"},
