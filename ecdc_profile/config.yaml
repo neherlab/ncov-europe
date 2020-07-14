@@ -23,7 +23,7 @@ cluster: "sbatch --time={cluster.time} --mem={cluster.mem} --cpus-per-task={clus
 
 jobs: 128
 
-jobscript: nextstrain-scicore/nextstrain-scicore/submit.sh
+jobscript: nextstrain_profiles/nextstrain-scicore/submit.sh
 
 # Set the name for the job as display in the cluster queue.
 jobname: "{rulename}.{jobid}.sh"
