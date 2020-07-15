@@ -27,6 +27,11 @@
       "type": "categorical"
     },
     {
+      "key": "subclade_membership",
+      "title": "Emerging clade",
+      "type": "categorical"
+    },
+    {
       "key": "legacy_clade_membership",
       "title": "Old Nextstrain clades",
       "type": "categorical"

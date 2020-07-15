@@ -81,7 +81,7 @@ frequencies:
   pivot_interval: 1
 
   # KDE bandwidths in proportion of a year to use per strain.
-  narrow_bandwidth: 0.05
+  narrow_bandwidth: 0.02
   proportion_wide: 0.0
 
   # Diffusion frequency settings
