@@ -161,6 +161,8 @@ location	Ulan-Ude
 location	Kipen
 location	Kraków
 location	Prostějov
+location	Domažlice
+location	Brno
 location	Plock
 location	Grodzisk Mazowiecki
 location	Olsztyn
@@ -999,9 +1001,11 @@ location	Dutchess County
 location	Passaic County
 location	Monroe County
 location	Winona County
+location	Houston County
 location	Allamakee County
 location	Winneshiek County
 location	Jackson County
+location	Whitehall County
 location	Florida
 location	Miramar
 location	Wabasha County
@@ -1116,10 +1120,19 @@ location	Wasco County
 location	Richland County
 location	Accra
 location	Cape Town Metro
+location	eThekwini
+location	iLembe
+location	Zululand
+location	uMgungundlovu
+location	uThukela
+location	Ugu
+location	Amajuba
 location	Montérégie
 location	Lanaudière
 location	Al Matariyyah
 location	Kfar Saba
+
+
 
 
 division	Mongolia
@@ -1147,6 +1160,7 @@ division	Samut Prakarn
 division	Pathum Thani
 division	Nakhonnayok
 division	Trang
+division	Samut Songkhram
 division	New Taipei City
 division	Philippines
 division	Manila
@@ -1178,6 +1192,7 @@ division	Seoul
 division	South Korea
 division	Chattogram
 division	Sylhet
+division	Barishal
 division	Nepal
 division	Kathmandu
 division	Sri Lanka
@@ -1202,6 +1217,7 @@ division	Karnataka
 division	North Sulawesi
 division	East Kalimantan
 division	Gujarat
+division	Lucknow
 division	Rajasthan
 division	Kerala
 division	West Bengal
@@ -1484,6 +1500,8 @@ division	Prague
 division	Melnik
 division	Litomerice-Brnay
 division	Vysocina Region
+division	Plzeň Region
+division	South Moravian Region
 division	Martin
 division	Copenhagen
 division	Ile de France
@@ -1721,6 +1739,7 @@ division	Kwara State
 division	Ogun State
 division	Osun State
 division	Oyo State
+division	Ekiti State
 division	Ghana
 division	Senegal
 division	Gambia
@@ -1740,6 +1759,7 @@ division	Kenya
 division	Democratic Republic of the Congo
 division	Haut-Katanga
 division	Kinshasa
+division	Kongo Central
 division	Sud Kivu
 division	South Africa
 division	Eastern Cape
@@ -1757,6 +1777,8 @@ division	Dakar
 division	Kolda
 division	St-Louis
 division	Thies
+division	Mopti
+division	Bamako
 division	Blida
 division	Boufarik
 division	Chile
@@ -1841,6 +1863,8 @@ division	Imbabura
 division	Guayas
 division	Pichincha
 division	Peru
+division	Huanuco
+division	Ica
 division	Lima
 division	Montevideo
 division	Panama City
@@ -2004,6 +2028,7 @@ country	Nigeria
 country	Benin
 country	Kenya
 country	Ghana
+country	Mali
 country	Senegal
 country	Gambia
 country	Algeria

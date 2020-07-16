@@ -32,6 +32,7 @@ location	Almassera	39.5105	-0.3572
 location	Almenara	-16.1797	-40.6953
 location	Almeria	36.844270	-2.450766
 location	Altenhof Am Hausruck	48.134291	13.686464
+location	Amajuba	-27.7351566	29.961884968271626
 location	Ambite	40.3284	-3.1824
 location	Ames	42.9038	-8.6584
 location	Anchorage	61.203109	-149.888095
@@ -153,6 +154,7 @@ location	Bridgeport	41.1792	-73.1894
 location	Brindisi	40.629964	17.937041
 location	Brisbane	-27.484246	153.026118
 location	Bristol	41.6718	-72.9493
+location	Brno	49.1922443	16.6113382
 location	Broechem	51.180793	4.602098
 location	Bronx	40.858846	-73.864979
 location	Brookfield	43.066515	-88.129450
@@ -284,6 +286,7 @@ location	Dijon	47.3220	5.0415
 location	Dilbeek	50.8465	4.2621
 location	Dodge County	43.413614	-88.7177834
 location	Dolembreux	50.535464	5.632975
+location	Domažlice	49.4407069	12.9298338
 location	Dongguan	22.992389	113.744830
 location	Donostia-San Sebastian	43.304023	-1.981439
 location	Door County	44.7615925	-87.5329747
@@ -318,6 +321,7 @@ location	Envigado	6.168786	-75.583389
 location	Ere	50.580306	3.368009
 location	Essex County	40.784033	-74.235550
 location	Estinnes	50.374881	4.103617
+location	eThekwini	-29.861825	31.009909
 location	Ettelgem	51.178991	3.030238
 location	Etterbeek	50.833658	4.394661
 location	Eupen	50.6292	6.0337
@@ -440,6 +444,7 @@ location	Hong Kong	22.3964	114.1095
 location	Honnelles	50.350747	3.714603
 location	Hortolandia	-22.881443	-47.206973
 location	Houston	29.813606	-95.415223
+location	Houston County	43.676439	-91.493283
 location	Greater Houston Area	29.679767	-95.360138
 location	Houten	52.0278	5.1630
 location	Houthalen-Helchteren	51.0312	5.3765
@@ -457,6 +462,7 @@ location	Ibague	4.438643	-75.190558
 location	Ibarra	0.3478421	-78.1173588
 location	Iberville Parish	30.256342	-91.380864
 location	Ibiza	39.0200	1.4821
+location	iLembe	-29.240765	31.234110920000003
 location	Illinois	40.088552	-89.301876
 location	Imperial County	32.845969	-115.543429
 location	Indianapolis	39.7684	-86.1581
@@ -1006,13 +1012,16 @@ location	Tumaco	1.792753	-78.793766
 location	Tweed Heads	-28.201312	153.543425
 location	Ubeda	38.0114	-3.3712
 location	Uccle	50.793431	4.355608
+location	Ugu	-30.54723	30.29119696183432
 location	Ujjain	23.161092	75.803740
 location	Uijeongbu	37.7381078	127.033929
 location	Ulan-Ude	51.827029	107.655954
 location	Ulster County	41.8586	-74.3118
 location	Umatilla County	45.648981	-118.720688
+location	uMgungundlovu	-29.52982	30.057047991912206
 location	Una	31.4685	76.2708
 location	Urcuqui	0.4172921	-78.1941499
+location	uThukela	-28.7446904	30.2224445
 location	Utrecht	52.0907	5.1214
 location	Uttara	23.8759	90.3795
 location	Vadodara	22.306797	73.173072
@@ -1073,6 +1082,7 @@ location	Westchester County	41.1220	-73.7949
 location	Wevelgem	50.832135	3.174228
 location	Wezembeek-Oppem	50.842122	4.490653
 location	Whatcom County	48.830959	-121.791189
+location	Whitehall County	44.366840	-91.324050
 location	Whitefish Bay	43.111041	-87.901408
 location	Wijnegem	51.228317	4.515561
 location	Wilrijk	51.169169	4.396261
@@ -1117,10 +1127,10 @@ location	Zonhoven	50.9871	5.3672
 location	Zoutleeuw	50.836614	5.107761
 location	Zujar	37.5394	-2.8415
 location	Zulueta	42.745008	-1.579320
+location	Zululand	-27.897909900000002	31.293846335885597
 location	Ahmedabad	23.024605	72.570805
 location	Gandhinagar	23.227004	72.643142
 location	Mansa	23.428814	72.656249
-
 
 
 
@@ -1179,10 +1189,12 @@ division	Balassagyarmat	48.0712	19.2937
 division	Balatonfured	46.9599	17.8851
 division	Balear Islands	39.30	3.0
 division	Balikesir	39.650196	27.88958
+division	Bamako	12.60503275	-7.986513673439357
 division	Bangkok	13.798471	100.590834
 division	Bangladesh	24.506442	90.041454
 division	Baranya	46.0485	18.2719
 division	Barcelona	41.394769	2.173828
+division	Barishal	22.7562851	90.41098391553726
 division	Basel-Land	47.493316	7.714938
 division	Basel-Stadt	47.557238	7.595666
 division	Basilicata	40.447062	16.081705
@@ -1325,6 +1337,7 @@ division	Eastern Cape	-32.344458	26.497832
 division	Ecuador	-1.3397667	-79.3666964
 division	Eeklo	51.193464	3.562381
 division	Egypt	26.2540493	29.2675469
+division	Ekiti State	9.0311972	7.521753
 division	Elad	32.0495	34.9507
 division	Elkana	32.1106	35.0321
 division	Emilia-Romagna	44.641437	11.119072
@@ -1405,12 +1418,14 @@ division	Holsbeek	50.9211	4.7570
 division	Hong Kong	22.3964	114.1095
 division	Houthalen-Helchteren	51.0312	5.3765
 division	Hranice Na Moravě	49.5497	17.7349
+division	Huanuco	-9.893964	-76.299456
 division	Huasco	-28.467340	-71.221674
 division	Hubei	31.095477	112.676644
 division	Huila	2.545605	-75.524024
 division	Hukuk	32.8798972	35.4958000
 division	Hungary	47	20
 division	Huy	50.510704	5.209278
+division	Ica	-14.079922	-75.740852
 division	Iceland	64.9841821	-18.1059012
 division	Idaho	43.810421	-114.351215
 division	Ieper	50.857716	2.874138
@@ -1482,6 +1497,7 @@ division	Kochi	33.518628	133.505674
 division	Koersel	51.0584	5.2718
 division	Kolda	12.9493	-14.4723
 division	Kombo	13.294035	-16.656832
+division	Kongo Central	-5.8162516	13.4908753
 division	Konya	37.859743	32.495438
 division	Koprivnica	46.168157	16.827208
 division	Kortrijk	50.802287	3.264668
@@ -1531,6 +1547,7 @@ division	Louisiana	30.9843	-91.9623
 division	Louth	53.9508	-6.5406
 division	Lower Austria	48.360214	15.824134
 division	Lucerne	47.0502	8.3093
+division	Lucknow	26.851073	80.934261
 division	Lummen	50.9876	5.1951
 division	Luxembourg	49.755428	6.119486
 division	Maalot Tarshicha	33.0150	35.2760
@@ -1578,6 +1595,7 @@ division	Mongolia	47.504782	102.997672
 division	Mons	50.445439	3.962794
 division	Montana	46.974704	-110.872530
 division	Montevideo	-34.823827	-56.211799
+division	Mopti	14.514489000000001	-3.646458060483871
 division	Morocco	32.525925	-5.843761
 division	Moscow	55.7558	37.6173
 division	Moscow Region	55.3404	38.2918
@@ -1688,6 +1706,7 @@ division	Phuket	7.959471	98.339272
 division	Piaui	-7.7183	-42.7289
 division	Pichincha	-0.1465	-78.4752
 division	Pleven	43.4170	24.6067
+division	Plzeň Region	49.7477415	13.3775249
 division	Poland	52.0977181	19.0258159
 division	Polleur	50.580257	5.866744
 division	Pomorskie	54.2944	18.1531
@@ -1745,6 +1764,7 @@ division	Sakarya	40.753425	30.384694
 division	Sakhalin Region	50.691	142.9506
 division	Salzburg	47.356774	13.227550
 division	Samara Region	53.4184	50.4726
+division	Samut Songkhram	13.410190	99.949071
 division	San Jose	9.9281	-84.0907
 division	Sankt Gallen	47.419862	9.374697
 division	Santa Catarina	-27.15767	-49.888561
@@ -1795,6 +1815,7 @@ division	South Coast District	29.873836	34.934417
 division	South District	30.8296	35.0388
 division	South Holland	52.006053	4.485728
 division	South Korea	36.609249	127.917932
+division	South Moravian Region	49.1249179	16.682771628867208
 division	South Tyrol	46.762051	11.427443
 division	South Yorkshire	53.4697	-1.326
 division	Southern	-46.040582	169.144142
@@ -1970,6 +1991,7 @@ country	Kyrgyzstan	41.2044	74.7661
 country	Lithuania	55.378752	23.945328
 country	Luxembourg	49.755428	6.119486
 country	Malaysia	4.264153	102.222436
+country	Mali	16.3700359	-2.2900239
 country	Mongolia	47.504782	102.997672
 country	Morocco	32.549785	-5.480765
 country	Myanmar	20.600856	96.287616
