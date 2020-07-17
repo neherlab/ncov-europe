@@ -1,6 +1,6 @@
 {
   "title": "Genomic epidemiology of SARS-CoV-2 in Europe",
-  "build_url": "https://github.com/neherlab/ncov-ecdc",
+  "build_url": "https://github.com/neherlab/ncov-europe",
   "maintainers": [
     {"name": "Emma Hodcroft", "url": "https://neherlab.org"},
     {"name": "Richard Neher", "url": "https://neherlab.org"}
