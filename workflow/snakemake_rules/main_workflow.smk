@@ -345,6 +345,7 @@ rule subsample:
         sequences_per_group = _get_specific_subsampling_setting("seq_per_group"),
         exclude_argument = _get_specific_subsampling_setting("exclude", optional=True),
         include_argument = _get_specific_subsampling_setting("include", optional=True),
+        query_argument = _get_specific_subsampling_setting("query", optional=True),
         priority_argument = get_priority_argument
     conda: config["conda_environment"]
     shell:
@@ -355,6 +356,7 @@ rule subsample:
             --include {input.include} \
             {params.exclude_argument} \
             {params.include_argument} \
+            {params.query_argument} \
             {params.priority_argument} \
             --group-by {params.group_by} \
             --sequences-per-group {params.sequences_per_group} \
@@ -498,7 +500,8 @@ rule refine:
         coalescent = config["refine"]["coalescent"],
         date_inference = config["refine"]["date_inference"],
         divergence_unit = config["refine"]["divergence_unit"],
-        clock_filter_iqd = config["refine"]["clock_filter_iqd"]
+        clock_filter_iqd = config["refine"]["clock_filter_iqd"],
+        timetree = "" if config["refine"].get("no_timetree", False) else "--timetree"
     conda: config["conda_environment"]
     shell:
         """
@@ -509,7 +512,7 @@ rule refine:
             --output-tree {output.tree} \
             --output-node-data {output.node_data} \
             --root {params.root} \
-            --timetree \
+            {params.timetree} \
             --clock-rate {params.clock_rate} \
             --clock-std-dev {params.clock_std_dev} \
             --coalescent {params.coalescent} \

@@ -62,6 +62,7 @@ location	Hanoi
 location	Bangkok
 location	Hyderabad
 location	Noida
+location	Lucknow
 location	Ahmedabad
 location	Uttara
 location	Gulshan
@@ -71,6 +72,7 @@ location	Moulvibazar
 location	Habiganj
 location	Brahmanbaria
 location	Pabna
+location	Jashore
 location	Chandpur
 location	Kalia
 location	Kodomtoly
@@ -131,6 +133,22 @@ location	Nadiad
 location	Kapadvanj
 location	Mahemdavad
 location	Manama
+location	Barka
+location	Al Awabi
+location	Nakhal
+location	Ar Rustaq
+location	Ibra
+location	Nizwa
+location	Bahla
+location	Samail
+location	Manah
+location	Bawshar
+location	Al Amrat
+location	Mutrah
+location	As Seeb
+location	Qurayyat
+location	Ibri
+location	Buraimi
 location	Dhanera
 location	Darjeeling
 location	Singapore
@@ -162,10 +180,17 @@ location	Kipen
 location	Kraków
 location	Prostějov
 location	Domažlice
+location	Všebořice
+location	Fryšták
+location	Plzeň
+location	Klenčí
+location	Litovel
 location	Brno
+location	Breclav
 location	Plock
 location	Grodzisk Mazowiecki
 location	Olsztyn
+location	Brodno-Warszawa
 location	Warszawa
 location	Radom
 location	Kalisz
@@ -581,6 +606,7 @@ location	Tuebingen
 location	Strasbourg
 location	Rome
 location	Naples
+location	Benevento
 location	Taranto
 location	Lecce
 location	Brindisi
@@ -700,6 +726,33 @@ location	Cordoba
 location	Granada
 location	La Estrada
 location	Las Palmas
+location	Agualva
+location	Aguas livres
+location	Algueirão-Mem Martins
+location	Almargem do Bispo
+location	Amadora
+location	Buraca
+location	Cacem
+location	Casal de Cambra
+location	Corroios
+location	Cova da Moura
+location	Damaia de Cima
+location	Encosta de Sol
+location	Massama
+location	Mina da Agua
+location	Monte Abrão
+location	Penacova
+location	Pontinha
+location	Queluz
+location	Ramada
+location	Reboleira
+location	Rio de Mouro
+location	Sacavem
+location	Santa Clara de Louredo
+location	Santa Maria dos Olivais
+location	Santarem
+location	Seia
+location	São Domingos da Benfica
 location	Lalin
 location	Leganés
 location	Negreira
@@ -819,6 +872,7 @@ location	Yumbo
 location	São Paulo
 location	Brasilia
 location	Rio de Janeiro
+location	Resende
 location	Bahia Blanca
 location	Osasco
 location	Presidente Venceslau
@@ -829,6 +883,20 @@ location	Mogi Das Cruzes
 location	San Carlos de Bariloche
 location	Quilmes
 location	Babahoyo
+location	Guayaquil
+location	Awa Reserve
+location	Ventanas
+location	San Jacinto de Yaguachi
+location	General Villamil Playas
+location	Puerto Lopez
+location	Pajan
+location	Jipijapa
+location	Sucre
+location	Portoviejo
+location	Calceta
+location	Manta
+location	Puerto Baquerizo Moreno
+location	Gomez Palacios
 location	Cayambe
 location	Riobamba
 location	Ibarra
@@ -855,6 +923,17 @@ location	Vila Velha
 location	Mexico City
 location	San Rafael de Alajuela
 location	San Rafael Heredia
+location	Alajuela
+location	Grecia
+location	Escazu
+location	San Jose
+location	Curridabat
+location	Santa Ana
+location	Perez Zeledon
+location	Aserri
+location	Desamparados
+location	Tarrazu
+location	Nicoya
 location	Orotina
 location	La Union
 location	Tibas
@@ -872,6 +951,7 @@ location	Holy Cross
 location	Hillpoint
 location	Richland Center
 location	Oregon WI
+location	Sauk County
 location	Cottage Grove
 location	Cross Plains
 location	Deforest
@@ -911,6 +991,8 @@ location	Columbus OH
 location	Columbus WI
 location	Cincinnati
 location	Miami
+location	Miami-Dade County
+location	Palm Beach County
 location	Ketchikan
 location	Fairbanks
 location	Mat-Su
@@ -943,11 +1025,17 @@ location	Waukesha County
 location	Jefferson County WI
 location	Washington County WI
 location	Columbia County WI
+location	Jackson County IA
+location	Jackson County WI
 location	Clark County
 location	Umatilla County
 location	Phoenix
+location	Maricopa County
+location	Denver County
 location	Chicago
 location	Winnebago County IL
+location	Dupage County
+location	Kane County
 location	Illinois
 location	Indianapolis
 location	Wisconsin
@@ -955,6 +1043,8 @@ location	Manitowoc County
 location	Brown County WI
 location	Dane County
 location	Boston
+location	Norfolk County
+location	Middlesex County
 location	Houston
 location	Greater Houston Area
 location	Orange County NY
@@ -987,7 +1077,7 @@ location	Columbia County OR
 location	Albany County
 location	Putnam County
 location	New York City
-location	Fairfield County
+location	Fairfield County CT
 location	Bergen County
 location	Clinton County
 location	Broome County
@@ -1004,11 +1094,11 @@ location	Winona County
 location	Houston County
 location	Allamakee County
 location	Winneshiek County
-location	Jackson County
 location	Whitehall County
 location	Florida
 location	Miramar
 location	Wabasha County
+location	Stearns County
 location	Adams County WA
 location	Adams County WI
 location	New Orleans
@@ -1050,6 +1140,7 @@ location	Dodge County
 location	Sheboygan County
 location	Outagamie County
 location	Door County
+location	Waupaca County
 location	Racine
 location	Cudahy
 location	Mequon
@@ -1117,7 +1208,9 @@ location	Columbia County
 location	Marion County
 location	Multnomah County
 location	Wasco County
-location	Richland County
+location	Fairfield County SC
+location	Berkeley County
+location	Richland County SC
 location	Accra
 location	Cape Town Metro
 location	eThekwini
@@ -1156,6 +1249,7 @@ division	Heilongjiang
 division	Shanghai
 division	Hong Kong
 division	Taiwan
+division	Tainan
 division	Samut Prakarn
 division	Pathum Thani
 division	Nakhonnayok
@@ -1163,6 +1257,7 @@ division	Trang
 division	Samut Songkhram
 division	New Taipei City
 division	Philippines
+division	National Capital Region
 division	Manila
 division	Keelung
 division	Aichi
@@ -1192,6 +1287,7 @@ division	Seoul
 division	South Korea
 division	Chattogram
 division	Sylhet
+division	Khulna
 division	Barishal
 division	Nepal
 division	Kathmandu
@@ -1315,6 +1411,8 @@ division	Nelson Marlborough
 division	Waitemata
 division	United Arab Emirates
 division	Muscat
+division	Dhahirah
+division	North Sharqiyah
 division	North Batinah
 division	South Batinah
 division	Dakhiliyah
@@ -1502,6 +1600,8 @@ division	Litomerice-Brnay
 division	Vysocina Region
 division	Plzeň Region
 division	South Moravian Region
+division	Zlin
+division	Olomouc Region
 division	Martin
 division	Copenhagen
 division	Ile de France
@@ -1600,6 +1700,8 @@ division	Saint-Saulve
 division	Switzerland
 division	Lucerne
 division	Bavaria
+division	Niedersachsen
+division	Western Pomerania
 division	Duesseldorf
 division	Baden-Wuerttemberg
 division	Munich
@@ -1685,6 +1787,11 @@ division	Grand Canary Islands
 division	Canary Islands
 division	La Rioja
 division	Lisbon
+division	Setúbal
+division	Coimbra
+division	Beja
+division	Guarda
+division	Santarem
 division	Croatia
 division	United Kingdom
 division	Northern Ireland
@@ -1723,6 +1830,7 @@ division	Varmland
 division	Gavleborgs Lan
 division	Orebro Lan
 division	Norrbotten
+division	North Macedonia
 division	Greece
 division	Thessaloniki
 division	Finland
@@ -1762,6 +1870,8 @@ division	Kinshasa
 division	Kongo Central
 division	Sud Kivu
 division	South Africa
+division	Western Cape
+division	Free State
 division	Eastern Cape
 division	KwaZulu-Natal
 division	North-West
@@ -1861,9 +1971,17 @@ division	Quito
 division	Chimborazo
 division	Imbabura
 division	Guayas
+division	Manabi
+division	Daule
+division	Santa Elena
+division	Carchi
+division	Orellana
+division	Galapagos
 division	Pichincha
 division	Peru
+division	Lambayeque
 division	Huanuco
+division	Arequipa
 division	Ica
 division	Lima
 division	Montevideo
@@ -1874,8 +1992,8 @@ division	Heredia
 division	Cartago CO
 division	Cartago CR
 division	San Jose
+division	Guanacaste
 division	Mexico
-division	Gomez Palacios
 division	Guadalajara
 division	Durango
 division	Guerrero
@@ -1885,6 +2003,15 @@ division	Mexico City
 division	Estado de Mexico
 division	Chiapas
 division	Chihuahua
+division	Guanajuato
+division	Sinaloa
+division	Tabasco
+division	Morelos
+division	Nayarit
+division	Sonora
+division	Yucatan
+division	Baja California Sur
+division	Baja California
 division	Puebla
 division	Queretaro
 division	USA
@@ -2022,6 +2149,7 @@ country	Ireland
 country	Finland
 country	Sweden
 country	Portugal
+country	North Macedonia
 country	Greece
 country	Egypt
 country	Nigeria
