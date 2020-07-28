@@ -127,20 +127,26 @@ location	Gondal
 location	Rajkot
 location	Botad
 location	Chuda
+location	Mahuva
 location	Dhanera
+location	Bhavnagar
+location	Ghogha
 location	Kadi
 location	Palanpur
+location	Dholka
 location	Kalol
 location	Ahmedabad
 location	Gandhinagar
 location	Mansa
 location	Kheda
+location	Daskroi
 location	Olpad
 location	Mahemdavad
 location	Dahegam
 location	Surat
 location	Prantij
 location	Nadiad
+location	Kamrej
 location	Talod
 location	Choryasi
 location	Himatnagar
@@ -282,7 +288,7 @@ location	Perth
 
 # Victoria
 location	Melbourne
-location	Clayton
+location	Clayton AU
 
 # Queensland
 location	Northern Queensland
@@ -836,6 +842,7 @@ location	Teramo
 
 # Campania
 location	Naples
+location	Benevento
 
 # Apulia
 location	Taranto
@@ -1179,13 +1186,22 @@ location	Velingara
 location	Cape Town Metro
 
 # KwaZulu-Natal
+location	Harry Gwala
 location	Amajuba
 location	uMgungundlovu
 location	uThukela
 location	Ugu
+location	uMzinyathi
+location	Umbilo
+location	Overport
+location	Berea
 location	eThekwini
+location	Morningside
 location	iLembe
 location	Zululand
+location	KwaDukuza
+location	King Cetshwayo
+location	uMkhanyakude
 
 ################
 
@@ -1406,7 +1422,7 @@ location	Alajuela
 location	San Rafael Heredia
 
 # San Jose
-location	Santa Ana
+location	Santa Ana CR
 location	Escazu
 location	San Jose
 location	Aserri
@@ -1420,8 +1436,60 @@ location	Perez Zeledon
 location	La Union
 
 ### Mexico
+# Baja California
+location	Tijuana
+
 # Durango
 location	Gomez Palacios
+
+### Panama
+# Panama Oeste
+location	Lídice
+location	La Chorrera
+location	Herrera (Panama Oeste)
+location	Guadalupe
+location	Juan Demóstenes Arosemena
+location	Vista Alegre
+location	Arraiján
+location	Burunga
+location	Veracruz
+
+# Panama Center
+location	Calidonia
+location	Pueblo Nuevo
+location	Las Cumbres
+location	Chilibre
+location	Ancón
+location	Clayton PA
+location	Juan Díaz
+location	Alcalde Díaz
+location	Arnulfo Arias
+location	El Chorrillo
+location	Río Abajo
+location	Santa Ana PA
+location	Ernesto Córdoba
+location	Betania
+location	Bella Vista
+location	Omar Torrijos
+location	Amelia Denis de Icaza
+location	Victoriano Lorenzo
+location	San Francisco PA
+location	Belisario Porras
+location	Belisario Frías
+location	Parque Lefevre
+location	Jose Domingo Espinar
+location	El Crisol
+location	Pedregal
+location	Rufina Alfaro
+location	Don Bosco
+location	Parque Real
+location	Las Mañanitas
+location	Tocumen
+location	Pacora
+location	Chepo
+
+# Guna Yala
+location	Aligandí
 
 ### USA
 # Alaska
@@ -1446,8 +1514,10 @@ location	Multnomah County
 location	Wasco County
 
 # Washington
+location	Grays Harbor County
 location	Jefferson County WA
 location	Mason County
+location	San Juan County
 location	Thurston County
 location	Cowlitz County
 location	Clark County
@@ -1460,10 +1530,12 @@ location	Skagit County
 location	Whatcom County
 location	Kittitas County
 location	Yakima County
+location	Chelan County
 location	Douglas County
 location	Grant County WA
 location	Franklin County WA
 location	Umatilla County
+location	Walla Walla County
 location	Adams County WA
 location	Spokane County
 location	Asotin County
@@ -1538,6 +1610,7 @@ location	St Tammany Parish
 location	St Bernard Parish
 
 # Missouri
+location	Saint Louis County
 location	St. Louis MO
 
 # Wisconsin
@@ -1657,6 +1730,7 @@ location	Montgomery County PA
 
 # New Jersey
 location	Camden County
+location	Burlington County
 location	Essex County
 location	Bergen County
 location	Hudson County
@@ -2432,6 +2506,7 @@ division	Adıyaman
 division	Mardin
 division	Siirt
 division	Agri
+division	Kars Province
 
 ### United Kingdom
 division	Northern Ireland
@@ -2495,6 +2570,7 @@ division	Nigeria
 
 ### Senegal
 division	Dakar
+division	Pikine
 division	Mbour
 division	Thies
 division	St-Louis
@@ -2541,7 +2617,6 @@ division	Paraná
 division	Amapa
 division	Santa Catarina
 division	Goiás
-division	Goiais
 division	Distrito Federal
 division	São Paulo
 division	Maranhão
@@ -2575,26 +2650,33 @@ division	Punta Arenas
 
 ### Colombia
 division	Narino
+division	Pasto
 division	Choco
 division	Cauca
+division	Santander de Quilichao
 division	Valle del Cauca
 division	Cartago CO
 division	Risaralda
 division	Cordoba
 division	Quindio
+division	Cienaga de Oro
 division	Huila
 division	Antioquia
 division	Caldas
 division	Tolima
 division	Atlantico
+division	Soledad
+division	Tolemaida
 division	Bolivar
 division	Magdalena
 division	Bogota
 division	Cundinamarca
+division	Suesca
 division	Colombia
 division	Cesar
 division	Santander
 division	Boyaca
+division	Tunja
 division	Meta
 division	Norte de Santander
 division	Departamento de Amazonas
@@ -2652,20 +2734,39 @@ division	Cartago CR
 division	Jamaica
 
 ### Mexico
+division	Baja California
+division	Baja California Sur
+division	Sonora
+division	Sinaloa
 division	Chihuahua
+division	Nayarit
 division	Durango
 division	Jalisco
+division	Guanajuato
 division	Queretaro
 division	Guerrero
 division	Estado de Mexico
 division	Mexico City
 division	Mexico
+division	Morelos
 division	Puebla
 division	Chiapas
+division	Tabasco
+division	Yucatan
 division	Quintana Roo
 
 ### Panama
+division	Chiriqui
+division	Bocas del Toro
+division	Santiago de Veraguas
+division	Herrera
+division	Cocle
+division	Los Santos
+division	Colon
+division	Panama Oeste
 division	Panama City
+division	Panama Center
+division	Guna Yala
 
 ### USA
 division	Hawaii

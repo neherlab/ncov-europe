@@ -110,6 +110,12 @@ location	Bharuch
 location	Kheda
 location	Mandvi
 location	Bhuj
+location	Daskroi
+location	Dholka
+location	Bhavnagar
+location	Ghogha
+location	Mahuva
+location	Kamrej
 location	Savali
 location	Bardoli
 location	Choryasi
@@ -161,9 +167,9 @@ location	Tweed Heads
 location	Perth
 location	Sunshine Coast
 location	Melbourne
+location	Clayton AU
 location	Brisbane
 location	Rockhampton
-location	Clayton
 location	Auckland
 location	Gilgit
 location	Riyadh
@@ -928,11 +934,53 @@ location	Grecia
 location	Escazu
 location	San Jose
 location	Curridabat
-location	Santa Ana
+location	Santa Ana CR
 location	Perez Zeledon
 location	Aserri
 location	Desamparados
 location	Tarrazu
+location	San Francisco PA
+location	Parque Lefevre
+location	Las Cumbres
+location	Pedregal
+location	Omar Torrijos
+location	Betania
+location	Amelia Denis de Icaza
+location	Juan Díaz
+location	Bella Vista
+location	Rufina Alfaro
+location	Alcalde Díaz
+location	Ernesto Córdoba
+location	Pacora
+location	Clayton PA
+location	Ancón
+location	Arnulfo Arias
+location	Don Bosco
+location	Río Abajo
+location	Pueblo Nuevo
+location	Chepo
+location	El Crisol
+location	Las Mañanitas
+location	Tocumen
+location	Santa Ana PA
+location	Calidonia
+location	Parque Real
+location	Chilibre
+location	El Chorrillo
+location	Belisario Frías
+location	Jose Domingo Espinar
+location	Victoriano Lorenzo
+location	Belisario Porras
+location	Juan Demóstenes Arosemena
+location	Vista Alegre
+location	La Chorrera
+location	Arraiján
+location	Herrera (Panama Oeste)
+location	Lídice
+location	Guadalupe
+location	Burunga
+location	Veracruz
+location	Aligandí
 location	Nicoya
 location	Orotina
 location	La Union
@@ -967,9 +1015,12 @@ location	Middleton
 location	Ventura County
 location	Contra Costa County
 location	King County
+location	Grays Harbor County
 location	Monterey County CA
 location	Whatcom County
 location	Yakima County
+location	Walla Walla County
+location	Chelan County
 location	Thurston County
 location	Skagit County
 location	Snohomish County
@@ -1006,6 +1057,7 @@ location	Elmendorf AFB
 location	San Francisco
 location	San Diego County
 location	San Diego
+location	Tijuana
 location	San Mateo County
 location	Marin County
 location	San Joaquin County
@@ -1013,6 +1065,7 @@ location	Sacramento County
 location	Santa Clara County
 location	Davis
 location	Grant County WA
+location	San Juan County
 location	Grant County WI
 location	Winnebago County WI
 location	Lafayette County
@@ -1057,6 +1110,7 @@ location	Staten Island
 location	Bronx
 location	Hudson County
 location	Essex County
+location	Burlington County
 location	Camden County
 location	Westchester County
 location	Richmond County
@@ -1122,6 +1176,7 @@ location	Livingston Parish
 location	Iberville Parish
 location	Pittsburgh
 location	St. Louis MO
+location	Saint Louis County
 location	Colorado Springs
 location	Alameda County
 location	Humboldt County
@@ -1216,6 +1271,15 @@ location	Cape Town Metro
 location	eThekwini
 location	iLembe
 location	Zululand
+location	Overport
+location	Berea
+location	Morningside
+location	Umbilo
+location	Harry Gwala
+location	KwaDukuza
+location	uMzinyathi
+location	King Cetshwayo
+location	uMkhanyakude
 location	uMgungundlovu
 location	uThukela
 location	Ugu
@@ -1228,6 +1292,8 @@ location	Kfar Saba
 
 
 
+division	Asia
+division	Kyrgyzstan
 division	Mongolia
 division	China
 division	Hubei
@@ -1311,6 +1377,7 @@ division	Kargil
 division	Telangana
 division	Karnataka
 division	North Sulawesi
+division	Indonesia
 division	East Kalimantan
 division	Gujarat
 division	Lucknow
@@ -1457,6 +1524,7 @@ division	South Coast District
 division	South District
 division	Jordan
 division	Turkey
+division	Kars Province
 division	Styria
 division	Denizli
 division	Tokat
@@ -1836,8 +1904,10 @@ division	Thessaloniki
 division	Finland
 division	Uusimaa
 division	Denmark
+division	Faroe Islands
 division	Portugal
 division	Egypt
+division	Nile River Cruise
 division	Cairo
 division	Kalyoubia
 division	Oueme
@@ -1863,6 +1933,9 @@ division	Ouarzazate
 division	Lagos
 division	Ondo State
 division	Uganda
+division	Niger
+division	Togo
+division	Burkina Faso
 division	Kenya
 division	Democratic Republic of the Congo
 division	Haut-Katanga
@@ -1884,6 +1957,7 @@ division	West Coast Region
 division	Mbour
 division	Touba
 division	Dakar
+division	Pikine
 division	Kolda
 division	St-Louis
 division	Thies
@@ -1943,6 +2017,13 @@ division	Uruguay
 division	Rivera
 division	Maldonado
 division	Colombia
+division	Soledad
+division	Tunja
+division	Santander de Quilichao
+division	Pasto
+division	Cienaga de Oro
+division	Suesca
+division	Tolemaida
 division	Meta
 division	Caldas
 division	Cali
@@ -1987,6 +2068,16 @@ division	Lima
 division	Montevideo
 division	Panama City
 division	Panama
+division	Panama Center
+division	Panama Oeste
+division	Colon
+division	Santiago de Veraguas
+division	Cocle
+division	Chiriqui
+division	Guna Yala
+division	Bocas del Toro
+division	Herrera
+division	Los Santos
 division	Alajuela
 division	Heredia
 division	Cartago CO
@@ -2014,6 +2105,7 @@ division	Baja California Sur
 division	Baja California
 division	Puebla
 division	Queretaro
+division	South America
 division	USA
 division	Washington DC
 division	Maryland
@@ -2077,6 +2169,7 @@ division	Saskatchewan
 division	British Columbia
 
 
+country	Asia
 country	Mongolia
 country	China
 country	Hong Kong
@@ -2165,6 +2258,10 @@ country	Morocco
 country	Uganda
 country	Democratic Republic of the Congo
 country	South Africa
+country	Togo
+country	Niger
+country	Burkina Faso
+country	South America
 country	Chile
 country	Ecuador
 country	Peru

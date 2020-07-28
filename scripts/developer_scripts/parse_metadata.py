@@ -27,7 +27,7 @@ def read_local_file(file_name): #TODO: how will final file structure look like? 
     if path_file_name in first_files: #simple list
         return [line.strip() for line in file_content[1:]]
 
-    second_files = [path_to_script_files+fi for fi in ["variants.txt", "wrong_regions.txt", "abbreviations.txt", "false_divisions.txt", ] ]
+    second_files = [path_to_script_files+fi for fi in ["wrong_regions.txt", "abbreviations.txt", "false_divisions.txt", ] ]
 
     if path_file_name in second_files: #dictionary, keys seaprated from content with tabs
         content = {}
@@ -37,6 +37,25 @@ def read_local_file(file_name): #TODO: how will final file structure look like? 
                 print("Attention, duplicate found while reading " + file_name + ": " + l[0] + " -> " + l[1] + ", " + content[l[0]])
             content[l[0]] = l[1]
         return content
+
+    third_files = [path_to_script_files+fi for fi in ["variants.txt"] ]
+
+    if path_file_name in third_files: #need two level-dict
+        if path_file_name == path_to_script_files+"variants.txt":
+            content = {'location': {}, 'division': {}, 'country': {}, 'region': {}}
+        for line in file_content[1:]:
+            l = line.strip().split("\t")
+            if line.endswith("\t\n"):
+                l = [l[0], l[1], ""] #allow empty assignment of hierarchy (e.g. set location to blank)
+            if l[0] in content:
+                if l[1] in content[l[0]]:
+                    print("Attention, duplicate found while reading " + file_name + ": " + l[0] + " -> " + l[1] + ", " + content[l[0]] + ", " + content[l[1]])
+                content[l[0]][l[1]] = l[2]
+            else:
+                content[l[0]] = {}
+                content[l[0]][l[1]] = l[2]
+        return content
+
 
 # Read ordering and lat_longs file and return as dictionary:
 def read_geography_file(file_name):
@@ -353,8 +372,8 @@ def apply_variants(data): #TODO: currently, the file variants.txt doesn't distin
     countries_to_switch = {}
     for region in data:
         for country in data[region]:
-            if country in variants:
-                country_correct = variants[country]
+            if country in variants['country']:
+                country_correct = variants['country'][country]
                 print("Apply variant (country): " + bold(country) + " -> " + bold(country_correct))
                 countries_to_switch[country] = (region, country_correct)
 
@@ -364,8 +383,8 @@ def apply_variants(data): #TODO: currently, the file variants.txt doesn't distin
     for region in data:
         for country in data[region]:
             for division in data[region][country]:
-                if division in variants:
-                    division_correct = variants[division]
+                if division in variants['division']:
+                    division_correct = variants['division'][division]
                     print("Apply variant (division): " + bold(division) + " -> " + bold(division_correct))
                     divisions_to_switch[division] = (region, country, division_correct)
 
@@ -376,8 +395,8 @@ def apply_variants(data): #TODO: currently, the file variants.txt doesn't distin
         for country in data[region]:
             for division in data[region][country]:
                 for location in data[region][country][division]:
-                    if location in variants:
-                        location_correct = variants[location]
+                    if location in variants['location']:
+                        location_correct = variants['location'][location]
                         print("Apply variant (location): " + bold(location) + " -> " + bold(location_correct))
                         locations_to_switch[location] = (region, country, division, location_correct)
 
@@ -557,17 +576,19 @@ def check_for_missing(data):
                         else:
                             data_clean[region][country][division] = []
                     else: #only check for additional hints like "similar name" or "present as location" if not auto-added to color_ordering
-                        if name0 != "":
-                            s += " (similar name: " + name0 + " - consider adding to variants.txt)"
                         if division in ordering["division"] and division not in lat_longs["division"]:
                             s = s + " (only missing in lat_longs)"
-                        if division in ordering["location"] or division in lat_longs["location"]:
-                            s = s + " (present as location)"
+                        else:
+                            if name0 != "":
+                                s += " (similar name: " + name0 + " - consider adding to variants.txt)"
+                            if division in ordering["location"] or division in lat_longs["location"]:
+                                s = s + " (present as location)"
                     if country not in missing["division"]:
                         missing["division"][country] = []
                         clean_missing["division"][country] = []
                     missing["division"][country].append(s)
-                    clean_missing["division"][country].append(division)
+                    if "(only missing in ordering" not in s:
+                        clean_missing["division"][country].append(division)
 
                 else:
                     if country not in data_clean[region]:
@@ -611,7 +632,8 @@ def check_for_missing(data):
                                 clean_missing["location"][country][division] = []
                         if not any(x in location for x in cruise_abbrev) and not any(x in division for x in cruise_abbrev):
                             missing["location"][country][division].append(s)
-                            clean_missing["location"][country][division].append(location)
+                            if "(only missing in ordering" not in s:
+                                clean_missing["location"][country][division].append(location)
                         else:
                             print("Cruise-associated location ignored ("+location+")")
 
@@ -857,7 +879,7 @@ data = read_metadata(metadata)
 # Since travel history related entries are prone to errors, check for each entry whether it collides with already existing data.
 
 # TODO: Currently commented out due to numerous inconsistencies
-# data_exposure = read_exposure(data, metadata)
+#data = read_exposure(data, metadata)
 
 
 ################################################################################
