@@ -12,6 +12,9 @@ location	Pabna
 # Jhenaidha
 location	Shailokupa
 
+# Rangpur
+location	Nilphamari
+
 # Khulna
 location	Jashore
 
@@ -108,6 +111,9 @@ location	Hangzhou
 location	Keqiao
 location	Yuecheng
 location	Shangyu
+
+# Liaoning
+location	Dalian
 
 # Heilongjiang
 location	Harbin
@@ -306,6 +312,50 @@ location	Tweed Heads
 ### New Zealand
 # Auckland
 location	Auckland
+
+################
+
+# Africa
+
+### Egypt
+# Cairo
+location	Al Matariyyah
+
+### Ghana
+# Greater Accra
+location	Accra
+
+### Senegal
+# Dakar
+location	Guediawaye
+location	Yeumbeul
+location	Mbao
+location	Sangalkam
+
+# Kolda
+location	Velingara
+
+### South Africa
+# Western Cape Province
+location	Cape Town Metro
+
+# KwaZulu-Natal
+location	Harry Gwala
+location	Amajuba
+location	uMgungundlovu
+location	uThukela
+location	Ugu
+location	uMzinyathi
+location	Umbilo
+location	Overport
+location	Berea
+location	eThekwini
+location	Morningside
+location	iLembe
+location	Zululand
+location	KwaDukuza
+location	King Cetshwayo
+location	uMkhanyakude
 
 ################
 
@@ -961,6 +1011,7 @@ location	Las Palmas
 # Galicia
 location	Muros
 location	Ribeira
+location	Outes
 location	Noia
 location	Boiro
 location	Santa Comba
@@ -968,6 +1019,7 @@ location	Rianjo
 location	Negreira
 location	Padrón
 location	Ames
+location	Pontecesures
 location	Valga
 location	Teo
 location	La Estrada
@@ -1001,13 +1053,18 @@ location	Malaga
 location	Rincon de la Victoria
 location	Benajarafe
 location	Velez Malaga
+location	Castillo de Locubin
 location	Alcala la Real
+location	Illora
 location	Frailes
 location	Valderrubio
+location	Cijuela
 location	Pinos Puente
 location	Santa Fe
 location	Vegas del Genil
+location	Las Gabias
 location	Atarfe
+location	Cullar Vega
 location	Albolote
 location	Churriana de la Vega
 location	Otura
@@ -1017,6 +1074,10 @@ location	Pulianas
 location	Granada
 location	Guevejar
 location	Jun
+location	La Zubia
+location	Cogollos de la Vega
+location	Durcal
+location	Alfacar
 location	Iznalloz
 location	Huetor Santillan
 location	Ubeda
@@ -1027,6 +1088,7 @@ location	Zujar
 location	Castril
 location	Cortijos Nuevos
 location	Almeria
+location	Puebla de Don Fadrique
 
 # Madrid
 location	Parla
@@ -1047,21 +1109,40 @@ location	Villarrobledo
 location	San Clemente
 location	Riopar
 location	Lezuza
+location	Bogarra
 location	Balazote
 location	Cuenca
 location	Villanueva de la Jara
 location	Tazona
 location	Albacete
 location	Madrigueras
+location	Motilleja
 location	Mingogil
 location	Hellin
 location	Tobarra
 location	Almansa
 
 # La Rioja
+location	Ezcaray
+location	Ojacastro
+location	Santo Domingo de la Calzada
+location	Casalarreina
+location	Haro
+location	San Vicente de la Sonsierra
+location	Najera
+location	Nalda
+location	Albelda de Iregua
+location	Lardero
 location	Logrono
+location	Alberite
+location	Villamediana de Iregua
+location	Agoncillo
+location	Herce
+location	El Villar de Arnedo
 location	Pradejon
+location	Autol
 location	Calahorra
+location	Alfaro
 
 # Basque Country
 location	Portugalete
@@ -1161,50 +1242,6 @@ location	Warwickshire
 
 ################
 
-# Africa
-
-### Egypt
-# Cairo
-location	Al Matariyyah
-
-### Ghana
-# Greater Accra
-location	Accra
-
-### Senegal
-# Dakar
-location	Guediawaye
-location	Yeumbeul
-location	Mbao
-location	Sangalkam
-
-# Kolda
-location	Velingara
-
-### South Africa
-# Western Cape Province
-location	Cape Town Metro
-
-# KwaZulu-Natal
-location	Harry Gwala
-location	Amajuba
-location	uMgungundlovu
-location	uThukela
-location	Ugu
-location	uMzinyathi
-location	Umbilo
-location	Overport
-location	Berea
-location	eThekwini
-location	Morningside
-location	iLembe
-location	Zululand
-location	KwaDukuza
-location	King Cetshwayo
-location	uMkhanyakude
-
-################
-
 # South America
 
 ### Argentina
@@ -1259,6 +1296,16 @@ location	Feira de Santana
 # Espirito Santo
 location	Vila Velha
 
+# Pernambuco
+location	Alianca
+location	Ipojuca
+location	Sao Lourenco Da Mata
+location	Camaragibe
+location	Jaboatao Dos Guararapes
+location	Recife
+location	Paulista
+location	Olinda
+
 # Alagoas
 location	Maceio
 
@@ -1301,7 +1348,7 @@ location	Andalucia
 location	Pereira
 location	Dosquebradas
 
-# Cordoba
+# Cordoba CO
 location	Tierralta
 location	Monteria
 
@@ -1499,11 +1546,7 @@ location	Anchorage
 location	Fairbanks
 location	Southeast Alaska
 
-# Grand Princess 2nd cruise
-location	Grand Princess Cruise Ship
-
 # Grand Princess
-location	Grand Princess Cruise Ship
 location	Sonoma County
 
 # Oregon
@@ -1543,6 +1586,7 @@ location	Benton County
 
 # California
 location	Humboldt County
+location	Grand Princess Cruise Ship
 location	Marin County
 location	San Francisco
 location	San Francisco County
@@ -1816,6 +1860,9 @@ location	Boston
 
 # Asia
 
+### Asia
+division	Asia
+
 ### Bahrain
 division	Bahrain
 division	Capital Governorate
@@ -1830,6 +1877,7 @@ division	Bagherhat
 division	Tangail
 division	Bangladesh
 division	Barishal
+division	Mymensingh
 division	Dhaka
 division	Narayanganj
 division	Chattogram
@@ -1858,6 +1906,7 @@ division	Shandong
 division	Jiangsu
 division	Zhejiang
 division	Shanghai
+division	Liaoning
 division	Heilongjiang
 
 ### Georgia
@@ -1894,6 +1943,7 @@ division	Assam
 division	Jakarta
 division	Surabaya
 division	Pasuruan
+division	Indonesia
 division	East Kalimantan
 division	North Sulawesi
 
@@ -1972,6 +2022,9 @@ division	Nur-Sultan
 ### Kuwait
 division	Kuwait
 
+### Kyrgyzstan
+division	Kyrgyzstan
+
 ### Lebanon
 division	Beirut
 
@@ -1988,6 +2041,7 @@ division	Mongolia
 division	Myanmar
 
 ### Nepal
+division	Nepal
 division	Kathmandu
 
 ### Oman
@@ -2100,12 +2154,103 @@ division	Bay of Plenty
 
 ################
 
+# Africa
+
+### Algeria
+division	Blida
+division	Boufarik
+
+### Benin
+division	Cotonou
+division	Oueme
+
+### Burkina Faso
+division	Burkina Faso
+
+### Democratic Republic of the Congo
+division	Kongo Central
+division	Kinshasa
+division	Democratic Republic of the Congo
+division	Haut-Katanga
+division	Sud Kivu
+
+### Egypt
+division	Egypt
+division	Cairo
+division	Kalyoubia
+division	Nile River Cruise
+
+### Gambia
+division	Kombo
+division	West Coast Region
+
+### Ghana
+division	Greater Accra
+
+### Kenya
+division	Kenya
+
+### Mali
+division	Bamako
+division	Mopti
+
+### Morocco
+division	Casablanca
+division	Rabat
+division	Morocco
+division	Ouarzazate
+
+### Niger
+division	Niger
+
+### Nigeria
+division	Lagos
+division	Ogun State
+division	Oyo State
+division	Kwara State
+division	Osun State
+division	Ondo State
+division	Ekiti State
+division	Nigeria
+
+### Senegal
+division	Dakar
+division	Pikine
+division	Mbour
+division	Thies
+division	St-Louis
+division	Touba
+division	Kolda
+
+### South Africa
+division	Western Cape Province
+division	South Africa
+division	North-West
+division	Eastern Cape
+division	Free State
+division	Gauteng
+division	Limpopo
+division	Mpumalanga
+division	KwaZulu-Natal
+
+### Togo
+division	Togo
+
+### Tunisia
+division	Tunisia
+division	Bizerte
+division	Ben Arous
+
+### Uganda
+division	Uganda
+
+################
+
 # Europe
 
 ### Austria
 division	Vorarlberg
 division	Tyrol
-division	Italian cruise ship
 division	Salzburg
 division	Upper Austria
 division	Styria
@@ -2192,6 +2337,7 @@ division	Smolyan
 ### Croatia
 division	Pula
 division	Istria
+division	Croatia
 division	Varaždin County
 division	Varazdin
 division	Split
@@ -2217,11 +2363,15 @@ division	Zlin
 division	Hranice Na Moravě
 
 ### Denmark
+division	Faroe Islands
 division	Denmark
 division	Copenhagen
 
 ### Estonia
 division	Estonia
+
+### Europe
+division	Europe
 
 ### Finland
 division	Helsinki
@@ -2280,10 +2430,15 @@ division	Szabolcs-Szatmár-Bereg County
 division	Reykjavik
 
 ### Ireland
+division	Kerry
 division	Limerick
+division	Sligo
 division	Cork
 division	Tipperary
+division	Leitrim
 division	Ireland
+division	Kilkenny
+division	Waterford
 division	Louth
 division	Dublin
 division	Wicklow
@@ -2292,8 +2447,11 @@ division	Wicklow
 division	Valle D'Aosta
 division	Sardinia
 division	Lombardy
+division	Trentino
 division	Emilia-Romagna
 division	Pa Trento
+division	South Tyrol
+division	Italian cruise ship
 division	Italy
 division	Veneto
 division	Lazio
@@ -2349,6 +2507,7 @@ division	Wielkopolskie
 division	Opolskie
 division	Pomorskie
 division	Slask
+division	Poland
 division	Łódzkie
 division	Malopolskie
 division	Warminsko-Mazurskie
@@ -2419,10 +2578,12 @@ division	Slovenia
 
 ### Spain
 division	Canary Islands
+division	Grand Canary Islands
 division	Galicia
 division	Asturias
 division	Andalusia
 division	Castilla y Leon
+division	Spain
 division	Madrid
 division	Castilla la Mancha
 division	Melilla
@@ -2471,6 +2632,7 @@ division	Bern
 division	Basel-Stadt
 division	Basel-Land
 division	Aargau
+division	Switzerland
 division	Lucerne
 division	Zug
 division	Uri
@@ -2512,89 +2674,8 @@ division	Kars Province
 division	Northern Ireland
 division	Scotland
 division	Wales
+division	United Kingdom
 division	England
-
-################
-
-# Africa
-
-### Algeria
-division	Blida
-division	Boufarik
-
-### Benin
-division	Cotonou
-division	Oueme
-
-### Democratic Republic of the Congo
-division	Kongo Central
-division	Kinshasa
-division	Democratic Republic of the Congo
-division	Haut-Katanga
-division	Sud Kivu
-
-### Egypt
-division	Egypt
-division	Cairo
-division	Kalyoubia
-
-### Gambia
-division	Kombo
-division	West Coast Region
-
-### Ghana
-division	Greater Accra
-
-### Kenya
-division	Kenya
-
-### Mali
-division	Bamako
-division	Mopti
-
-### Morocco
-division	Casablanca
-division	Rabat
-division	Morocco
-division	Ouarzazate
-
-### Nigeria
-division	Lagos
-division	Ogun State
-division	Oyo State
-division	Kwara State
-division	Osun State
-division	Ondo State
-division	Ekiti State
-division	Nigeria
-
-### Senegal
-division	Dakar
-division	Pikine
-division	Mbour
-division	Thies
-division	St-Louis
-division	Touba
-division	Kolda
-
-### South Africa
-division	Western Cape Province
-division	South Africa
-division	North-West
-division	Eastern Cape
-division	Free State
-division	Gauteng
-division	Limpopo
-division	Mpumalanga
-division	KwaZulu-Natal
-
-### Tunisia
-division	Tunisia
-division	Bizerte
-division	Ben Arous
-
-### Uganda
-division	Uganda
 
 ################
 
@@ -2602,6 +2683,7 @@ division	Uganda
 
 ### Argentina
 division	Tucuman
+division	Cordoba AR
 division	Argentina
 division	Rio Negro
 division	Buenos Aires
@@ -2657,7 +2739,7 @@ division	Santander de Quilichao
 division	Valle del Cauca
 division	Cartago CO
 division	Risaralda
-division	Cordoba
+division	Cordoba CO
 division	Quindio
 division	Cienaga de Oro
 division	Huila
@@ -2702,6 +2784,9 @@ division	Huanuco
 division	Ica
 division	Arequipa
 
+### South America
+division	South America
+
 ### Uruguay
 division	Montevideo
 division	Rivera
@@ -2742,6 +2827,7 @@ division	Chihuahua
 division	Nayarit
 division	Durango
 division	Jalisco
+division	Guadalajara
 division	Guanajuato
 division	Queretaro
 division	Guerrero
@@ -2784,6 +2870,7 @@ division	Montana
 division	Wyoming
 division	New Mexico
 division	Colorado
+division	South Dakota
 division	Nebraska
 division	Texas
 division	USA
@@ -2794,6 +2881,7 @@ division	Iowa
 division	Louisiana
 division	Arkansas
 division	Missouri
+division	Mississippi
 division	Wisconsin
 division	Illinois
 division	Alabama
@@ -2828,6 +2916,7 @@ division	Diamond Princess
 
 
 # Asia
+country	Asia
 country	Bahrain
 country	Bangladesh
 country	Brunei
@@ -2843,6 +2932,7 @@ country	Japan
 country	Jordan
 country	Kazakhstan
 country	Kuwait
+country	Kyrgyzstan
 country	Lebanon
 country	Malaysia
 country	Mongolia
@@ -2867,6 +2957,25 @@ country	Australia
 country	Guam
 country	New Zealand
 
+# Africa
+country	Algeria
+country	Benin
+country	Burkina Faso
+country	Democratic Republic of the Congo
+country	Egypt
+country	Gambia
+country	Ghana
+country	Kenya
+country	Mali
+country	Morocco
+country	Niger
+country	Nigeria
+country	Senegal
+country	South Africa
+country	Togo
+country	Tunisia
+country	Uganda
+
 # Europe
 country	Austria
 country	Belarus
@@ -2878,6 +2987,7 @@ country	Cyprus
 country	Czech Republic
 country	Denmark
 country	Estonia
+country	Europe
 country	Finland
 country	France
 country	Germany
@@ -2905,22 +3015,6 @@ country	Switzerland
 country	Turkey
 country	United Kingdom
 
-# Africa
-country	Algeria
-country	Benin
-country	Democratic Republic of the Congo
-country	Egypt
-country	Gambia
-country	Ghana
-country	Kenya
-country	Mali
-country	Morocco
-country	Nigeria
-country	Senegal
-country	South Africa
-country	Tunisia
-country	Uganda
-
 # South America
 country	Argentina
 country	Brazil
@@ -2928,6 +3022,7 @@ country	Chile
 country	Colombia
 country	Ecuador
 country	Peru
+country	South America
 country	Uruguay
 country	Venezuela
 
@@ -2950,8 +3045,8 @@ recency	1-2 days ago
 recency	New
 region	Asia
 region	Oceania
-region	Europe
 region	Africa
+region	Europe
 region	South America
 region	North America
 
