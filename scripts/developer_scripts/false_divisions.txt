@@ -17,3 +17,28 @@ Manama	Capital Governorate
 Mbao	Dakar
 Domažlice	Plzeň Region
 Brno	South Moravian Region
+Munich	Bavaria
+Jashore	Khulna
+Lucknow	Uttar Pradesh
+Litovel	Olomouc Region
+Guayaquil	Guayas
+Breclav	South Moravian Region
+Benevento	Campania
+Togui	Boyaca
+Zipaquira	Cundinamarca
+Pereira	Risaralda
+Santa Marta	Magdalena
+Valledupar	Cesar
+Villavicencio	Meta
+Cartagena	Bolivar
+Barranquilla	Atlantico
+Armenia	Quindio
+Guediawaye	Dakar
+Livadeia	Central Greece
+Pikine	Dakar
+Mumbai	Maharashtra
+Marseille	Provence-Alpes-Côte d'Azur
+Prague-Miskovice	Prague
+Narayanganj	Dhaka
+Prilep	Pelagonia
+Quito	Pichincha

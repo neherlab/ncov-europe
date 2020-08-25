@@ -113,7 +113,7 @@ rule diagnose_excluded:
     conda: config["conda_environment"]
     shell:
         """
-        {python:q} scripts/diagnostic.py \
+        python3 scripts/diagnostic.py \
             --alignment {input.alignment} \
             --metadata {input.metadata} \
             --reference {input.reference} \
@@ -137,7 +137,7 @@ checkpoint partition_sequences:
     conda: config["conda_environment"]
     shell:
         """
-        {python:q} scripts/partition-sequences.py \
+        python3 scripts/partition-sequences.py \
             --sequences {input.sequences} \
             --sequences-per-group {params.sequences_per_group} \
             --output-dir {output.split_sequences} 2>&1 | tee {log}
@@ -208,7 +208,7 @@ rule diagnostic:
     conda: config["conda_environment"]
     shell:
         """
-        {python:q} scripts/diagnostic.py \
+        python3 scripts/diagnostic.py \
             --alignment {input.alignment} \
             --metadata {input.metadata} \
             --reference {input.reference} \
@@ -264,7 +264,7 @@ rule mask:
     conda: config["conda_environment"]
     shell:
         """
-        {python:q} scripts/mask-alignment.py \
+        python3 scripts/mask-alignment.py \
             --alignment {input.alignment} \
             --mask-from-beginning {params.mask_from_beginning} \
             --mask-from-end {params.mask_from_end} \
@@ -345,6 +345,7 @@ rule subsample:
         sequences_per_group = _get_specific_subsampling_setting("seq_per_group"),
         exclude_argument = _get_specific_subsampling_setting("exclude", optional=True),
         include_argument = _get_specific_subsampling_setting("include", optional=True),
+        query_argument = _get_specific_subsampling_setting("query", optional=True),
         priority_argument = get_priority_argument
     conda: config["conda_environment"]
     shell:
@@ -355,6 +356,7 @@ rule subsample:
             --include {input.include} \
             {params.exclude_argument} \
             {params.include_argument} \
+            {params.query_argument} \
             {params.priority_argument} \
             --group-by {params.group_by} \
             --sequences-per-group {params.sequences_per_group} \
@@ -381,7 +383,7 @@ rule proximity_score:
     conda: config["conda_environment"]
     shell:
         """
-        {python:q} scripts/priorities.py --alignment {input.alignment} \
+        python3 scripts/priorities.py --alignment {input.alignment} \
             --metadata {input.metadata} \
             --reference {input.reference} \
             --focal-alignment {input.focal_alignment} \
@@ -410,7 +412,7 @@ rule combine_samples:
     conda: config["conda_environment"]
     shell:
         """
-        {python:q} scripts/combine-and-dedup-fastas.py \
+        python3 scripts/combine-and-dedup-fastas.py \
             --input {input} \
             --output {output} 2>&1 | tee {log}
         """
@@ -432,7 +434,7 @@ rule adjust_metadata_regions:
     conda: config["conda_environment"]
     shell:
         """
-        {python:q} scripts/adjust_regional_meta.py \
+        python3 scripts/adjust_regional_meta.py \
             --region {params.region:q} \
             --metadata {input.metadata} \
             --output {output.metadata} 2>&1 | tee {log}
@@ -498,7 +500,8 @@ rule refine:
         coalescent = config["refine"]["coalescent"],
         date_inference = config["refine"]["date_inference"],
         divergence_unit = config["refine"]["divergence_unit"],
-        clock_filter_iqd = config["refine"]["clock_filter_iqd"]
+        clock_filter_iqd = config["refine"]["clock_filter_iqd"],
+        timetree = "" if config["refine"].get("no_timetree", False) else "--timetree"
     conda: config["conda_environment"]
     shell:
         """
@@ -509,7 +512,7 @@ rule refine:
             --output-tree {output.tree} \
             --output-node-data {output.node_data} \
             --root {params.root} \
-            --timetree \
+            {params.timetree} \
             --clock-rate {params.clock_rate} \
             --clock-std-dev {params.clock_std_dev} \
             --coalescent {params.coalescent} \
@@ -559,7 +562,7 @@ rule haplotype_status:
     conda: config["conda_environment"]
     shell:
         """
-        {python:q} scripts/annotate-haplotype-status.py \
+        python3 scripts/annotate-haplotype-status.py \
             --ancestral-sequences {input.nt_muts} \
             --reference-node-name {params.reference_node_name:q} \
             --output {output.node_data} 2>&1 | tee {log}
@@ -645,7 +648,7 @@ rule pangolin:
     conda: config["conda_environment"]
     shell:
         """
-        {python:q} scripts/add_pangolin_lineages.py \
+        python3 scripts/add_pangolin_lineages.py \
             --tree {input.tree} \
             --metadata {input.metadata} \
             --output {output.clade_data}
@@ -742,7 +745,7 @@ rule colors:
     conda: config["conda_environment"]
     shell:
         """
-        {python:q} scripts/assign-colors.py \
+        python3 scripts/assign-colors.py \
             --ordering {input.ordering} \
             --color-schemes {input.color_schemes} \
             --output {output.colors} \
@@ -760,7 +763,7 @@ rule recency:
     conda: config["conda_environment"]
     shell:
         """
-        {python:q} scripts/construct-recency-from-submission-date.py \
+        python3 scripts/construct-recency-from-submission-date.py \
             --metadata {input.metadata} \
             --output {output} 2>&1 | tee {log}
         """
@@ -911,7 +914,7 @@ rule incorporate_travel_history:
     conda: config["conda_environment"]
     shell:
         """
-        {python:q} ./scripts/modify-tree-according-to-exposure.py \
+        python3 ./scripts/modify-tree-according-to-exposure.py \
             --input {input.auspice_json} \
             --colors {input.colors} \
             --lat-longs {input.lat_longs} \
@@ -933,7 +936,7 @@ rule finalize:
     conda: config["conda_environment"]
     shell:
         """
-        {python:q} scripts/fix-colorings.py \
+        python3 scripts/fix-colorings.py \
             --input {input.auspice_json} \
             --output {output.auspice_json} 2>&1 | tee {log} &&
         cp {input.frequencies} {output.tip_frequency_json}
