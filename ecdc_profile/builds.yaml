@@ -213,12 +213,12 @@ subsampling:
     # Focal samples for country
     country:
       group_by: "division year month"
-      seq_per_group: 60
+      max_sequences: 1000
       exclude: "--exclude-where 'country!={country}'"
     # Contextual samples from country's region
     region:
       group_by: "country year month"
-      seq_per_group: 20
+      max_sequences: 1500
       exclude: "--exclude-where 'country={country}' 'region!={region}'"
       priorities:
         type: "proximity"
@@ -227,7 +227,7 @@ subsampling:
     # excluding the current region to avoid resampling.
     global:
       group_by: "country year month"
-      seq_per_group: 10
+      max_sequences: 1000
       exclude: "--exclude-where 'region={region}'"
       priorities:
         type: "proximity"
