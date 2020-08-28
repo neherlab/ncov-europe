@@ -172,6 +172,11 @@ location	Kathmandu
 
 ### Bangladesh
 # Chattogram
+location	Noakhali
+location	Kabirhat
+location	Companigonj
+location	Begumganj
+location	Laxmipur Sadar
 location	Chandpur
 location	Brahmanbaria
 
@@ -195,6 +200,7 @@ location	Uttara
 location	Tejgaon
 location	Gulshan
 location	Jatrabari
+location	Narayanganj
 location	Kodomtoly
 
 # Rajshahi
@@ -1231,6 +1237,9 @@ location	Heinsberg District
 location	Duesseldorf
 location	Münster
 
+# Berlin
+location	Berlin
+
 ### Italy
 # Lombardy
 location	Milan
@@ -1292,6 +1301,9 @@ location	Plzeň
 # Usti nad Labem
 location	Všebořice
 
+# Prague
+location	Prague-Miskovice
+
 # Vysocina Region
 location	Bela - Ledec Na Sazavou
 location	Kynice
@@ -1304,6 +1316,7 @@ location	Brno
 location	Litovel
 
 # Zlin
+location	Uhersky Brod
 location	Fryšták
 
 # Hranice Na Moravě
@@ -1335,6 +1348,16 @@ location	Radom
 ### Hungary
 # Central Hungary
 location	Budapest
+
+### North Macedonia
+# Pelagonia
+location	Prilep
+
+# Northeastern Region
+location	Kumanovo
+
+# Eastern Region
+location	Shtip
 
 ### Greece
 # Central Greece
@@ -1388,6 +1411,10 @@ location	Copiapo
 # Amazonas
 location	Manaus
 
+# Rondonia
+location	Jaru
+location	Porto Velho
+
 # Paraná
 location	Curitiba
 
@@ -1401,15 +1428,20 @@ location	Brasilia
 # São Paulo
 location	Presidente Venceslau
 location	Rio Claro
+location	Americana
 location	Hortolandia
+location	Peruibe
 location	Barueri
 location	Itapecerica Da Serra
+location	Itatiba
 location	Osasco
 location	Caieiras
 location	São Paulo
 location	Diadema
 location	Sao Bernardo do Campo
 location	Maua
+location	Sao Vicente
+location	Guarujá
 location	Mogi Das Cruzes
 
 # Rio de Janeiro
@@ -1464,12 +1496,17 @@ location	San Jacinto de Yaguachi
 
 # Los Rios
 location	Babahoyo
+location	Quevedo
 location	Ventanas
+
+# Zamora-Chinchipe
+location	Yantzaza
 
 # Chimborazo
 location	Riobamba
 
 # Pichincha
+location	Quito
 location	Cayambe
 
 # Imbabura
@@ -1478,6 +1515,9 @@ location	Ibarra
 
 # Carchi
 location	Awa Reserve
+
+# Orellana
+location	Coca
 
 ### Colombia
 # Departamento de Amazonas
@@ -1673,9 +1713,6 @@ location	Anchorage
 location	Fairbanks
 location	Southeast Alaska
 
-# Grand Princess
-location	Sonoma County
-
 # Oregon
 location	Columbia County OR
 location	Washington County OR
@@ -1717,6 +1754,8 @@ location	Asotin County
 # California
 location	Humboldt County
 location	Grand Princess Cruise Ship
+location	Sonoma County
+location	Lake County CA
 location	Marin County
 location	San Francisco
 location	San Francisco County
@@ -1725,12 +1764,20 @@ location	Solano County
 location	Contra Costa County
 location	Davis
 location	Alameda County
+location	Sutter County
 location	Santa Clara County
 location	Sacramento County
 location	San Joaquin County
 location	Monterey County CA
+location	Merced County
 location	San Luis Obispo County
+location	Tuolumne County
+location	Santa Barbara County
+location	Fresno County
+location	Kings County
+location	Madera County
 location	Ventura County
+location	Kern County
 location	Los Angeles County
 location	Orange County CA
 location	San Diego
@@ -1795,6 +1842,7 @@ location	St. Louis MO
 # Wisconsin
 location	Crawford County
 location	Trempealeau County
+location	Eau Claire County
 location	Chippewa County WI
 location	La Crosse County
 location	Vernon County
@@ -1803,6 +1851,7 @@ location	Grant County WI
 location	Monroe County
 location	Richland County WI
 location	Lafayette County
+location	Iowa County WI
 location	Juneau County
 location	Sauk County
 location	Adams County WI
@@ -1837,12 +1886,13 @@ location	Racine County
 location	Door County
 
 # Illinois
+location	Jo Daviess County
 location	Ogle County
 location	Winnebago County IL
 location	Mchenry County
 location	Kane County
 location	Dupage County
-location	Lake County
+location	Lake County IL
 location	Cook County
 location	Chicago
 
@@ -1868,7 +1918,11 @@ location	Fairfield County SC
 
 # Pennsylvania
 location	Pittsburgh
+location	Allegheny County
 location	Montgomery County PA
+
+# Washington DC
+location	District of Columbia County
 
 # New Jersey
 location	Camden County
@@ -1949,6 +2003,9 @@ location	Shelton
 location	Middlesex County
 location	Norfolk County
 location	Boston
+
+# Puerto Rico
+location	Ponce
 
 ### Canada
 # Ontario
@@ -2048,6 +2105,7 @@ division	Nur-Sultan
 
 ### Pakistan
 division	Karachi
+division	Pakistan
 division	Rawalpindi
 division	Khyber Pakhtunkhwa
 division	Islamabad
@@ -2097,7 +2155,6 @@ division	Barishal
 division	Khulna
 division	Narail
 division	Jhenaidha
-division	Narayanganj
 division	Dhaka
 division	Tangail
 division	Rajshahi
@@ -2107,6 +2164,7 @@ division	Sylhet
 division	Rangpur
 
 ### Myanmar
+division	Yangon
 division	Myanmar
 
 ### Thailand
@@ -2291,8 +2349,15 @@ division	Kenya
 ### Uganda
 division	Uganda
 
+### Cameroon
+division	Yaounde
+
 ### Ghana
 division	Greater Accra
+division	Ghana
+
+### Sierra Leone
+division	Sierra Leone
 
 ### Togo
 division	Togo
@@ -2694,7 +2759,11 @@ division	Cacak
 division	Novi Sad
 
 ### North Macedonia
+division	Skopje
+division	Pelagonia
 division	North Macedonia
+division	Northeastern Region
+division	Eastern Region
 
 ### Greece
 division	Athens
@@ -2844,6 +2913,7 @@ division	South America
 ### Brazil
 division	Acre
 division	Amazonas
+division	Rondonia
 division	Mato Grosso
 division	Rio Grande do Sul
 division	Brazil
@@ -2862,16 +2932,20 @@ division	Bahia
 division	Espirito Santo
 division	Ceará
 division	Sergipe
-division	Rio Grande do Norte
 division	Pernambuco
+division	Rio Grande do Norte
 division	Alagoas
 
 ### Peru
 division	Arequipa
 division	Ica
+division	Cuzco
 division	Lima
+division	Junin
 division	Huanuco
+division	Ancash
 division	Lambayeque
+division	Loreto
 
 ### Ecuador
 division	Galapagos
@@ -2880,9 +2954,9 @@ division	Manabi
 division	Guayas
 division	Daule
 division	Los Rios
+division	Zamora-Chinchipe
 division	Chimborazo
 division	Pichincha
-division	Quito
 division	Imbabura
 division	Carchi
 division	Orellana
@@ -2974,6 +3048,7 @@ division	Nayarit
 division	Durango
 division	Jalisco
 division	Guadalajara
+division	Coahuila
 division	Guanajuato
 division	Queretaro
 division	Guerrero
@@ -2981,11 +3056,15 @@ division	Estado de Mexico
 division	Mexico City
 division	Mexico
 division	Morelos
+division	Tamaulipas
 division	Puebla
 division	Chiapas
 division	Tabasco
 division	Yucatan
 division	Quintana Roo
+
+### Cuba
+division	Cuba
 
 ### USA
 division	Hawaii
@@ -3038,6 +3117,7 @@ division	Vermont
 division	Massachusetts
 division	New Hampshire
 division	Rhode Island
+division	Maine
 division	Puerto Rico
 division	Virgin Islands
 division	Diamond Princess
@@ -3107,7 +3187,9 @@ country	Zambia
 country	Democratic Republic of the Congo
 country	Kenya
 country	Uganda
+country	Cameroon
 country	Ghana
+country	Sierra Leone
 country	Togo
 country	Benin
 country	Nigeria
@@ -3180,6 +3262,7 @@ country	Guatemala
 country	Belize
 country	Jamaica
 country	Mexico
+country	Cuba
 country	USA
 country	Canada
 

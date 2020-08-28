@@ -38,3 +38,7 @@ Livadeia	Central Greece
 Pikine	Dakar
 Mumbai	Maharashtra
 Marseille	Provence-Alpes-Côte d'Azur
+Prague-Miskovice	Prague
+Narayanganj	Dhaka
+Prilep	Pelagonia
+Quito	Pichincha
