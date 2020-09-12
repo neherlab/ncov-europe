@@ -44,3 +44,6 @@ Prilep	Pelagonia
 Quito	Pichincha
 Kargil	Ladakh
 Rabnita	Rezina
+Chia	Cundinamarca
+Medellin	Antioquia
+Tolemaida	Tolima

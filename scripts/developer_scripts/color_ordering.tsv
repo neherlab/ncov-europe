@@ -58,6 +58,9 @@ location	Bengaluru Urban
 location	Chikkaballapura
 location	Kolar
 
+# Andhra Pradesh
+location	Kurnool
+
 # Telangana
 location	Jogulamba Gadwal
 location	Gadwal
@@ -72,8 +75,11 @@ location	Hyderabad
 location	Khammam
 location	Mahboobnagar
 location	Sangareddy
+location	Warangal
 location	Kamareddy
+location	Karimnagar
 location	Nizamabad
+location	Jagtial
 location	Mancherial
 location	Nirmal
 location	Adilabad
@@ -112,8 +118,10 @@ location	Jetpur
 location	Bhavnagar
 location	Gondal
 location	Botad
+location	Khambhaliya
 location	Rajkot
 location	Vadodara
+location	Dhandhuka
 location	Jamnagar
 location	Chuda
 location	Savli
@@ -139,6 +147,9 @@ location	Prantij
 location	Modasa
 location	Himatnagar
 location	Mehsana
+location	Patan
+location	Radhanpur
+location	Siddhpur
 location	Khedbrahma
 location	Palanpur
 location	Dhanera
@@ -211,25 +222,17 @@ location	Kathmandu
 
 ### Bangladesh
 # Chattogram
+location	Chittagong
 location	Noakhali
-location	Kabirhat
-location	Companigonj
-location	Begumganj
-location	Laxmipur Sadar
+location	Lakshmipur
 location	Chandpur
 location	Brahmanbaria
 
-# Bagherhat
-location	Sador
-
 # Khulna
+location	Bagerhat
 location	Jashore
-
-# Narail
-location	Kalia
-
-# Jhenaidha
-location	Shailokupa
+location	Narail
+location	Jhenaidah
 
 # Dhaka
 location	Mohammadpur
@@ -238,6 +241,7 @@ location	Agargaon
 location	Uttara
 location	Tejgaon
 location	Gulshan
+location	Dhaka
 location	Jatrabari
 location	Narayanganj
 location	Kodomtoly
@@ -346,6 +350,11 @@ location	Tangerang
 
 # West Java
 location	Bandung
+
+# East Java
+location	Pasuruan
+location	Sidoarjo
+location	Surabaya
 
 # East Kalimantan
 location	Samarinda
@@ -1283,15 +1292,24 @@ location	Heinsberg District
 location	Duesseldorf
 location	Münster
 
+# Western Pomerania
+location	Rostock
+
 ### Italy
 # Lombardy
 location	Milan
+
+# Tuscany
+location	Siena
 
 # Veneto
 location	Verona IT
 
 # Lazio
 location	Rome
+
+# Marche
+location	Ancona
 
 # Abruzzo
 location	L'Aquila
@@ -1301,7 +1319,11 @@ location	Teramo
 location	Naples
 location	Benevento
 
+# Basilicata
+location	Potenza
+
 # Apulia
+location	Bari
 location	Taranto
 location	Brindisi
 location	Lecce
@@ -1475,9 +1497,10 @@ location	Brasilia
 # São Paulo
 location	Presidente Venceslau
 location	Assis
-location	Rio Claro
 location	Americana
 location	Hortolandia
+location	Itariri
+location	Campinas
 location	Peruibe
 location	Barueri
 location	Itapecerica Da Serra
@@ -1487,9 +1510,11 @@ location	Caieiras
 location	São Paulo
 location	Diadema
 location	Sao Bernardo do Campo
+location	Guarulhos
 location	Maua
 location	Sao Vicente
 location	Guarujá
+location	Santa Isabel
 location	Mogi Das Cruzes
 
 # Rio de Janeiro
@@ -1524,6 +1549,17 @@ location	Olinda
 # Alagoas
 location	Maceio
 
+### Peru
+# Lima
+location	Cañete
+location	Lima
+
+# Ancash
+location	Huaraz
+
+# Lambayeque
+location	Chiclayo
+
 ### Ecuador
 # Galapagos
 location	Puerto Baquerizo Moreno
@@ -1547,8 +1583,16 @@ location	Babahoyo
 location	Quevedo
 location	Ventanas
 
+# Esmeraldas
+location	Esmeraldas
+
+# Bolivar EC
+location	Guaranda
+
 # Zamora-Chinchipe
+location	Zamora
 location	Yantzaza
+location	El-Pangui
 
 # Chimborazo
 location	Riobamba
@@ -1558,14 +1602,16 @@ location	Quito
 location	Cayambe
 
 # Imbabura
-location	Urcuqui
+location	Otavalo
 location	Ibarra
+location	Urcuqui
 
 # Carchi
 location	Awa Reserve
 
 # Orellana
 location	Coca
+location	Orellana
 
 ### Colombia
 # Departamento de Amazonas
@@ -1597,6 +1643,7 @@ location	Trujillo
 
 # Tolima
 location	Ibague
+location	Tolemaida
 
 # Quindio
 location	Armenia
@@ -1610,6 +1657,7 @@ location	Madrid CO
 location	Soacha
 location	Funza
 location	Pacho
+location	Chia
 location	Cajica
 location	Zipaquira
 location	Choconta
@@ -1718,6 +1766,7 @@ location	La Cruz
 # Puntarenas
 location	Garabito
 location	Corredores
+location	Coto Brus
 
 # Alajuela
 location	Orotina
@@ -1727,7 +1776,9 @@ location	Grecia
 location	San Carlos
 
 # Heredia
+location	Heredia
 location	San Rafael Heredia
+location	Barva
 
 # San Jose
 location	Perez Zeledon
@@ -1741,10 +1792,14 @@ location	Santa Ana CR
 location	San Jose
 location	Montes de Oca
 location	Tibas
+location	Goicoechea
 location	Moravia
 
 # Cartago CR
 location	La Union
+
+# Limon
+location	Siquirres
 
 ### Mexico
 # Baja California
@@ -1762,13 +1817,18 @@ location	Fairbanks
 location	Southeast Alaska
 
 # Oregon
+location	Yamhill County
+location	Douglas County OR
 location	Columbia County OR
 location	Washington County OR
 location	Lane County OR
 location	Marion County
+location	Jackson County OR
 location	Multnomah County
 location	Clackamas County
+location	Hood River County
 location	Wasco County
+location	Sherman County
 location	Umatilla County
 
 # Washington
@@ -1790,7 +1850,7 @@ location	Kittitas County
 location	Klickitat County
 location	Yakima County
 location	Chelan County
-location	Douglas County
+location	Douglas County WA
 location	Benton County
 location	Grant County WA
 location	Franklin County WA
@@ -1825,12 +1885,16 @@ location	Fresno County
 location	Kings County
 location	Madera County
 location	Ventura County
+location	Tulare County
 location	Kern County
 location	Los Angeles County
 location	Orange County CA
 location	San Diego
 location	San Diego County
 location	Imperial County
+
+# Idaho
+location	Madison County
 
 # Arizona
 location	Maricopa County
@@ -1844,8 +1908,9 @@ location	Denver County
 location	Minnehaha County
 
 # Texas
-location	Greater Houston Area
+location	Bexar County
 location	Houston
+location	Greater Houston Area
 location	Panola County
 
 # Minnesota
@@ -2144,6 +2209,9 @@ division	Semnan
 
 ### United Arab Emirates
 division	United Arab Emirates
+division	Abu Dhabi
+division	Dubai
+division	Sharja
 
 ### Oman
 division	Buraimi
@@ -2194,6 +2262,8 @@ division	Jammu
 division	Ladakh
 
 ### Sri Lanka
+division	Kalutara
+division	Colombo
 division	Sri Lanka
 
 ### Nepal
@@ -2205,11 +2275,8 @@ division	Asia
 
 ### Bangladesh
 division	Chattogram
-division	Bagherhat
 division	Barishal
 division	Khulna
-division	Narail
-division	Jhenaidha
 division	Dhaka
 division	Tangail
 division	Rajshahi
@@ -2285,8 +2352,8 @@ division	Banten
 division	Jakarta
 division	West Java
 division	Special Region of Yogyakarta
-division	Surabaya
-division	Pasuruan
+division	Central Java
+division	East Java
 division	Indonesia
 division	East Kalimantan
 division	North Sulawesi
@@ -2400,6 +2467,7 @@ division	Kinshasa
 division	Democratic Republic of the Congo
 division	Haut-Katanga
 division	Sud Kivu
+division	Nord Kivu
 
 ### Kenya
 division	Kenya
@@ -2425,13 +2493,19 @@ division	Cotonou
 division	Oueme
 
 ### Nigeria
+division	Rivers
+division	Akwa-Ibom
+division	Delta
+division	Ebonyi
 division	Lagos
+division	Enugu
+division	Edo
+division	Ondo State
 division	Ogun State
+division	Osun State
+division	Ekiti State
 division	Oyo State
 division	Kwara State
-division	Osun State
-division	Ondo State
-division	Ekiti State
 division	Nigeria
 
 ### Burkina Faso
@@ -2498,14 +2572,18 @@ division	Galway
 division	Limerick
 division	Sligo
 division	Cork
+division	Roscommon
 division	Tipperary
 division	Leitrim
 division	Ireland
+division	Offaly
 division	Laois
+division	Cavan
 division	Kilkenny
 division	Waterford
 division	Monaghan
 division	Kildare
+division	Wexford
 division	Meath
 division	Louth
 division	Dublin
@@ -2631,6 +2709,7 @@ division	Basel-Stadt
 division	Basel-Land
 division	Aargau
 division	Switzerland
+division	Obwalden
 division	Lucerne
 division	Zug
 division	Uri
@@ -2661,19 +2740,21 @@ division	Germany
 division	North Rhine Westphalia
 division	Berlin
 division	Niedersachsen
+division	Hamburg
 division	Western Pomerania
-division	Rostock
 
 ### Europe
 division	Europe
 
 ### Italy
 division	Valle D'Aosta
+division	Piedmont
 division	Sardinia
 division	Lombardy
 division	Trentino
 division	Emilia-Romagna
-division	Pa Trento
+division	Tuscany
+division	Trentino-Alto Adige
 division	South Tyrol
 division	Italian cruise ship
 division	Italy
@@ -2681,9 +2762,7 @@ division	Veneto
 division	Lazio
 division	Friuli Venezia Giulia
 division	Marche
-division	Ancona
 division	Abruzzo
-division	Castel di Sangro
 division	Sicily
 division	Molise
 division	Campania
@@ -2799,6 +2878,7 @@ division	Balatonfured
 division	Baranya
 division	Central Hungary
 division	Balassagyarmat
+division	Pest County
 division	Bács-Kiskun County
 division	Kecskemet
 division	Szeged
@@ -2819,6 +2899,9 @@ division	Serbia
 division	Uzice
 division	Cacak
 division	Novi Sad
+
+### Kosovo
+division	Kosovo
 
 ### North Macedonia
 division	Skopje
@@ -2887,6 +2970,9 @@ division	Ukraine
 ### Cyprus
 division	Cyprus
 
+### Crimea
+division	Crimea
+
 ### Turkey
 division	Canakkale
 division	Tekirdag
@@ -2919,7 +3005,6 @@ division	Saint-Petersburg
 division	Leningrad Region
 division	Bryansk Oblast
 division	Tver Region
-division	Republic of Crymea
 division	Moscow
 division	Moscow Region
 division	Yaroslavl Oblast
@@ -3005,12 +3090,14 @@ division	Ceará
 division	Sergipe
 division	Pernambuco
 division	Rio Grande do Norte
+division	Paraiba
 division	Alagoas
 
 ### Peru
 division	Arequipa
 division	Ica
 division	Cuzco
+division	Callao
 division	Lima
 division	Junin
 division	Huanuco
@@ -3027,6 +3114,8 @@ division	Manabi
 division	Guayas
 division	Daule
 division	Los Rios
+division	Esmeraldas
+division	Bolivar EC
 division	Zamora-Chinchipe
 division	Chimborazo
 division	Pichincha
@@ -3045,7 +3134,6 @@ division	Santander de Quilichao
 division	Meta
 division	Valle del Cauca
 division	Tolima
-division	Tolemaida
 division	Quindio
 division	Bogota
 division	Cartago CO
@@ -3310,6 +3398,7 @@ country	Slovakia
 country	Montenegro
 country	Hungary
 country	Serbia
+country	Kosovo
 country	North Macedonia
 country	Greece
 country	Lithuania
@@ -3322,6 +3411,7 @@ country	Belarus
 country	Moldova
 country	Ukraine
 country	Cyprus
+country	Crimea
 country	Turkey
 country	Russia
 
