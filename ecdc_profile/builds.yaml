@@ -9,162 +9,162 @@ builds:
     subsampling_scheme: region_global
 
   europe:
-    subsampling_scheme: region
+    subsampling_scheme: custom_region
     geographic_scale: region
     region: Europe
 
   russia:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Russia
   serbia:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Serbia
   latvia:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Latvia
   slovakia:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Slovakia
   slovenia:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Slovenia
   poland:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Poland
   belarus:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Belarus
   estonia:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Estonia
   lithuania:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Lithuania
   hungary:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Hungary
   croatia:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Croatia
   france:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: France
   iceland:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Iceland
   norway:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Norway
   denmark:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Denmark
   netherlands:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Netherlands
   belgium:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Belgium
   luxembourg:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Luxembourg
   germany:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Germany
   austria:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Austria
   switzerland:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Switzerland
   italy:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Italy
   spain:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Spain
   czech-republic:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Czech Republic
   united-kingdom:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: United Kingdom
   ireland:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Ireland
   finland:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Finland
   sweden:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Sweden
   portugal:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Portugal
   greece:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Greece
   israel:
-    subsampling_scheme: country
+    subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Israel
@@ -193,32 +193,32 @@ files:
 subsampling:
   # Custom subsampling logic for regions like Europe where grouping by country
   # is the smallest resolution required.
-  region:
+  custom_region:
     # Focal samples for region
     region:
-      group_by: "division year month"
-      seq_per_group: 15
+      group_by: "country year month"
+      max_sequences: 2000
       exclude: "--exclude-where 'region!={region}'"
     # Contextual samples for region from the rest of the world
     global:
       group_by: "country year month"
-      seq_per_group: 8
+      max_sequences: 1000
       exclude: "--exclude-where 'region={region}'"
       priorities:
         type: "proximity"
         focus: "region"
 
   # Default subsampling logic for countries
-  country:
+  custom_country:
     # Focal samples for country
     country:
       group_by: "division year month"
-      seq_per_group: 60
+      max_sequences: 1000
       exclude: "--exclude-where 'country!={country}'"
     # Contextual samples from country's region
     region:
       group_by: "country year month"
-      seq_per_group: 20
+      max_sequences: 1250
       exclude: "--exclude-where 'country={country}' 'region!={region}'"
       priorities:
         type: "proximity"
@@ -227,7 +227,7 @@ subsampling:
     # excluding the current region to avoid resampling.
     global:
       group_by: "country year month"
-      seq_per_group: 10
+      max_sequences: 750
       exclude: "--exclude-where 'region={region}'"
       priorities:
         type: "proximity"
