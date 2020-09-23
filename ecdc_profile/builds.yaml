@@ -168,6 +168,11 @@ builds:
     geographic_scale: country
     region: Europe
     country: Israel
+  romania:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    country: Romania
 
 title: "Phylogenetic analysis of SARS-CoV-2 diversity in Europe"
 
