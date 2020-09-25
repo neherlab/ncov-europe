@@ -49,3 +49,6 @@ Medellin	Antioquia
 Tolemaida	Tolima
 Tangail	Dhaka
 Taipei	Taiwan
+Valencia	Comunitat Valenciana
+Houston	Texas
+Bergen	Vestland

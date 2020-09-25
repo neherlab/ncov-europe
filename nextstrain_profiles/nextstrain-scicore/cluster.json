@@ -6,12 +6,16 @@
         "n" : 1,
         "mem": "16G"
     },
+    "ancestral":
+    {
+        "mem": "16G"
+    },
     "refine" :
     {
         "time" : "05:59:00",
         "qos": "6hours",
-	"mem": "16G",
-        "n" : 1
+        "n" : 1,
+        "mem": "16G"
     },
     "tree" : {
         "n": 16,
