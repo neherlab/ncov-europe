@@ -200,18 +200,33 @@ subsampling:
   # is the smallest resolution required.
   custom_region:
     # Focal samples for region
-    region:
+    region_early:
       group_by: "country year month"
-      max_sequences: 2000
-      exclude: "--exclude-where 'region!={region}'"
+      max_sequences: 500
+      query: "--query 'region=={region} and date < 2020.4'"
     # Contextual samples for region from the rest of the world
-    global:
+    global_early:
       group_by: "country year month"
-      max_sequences: 1000
-      exclude: "--exclude-where 'region={region}'"
+      max_sequences: 500
+      query: "--query 'region!={region} and date < 2020.4'"
       priorities:
         type: "proximity"
-        focus: "region"
+        focus: "region_late"
+
+    # Focal samples for region
+    region_late:
+      group_by: "country year month"
+      max_sequences: 1500
+      query: "--query 'region=={region} and date >= 2020.4'"
+    # Contextual samples for region from the rest of the world
+    global_late:
+      group_by: "country year month"
+      max_sequences: 500
+      query: "--query 'region!={region} and date >= 2020.4'"
+      priorities:
+        type: "proximity"
+        focus: "region_late"
+
 
   # Default subsampling logic for countries
   custom_country:
