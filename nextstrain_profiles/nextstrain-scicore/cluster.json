@@ -23,8 +23,8 @@
         "time" : "05:59:00"
     },
     "align": {
-        "n" : 2,
-        "mem": "16G"
+        "n" : 8,
+        "mem": "64G"
     },
     "proximity_score":{
 	"mem": "32G"
