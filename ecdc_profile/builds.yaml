@@ -23,6 +23,16 @@ builds:
     geographic_scale: country
     region: Europe
     country: Serbia
+  bosnia_and_herzegovina:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    country: "Bosnia and Herzegovina"
+  bulgaria:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    country: Bulgaria
   latvia:
     subsampling_scheme: custom_country
     geographic_scale: country
