@@ -142,7 +142,7 @@ rule align:
         "logs/align.txt"
     benchmark:
         "benchmarks/align.txt"
-    threads: 8
+    threads: 16
     conda: config["conda_environment"]
     shell:
         """
