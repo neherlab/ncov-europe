@@ -356,10 +356,16 @@ location	Hong Kong
 
 ### Indonesia
 # Banten
+location	South Tangerang
 location	Tangerang
 
 # West Java
 location	Bandung
+location	Purwakarta
+location	Bogor Regency
+
+# Yogyakarta
+location	Sleman
 
 # East Java
 location	Purwokerto
@@ -1672,6 +1678,13 @@ location	Warszawa
 location	Brodno-Warszawa
 location	Radom
 
+### Slovakia
+# Zilina
+location	Martincek
+
+# Kosice
+location	Zehra
+
 ### Hungary
 # Central Hungary
 location	Budapest
@@ -1704,6 +1717,10 @@ location	Rovaniemi
 ### Moldova
 # Rezina
 location	Rabnita
+
+### Ukraine
+# Volyn
+location	Lutsk
 
 ### Russia
 # Leningrad Region
@@ -1806,6 +1823,7 @@ location	Itatiba
 location	Osasco
 location	Taboao Da Serra
 location	Caieiras
+location	Jarinu
 location	São Paulo
 location	Diadema
 location	Sao Bernardo do Campo
@@ -1815,6 +1833,7 @@ location	Sao Vicente
 location	Guarujá
 location	Santa Isabel
 location	Mogi Das Cruzes
+location	Taubate
 
 # Rio de Janeiro
 location	Resende
@@ -2207,8 +2226,8 @@ location	San Juan County
 location	Thurston County
 location	Cowlitz County
 location	Clark County WA
+location	Pierce County WA
 location	Kirkland
-location	Pierce County
 location	Snohomish County
 location	King County
 location	Seattle
@@ -2374,15 +2393,20 @@ location	St. Louis MO
 
 # Wisconsin
 location	Crawford County
+location	Polk County
+location	Pierce County WI
 location	Pepin County
+location	Barron County
 location	Buffalo County
 location	Trempealeau County
 location	Eau Claire County
 location	Chippewa County WI
+location	Sawyer County
 location	La Crosse County
 location	Vernon County
 location	Jackson County WI
 location	Grant County WI
+location	Ashland County
 location	Monroe County
 location	Richland County WI
 location	Lafayette County
@@ -2411,8 +2435,10 @@ location	Walworth County
 location	Fond Du Lac County
 location	Outagamie County
 location	Campbellsport
+location	Oconto County
 location	Waukesha County
 location	Washington County WI
+location	Kenosha County
 location	Brown County WI
 location	Thiensville
 location	Milwaukee County
@@ -2620,6 +2646,7 @@ division	Amman
 division	Irbid
 
 ### Georgia
+division	Georgia
 division	Tbilisi
 
 ### Saudi Arabia
@@ -2750,6 +2777,7 @@ division	Singapore
 
 ### China
 division	Yunnan
+division	Gansu
 division	Sichuan
 division	China
 division	Chongqing
@@ -2789,7 +2817,7 @@ division	North Sumatra
 division	Banten
 division	Jakarta
 division	West Java
-division	Special Region of Yogyakarta
+division	Yogyakarta
 division	Central Java
 division	East Java
 division	Center Kalimantan
@@ -3018,7 +3046,9 @@ division	Coimbra
 
 ### Ireland
 division	Kerry
+division	Mayo
 division	Galway
+division	Clare
 division	Limerick
 division	Sligo
 division	Cork
@@ -3028,6 +3058,7 @@ division	Leitrim
 division	Ireland
 division	Offaly
 division	Laois
+division	Westmeath
 division	Cavan
 division	Kilkenny
 division	Waterford
@@ -3237,6 +3268,9 @@ division	Campania
 division	Basilicata
 division	Apulia
 
+### Malta
+division	Malta
+
 ### Slovenia
 division	Slovenia
 
@@ -3340,7 +3374,10 @@ division	Mazowieckie
 ### Slovakia
 division	Kostoliste
 division	Bratislava
+division	Pezinok
+division	Zilina
 division	Martin
+division	Slovakia
 division	Kosice
 
 ### Montenegro
@@ -3443,7 +3480,11 @@ division	Balti
 division	Soroca
 
 ### Ukraine
+division	Ivano-Frankivsk
+division	Volyn
+division	Kyiv
 division	Ukraine
+division	Kharkiv
 
 ### Cyprus
 division	Cyprus
@@ -3696,20 +3737,31 @@ division	Sinaloa
 division	Chihuahua
 division	Nayarit
 division	Durango
+division	Colima
 division	Jalisco
 division	Guadalajara
+division	Zacatecas
+division	Aguascalientes
 division	Coahuila
+division	Michoacan
 division	Guanajuato
+division	San Luis Potosi
 division	Queretaro
+division	Nuevo Leon
 division	Guerrero
 division	Estado de Mexico
 division	Mexico City
 division	Mexico
+division	Hidalgo
 division	Morelos
 division	Tamaulipas
 division	Puebla
+division	Tlaxcala
+division	Veracruz
+division	Oaxaca
 division	Chiapas
 division	Tabasco
+division	Campeche
 division	Yucatan
 division	Quintana Roo
 
@@ -3875,6 +3927,7 @@ country	Denmark
 country	Germany
 country	Europe
 country	Italy
+country	Malta
 country	Slovenia
 country	Sweden
 country	Austria
