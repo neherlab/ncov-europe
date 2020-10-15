@@ -147,6 +147,7 @@ rule align:
     shell:
         """
         mafft \
+	    --anysymbol \
             --auto \
             --thread {threads} \
             --keeplength \

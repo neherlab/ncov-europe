@@ -196,8 +196,6 @@ exposure:
     trait: "region"
     exposure: "region_exposure"
 
-refine:
-  root: "best"
 
 files:
   colors: "ecdc_profile/colors.tsv"
