@@ -475,6 +475,26 @@ rule tree:
             --nthreads {threads} 2>&1 | tee {log}
         """
 
+rule remove_zero_branches:
+    message:
+        """
+        Reducing zero length branches to polytomies
+        """
+    input:
+        tree = rules.tree.output.tree,
+        alignment = rules.combine_samples.output.alignment
+    output:
+        tree = "results/{build_name}/tree_nozero.nwk"
+    log:
+        "logs/remove_zero_branches_{build_name}.txt"
+    run:
+        from treetime import TreeAnc
+        from Bio import Phylo
+        tt = TreeAnc(tree=input.tree, aln=input.alignment, gtr='JC69', verbose=1)
+        tt.optimize_tree(prune_short=True, infer_gtr=True)
+        Phylo.write(tt.tree, output.tree, 'newick', format_branch_length="%1.7f")
+
+
 rule refine:
     message:
         """
@@ -484,7 +504,7 @@ rule refine:
           - estimate {params.date_inference} node dates
         """
     input:
-        tree = rules.tree.output.tree,
+        tree = rules.remove_zero_branches.output.tree,
         alignment = rules.combine_samples.output.alignment,
         metadata = _get_metadata_by_wildcards
     output:
