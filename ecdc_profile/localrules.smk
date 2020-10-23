@@ -1,4 +1,4 @@
-localrules: mask, adjust_metadata_regions, clades, colors, recency, export, incorporate_travel_history, fix_colorings, all_regions, export_all_regions, export_gisaid, incorporate_travel_history_gisaid, incorporate_travel_history_zh, export_zh, dated_json, fix_colorings_zh, fix_colorings_gisaid, finalize, pangolin, rename_legacy_clades, adjust_metadata_regions_ecdc, reassign_metadata
+localrules: mask, clades, colors, incorporate_travel_history, fix_colorings, all_regions, export_all_regions, export_gisaid, incorporate_travel_history_gisaid, incorporate_travel_history_zh, export_zh, dated_json, fix_colorings_zh, fix_colorings_gisaid, finalize, pangolin, rename_legacy_clades, adjust_metadata_regions_ecdc, reassign_metadata
 
 ruleorder: adjust_metadata_regions_ecdc > adjust_metadata_regions
 

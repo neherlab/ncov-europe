@@ -5,8 +5,6 @@
 # geographic scale the build focuses on. Together name and scale serve a look-up
 # in the geo_hierarchy to define region, country, division, etc
 builds:
-  global:
-    subsampling_scheme: region_global
 
   europe:
     subsampling_scheme: custom_region
