@@ -251,9 +251,15 @@ subsampling:
   # Default subsampling logic for countries
   custom_country:
     # Focal samples for country
-    country:
+    country_early:
       group_by: "division year month"
-      max_sequences: 1500
+      max_date: "--max-date 2020-05-31"
+      max_sequences: 500
+      exclude: "--exclude-where 'country!={country}'"
+    country_late:
+      group_by: "division year month"
+      min_date: "--min-date 2020-06-01"
+      max_sequences: 1000
       exclude: "--exclude-where 'country!={country}'"
     # Contextual samples from country's region
     region_early:
@@ -263,7 +269,7 @@ subsampling:
       exclude: "--exclude-where 'country={country}' 'region!={region}'"
       priorities:
         type: "proximity"
-        focus: "country"
+        focus: "country_early"
     # Contextual samples from the rest of the world,
     # excluding the current region to avoid resampling.
     global_early:
@@ -273,7 +279,7 @@ subsampling:
       exclude: "--exclude-where 'region={region}'"
       priorities:
         type: "proximity"
-        focus: "country"
+        focus: "country_early"
     region_late:
       group_by: "country year month"
       min_date: "--min-date 2020-06-01"
@@ -281,7 +287,7 @@ subsampling:
       exclude: "--exclude-where 'country={country}' 'region!={region}'"
       priorities:
         type: "proximity"
-        focus: "country"
+        focus: "country_late"
     # Contextual samples from the rest of the world,
     # excluding the current region to avoid resampling.
     global_late:
@@ -291,4 +297,4 @@ subsampling:
       exclude: "--exclude-where 'region={region}'"
       priorities:
         type: "proximity"
-        focus: "country"
+        focus: "country_late"
