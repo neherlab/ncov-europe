@@ -9,12 +9,14 @@ builds:
   europe:
     subsampling_scheme: custom_region
     geographic_scale: region
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     region: Europe
 
   russia:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     country: Russia
   serbia:
     subsampling_scheme: custom_country
@@ -80,6 +82,7 @@ builds:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     country: France
   iceland:
     subsampling_scheme: custom_country
@@ -90,21 +93,25 @@ builds:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     country: Norway
   denmark:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
+    subclades: "ecdc_profile/subclades_denmark.tsv"
     country: Denmark
   netherlands:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     country: Netherlands
   belgium:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     country: Belgium
   luxembourg:
     subsampling_scheme: custom_country
@@ -125,6 +132,7 @@ builds:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     country: Switzerland
   italy:
     subsampling_scheme: custom_country
@@ -135,6 +143,7 @@ builds:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     country: Spain
   czech-republic:
     subsampling_scheme: custom_country
@@ -145,6 +154,7 @@ builds:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     country: United Kingdom
   ireland:
     subsampling_scheme: custom_country
