@@ -161,36 +161,43 @@ builds:
     geographic_scale: country
     region: Europe
     country: Ireland
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
   finland:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Finland
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
   sweden:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Sweden
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
   portugal:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Portugal
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
   greece:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Greece
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
   israel:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Israel
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
   romania:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
     country: Romania
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
 
 title: "Phylogenetic analysis of SARS-CoV-2 diversity in Europe"
 
