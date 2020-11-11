@@ -4,6 +4,11 @@
 # be specified explicity as geographic_name. In addition, we require the
 # geographic scale the build focuses on. Together name and scale serve a look-up
 # in the geo_hierarchy to define region, country, division, etc
+# Define custom rules for pre- or post-standard workflow processing of data.
+custom_rules:
+  - nextstrain_profiles/nextstrain/subsampling_ranges.smk
+  - ecdc_profile/localrules.smk
+
 builds:
 
   europe:
@@ -226,13 +231,11 @@ subsampling:
     region_early:
       group_by: "country year month"
       max_sequences: 500
-      max_date: "--max-date 2020-05-31"
       exclude: "--exclude-where 'region!={region}'"
     # Contextual samples for region from the rest of the world
     global_early:
       group_by: "country year month"
       max_sequences: 300
-      max_date: "--max-date 2020-05-31"
       exclude: "--exclude-where 'region={region}'"
       priorities:
         type: "proximity"
@@ -241,14 +244,12 @@ subsampling:
     # Focal samples for region
     region_late:
       group_by: "country year month"
-      min_date: "--min-date 2020-06-01"
       max_sequences: 1500
       exclude: "--exclude-where 'region!={region}'"
     # Contextual samples for region from the rest of the world
     global_late:
       group_by: "country year month"
       max_sequences: 700
-      min_date: "--min-date 2020-06-01"
       exclude: "--exclude-where 'region={region}'"
       priorities:
         type: "proximity"
@@ -260,18 +261,15 @@ subsampling:
     # Focal samples for country
     country_early:
       group_by: "division year month"
-      max_date: "--max-date 2020-05-31"
       max_sequences: 500
       exclude: "--exclude-where 'country!={country}'"
     country_late:
       group_by: "division year month"
-      min_date: "--min-date 2020-06-01"
       max_sequences: 1000
       exclude: "--exclude-where 'country!={country}'"
     # Contextual samples from country's region
     region_early:
       group_by: "country year month"
-      max_date: "--max-date 2020-05-31"
       max_sequences: 250
       exclude: "--exclude-where 'country={country}' 'region!={region}'"
       priorities:
@@ -281,7 +279,6 @@ subsampling:
     # excluding the current region to avoid resampling.
     global_early:
       group_by: "country year month"
-      max_date: "--max-date 2020-05-31"
       max_sequences: 250
       exclude: "--exclude-where 'region={region}'"
       priorities:
@@ -289,7 +286,6 @@ subsampling:
         focus: "country_early"
     region_late:
       group_by: "country year month"
-      min_date: "--min-date 2020-06-01"
       max_sequences: 750
       exclude: "--exclude-where 'country={country}' 'region!={region}'"
       priorities:
@@ -299,7 +295,6 @@ subsampling:
     # excluding the current region to avoid resampling.
     global_late:
       group_by: "country year month"
-      min_date: "--min-date 2020-06-01"
       max_sequences: 500
       exclude: "--exclude-where 'region={region}'"
       priorities:

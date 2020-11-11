@@ -1,7 +1,6 @@
 configfile:
   - defaults/parameters.yaml
   - ecdc_profile/builds.yaml
-  - ecdc_profile/scicore-config.yaml
 
 keep-going: True
 printshellcmds: True
