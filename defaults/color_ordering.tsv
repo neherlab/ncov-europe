@@ -1021,6 +1021,7 @@ location	Morlaix
 location	Saint Pierre Quiberon
 location	Arradon
 location	Pordic
+location	Saint-Brieuc
 location	Vannes
 location	Sene
 location	La Rochelle
@@ -1075,6 +1076,7 @@ location	Longjumeau
 location	Paris
 location	Juvisy-sur-Orge
 location	Sarcelles
+location	Villeneuve St Georges
 location	Seine-Port
 location	Plessis Trevise
 location	Moussy Le Neuf
@@ -1127,6 +1129,7 @@ location	Montreux-Chateau
 # Grand Est
 location	Reims
 location	Gondrecourt-le-Chateau
+location	Tucquegnieux
 location	Crusnes
 location	Joeuf
 location	Fameck
@@ -1704,10 +1707,12 @@ location	Hochficht
 ### Czech Republic
 # Plzeň Region
 location	Domažlice
+location	Dobřany
 location	Plzeň
 
 # Usti nad Labem
 location	Litvinov
+location	Teplice
 location	Všebořice
 location	Sulejovice
 location	Libochovice
@@ -1720,10 +1725,25 @@ location	Prague-Miskovice
 location	Kvetnice
 
 # Southern Bohemia Region
+location	Šumavské Hoštice
+location	Prachatice
 location	Pisek
+location	Netolice
+location	Český Krumlov
+location	Dubné
+location	Dobrá Voda
+location	Jindřichův Hradec
 
 # Central Bohemian Region
+location	Příbram
+location	Zdiby
+location	Bášť
+location	Neratovice
+location	Benátky nad Jizerou
 location	Mlada Boleslav
+location	Chrášťany
+location	Poděbrady
+location	Kolin
 
 # Liberec Region
 location	Liberec
@@ -1755,6 +1775,7 @@ location	Fryšták
 location	Prostějov
 
 # Moravian-Silesian Region
+location	Frýdek-Místek
 location	Havířov
 location	Albrechtice
 location	Karviná
@@ -1973,17 +1994,49 @@ location	Lomas de Zamora
 location	Quilmes
 
 ### Chile
-# Chillan
+# Magallanes
+location	Puerto Natales
+location	Punta Arenas
+location	Porvenir
+location	Puerto Williams
+
+# Aysén
+location	Coyhaique
+
+# Los Lagos
+location	Puerto Montt
+
+# Araucanía
+location	Temuco
+
+# Biobío
+location	Concepcion
+
+# Ñuble
 location	Chillan
 
-# Huasco
-location	Huasco
+# Maule
+location	Talca
+
+# O'Higgins
+location	Rancagua
 
 # Santiago
 location	Santiago
 
-# Copiapo
+# Valparaiso
+location	Vina del Mar
+
+# Atacama
+location	Domeyko
+location	Freirina
+location	Huasco
+location	Tierra Amarilla
+location	Paipote
 location	Copiapo
+location	Caldera
+location	Chanaral
+location	El Salvador
 
 ### Brazil
 # Amazonas
@@ -3114,12 +3167,14 @@ division	Hokkaido
 ### New Zealand
 division	Southern
 division	Otago
+division	South Canterbury
 division	Canterbury
 division	New Zealand
 division	Nelson Marlborough
 division	Taranaki
 division	Auckland
 division	Wellington
+division	Whanganui
 division	Waikato
 division	Wairarapa
 division	Midcentral
@@ -3163,14 +3218,12 @@ division	Sierra Leone
 ### Guinea
 division	Conakry
 
-### Ivory Coast
-division	Ivory Coast
-
 ### Côte d'Ivoire
 division	Yamoussoukro
 division	Bouafle
 division	Beoumi
 division	Bouaké
+division	Côte d'Ivoire
 division	Katiola
 
 ### Morocco
@@ -3189,6 +3242,7 @@ division	Burkina Faso
 
 ### Ghana
 division	Greater Accra
+division	Volta
 division	Ghana
 
 ### Togo
@@ -3283,6 +3337,7 @@ division	Kenya
 
 ### Madagascar
 division	Analamanga
+division	Toamasina
 division	Analanjirofo
 
 ### Somalia
@@ -3860,21 +3915,18 @@ division	Montevideo
 division	Rivera
 
 ### Chile
-division	Concepcion
-division	Puerto Montt
-division	Temuco
-division	Puerto Natales
-division	Chillan
-division	Coyhaique
-division	Valparaiso
-division	Vina del Mar
-division	Talca
-division	Huasco
-division	Rancagua
+division	Magallanes
+division	Aysén
+division	Los Lagos
+division	Araucanía
+division	Biobío
+division	Ñuble
+division	Maule
+division	O'Higgins
 division	Santiago
+division	Valparaiso
+division	Atacama
 division	Antofagasta
-division	Copiapo
-division	Punta Arenas
 
 ### South America
 division	South America
@@ -4211,7 +4263,6 @@ country	Gambia
 country	Senegal
 country	Sierra Leone
 country	Guinea
-country	Ivory Coast
 country	Côte d'Ivoire
 country	Morocco
 country	Mali
