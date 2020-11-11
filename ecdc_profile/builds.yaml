@@ -27,61 +27,73 @@ builds:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     country: Serbia
   bosnia_and_herzegovina:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     country: "Bosnia and Herzegovina"
   bulgaria:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     country: Bulgaria
   latvia:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     country: Latvia
   slovakia:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     country: Slovakia
   slovenia:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     country: Slovenia
   poland:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     country: Poland
   belarus:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     country: Belarus
   estonia:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     country: Estonia
   lithuania:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     country: Lithuania
   hungary:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     country: Hungary
   croatia:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     country: Croatia
   france:
     subsampling_scheme: custom_country
@@ -93,6 +105,7 @@ builds:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     country: Iceland
   norway:
     subsampling_scheme: custom_country
@@ -122,16 +135,19 @@ builds:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     country: Luxembourg
   germany:
     subsampling_scheme: custom_country
     geographic_scale: country
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     region: Europe
     country: Germany
   austria:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     country: Austria
   switzerland:
     subsampling_scheme: custom_country
@@ -143,6 +159,7 @@ builds:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     country: Italy
   spain:
     subsampling_scheme: custom_country
@@ -154,6 +171,7 @@ builds:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     country: Czech Republic
   united-kingdom:
     subsampling_scheme: custom_country
