@@ -531,6 +531,16 @@ location	Amajuba
 # Cairo
 location	Al Matariyyah
 
+### Mozambique
+# Gaza
+location	Xai Xai
+
+# Manica
+location	Chimoio
+
+# Cabo Delgado
+location	Pemba
+
 ### Madagascar
 # Analamanga
 location	Antananarivo
@@ -1114,7 +1124,9 @@ location	Bourg-en-Bresse
 location	Bourgoin-Jallieu
 location	Montagnieu
 location	Oyonnax
+location	Grenoble
 location	Chambery
+location	Saint-Julien-en-Genevois
 location	Contamine-sur-Arve
 location	Contamines
 location	Vienne
@@ -1537,6 +1549,9 @@ location	Eupen
 location	Büllingen
 
 ### Netherlands
+# St Eustatius
+location	St Eustatius
+
 # South Holland
 location	Delft
 location	Nootdorp
@@ -1560,17 +1575,18 @@ location	Houten
 location	Amersfoort
 
 # North Brabant
-location	Eindhoven
-location	Helmond
-location	Oisterwijk
-location	Tilburg
-location	Loon op zand
-location	Heeswijk Dinther
-location	Berlicum
-location	Oss
 location	Nieuwendijk
+location	Tilburg
 location	Andel
+location	Loon op zand
+location	Oisterwijk
 location	Blaricum
+location	Berlicum
+location	Heeswijk Dinther
+location	Eindhoven
+location	Oss
+location	Helmond
+location	Milheeze
 
 # Flevoland
 location	Zeewolde
@@ -1613,6 +1629,7 @@ location	Frankfurt
 location	Heinsberg
 location	Heinsberg District
 location	Duesseldorf
+location	Cologne
 location	Essen
 location	Münster
 location	Bielefeld
@@ -1636,6 +1653,7 @@ location	Siena
 
 # Veneto
 location	Verona IT
+location	Padova
 
 # Lazio
 location	Rome
@@ -2021,7 +2039,7 @@ location	Talca
 # O'Higgins
 location	Rancagua
 
-# Santiago
+# Region Metropolitana de Santiago
 location	Santiago
 
 # Valparaiso
@@ -2464,6 +2482,10 @@ location	Siquirres
 ### Mexico
 # Baja California
 location	Tijuana
+location	Mexicali
+
+# Sonora
+location	San Luis Rio Colorado
 
 # Durango
 location	Gomez Palacios
@@ -2482,8 +2504,8 @@ location	Douglas County OR
 location	Columbia County OR
 location	Washington County OR
 location	Lane County OR
-location	Marion County
 location	Jackson County OR
+location	Marion County OR
 location	Multnomah County
 location	Clackamas County
 location	Hood River County
@@ -2551,6 +2573,7 @@ location	San Diego
 location	San Diego County
 location	San Bernardino County
 location	Imperial County
+location	Riverside
 
 # Nevada
 location	Clark County NV
@@ -2559,8 +2582,8 @@ location	Clark County NV
 location	Madison County
 
 # Arizona
+location	Yuma
 location	Maricopa County
-location	Phoenix
 
 # Montana
 location	Ravalli County
@@ -2598,6 +2621,7 @@ location	San Patricio County
 location	Gonzales County
 location	Cameron County
 location	Mclennan County
+location	Victoria County
 location	Lavaca County
 location	Dallas County
 location	Burleson County
@@ -2688,6 +2712,7 @@ location	Jackson County WI
 location	Grant County WI
 location	Ashland County
 location	Monroe County
+location	Taylor County WI
 location	Richland County WI
 location	Lafayette County
 location	Iowa County WI
@@ -2704,6 +2729,7 @@ location	Marquette County
 location	Oregon WI
 location	Brooklyn WI
 location	Columbia County WI
+location	Waushara County
 location	Rock County
 location	Columbus WI
 location	Waupaca County
@@ -2732,20 +2758,17 @@ location	Racine County
 location	Door County
 
 # Illinois
-location	Jo Daviess County
-location	Stephenson County
-location	Ogle County
-location	Winnebago County IL
-location	Boone County
-location	Mchenry County
-location	Kane County
-location	Dupage County
-location	Lake County IL
+location	Saline County
+location	Jackson County IL
 location	Cook County
 location	Chicago
+location	Kane County
+location	Winnebago County IL
+location	Lake County IL
+location	Jo Daviess County
 
 # Indiana
-location	Indianapolis
+location	Marion County IN
 
 # Ohio
 location	Columbus OH
@@ -2753,6 +2776,7 @@ location	Cuyahoga County
 
 # Florida
 location	Walton County
+location	Orange County FL
 location	Miami-Dade County
 location	Palm Beach County
 
@@ -2773,10 +2797,15 @@ location	Montgomery County PA
 # Washington DC
 location	District of Columbia County
 
+# Maryland
+location	Prince George'S County
+
 # Delaware
 location	Sussex County
 location	Kent County
 location	New Castle County
+location	Prospect
+location	Cheshire
 
 # New Jersey
 location	Camden County
@@ -2826,11 +2855,9 @@ location	Trumbull
 location	Seymour
 location	Woodbridge
 location	Bethany
-location	Prospect
 location	West Haven
 location	New Haven County
 location	Hamden
-location	Cheshire
 location	East Haven
 location	North Haven
 location	Wallingford
@@ -2917,8 +2944,9 @@ division	Jenin
 division	Beirut
 
 ### Jordan
-division	Amman
 division	Irbid
+division	Amman
+division	Mafraq
 
 ### Georgia
 division	Georgia (Europe)
@@ -3274,7 +3302,9 @@ division	Nigeria
 
 ### Tunisia
 division	Tunisia
+division	Nabeul
 division	Ben Arous
+division	Tunis
 division	Bizerte
 
 ### Niger
@@ -3292,6 +3322,7 @@ division	Brazzaville
 
 ### Democratic Republic of the Congo
 division	Kongo Central
+division	Kisantu
 division	Kinshasa
 division	Democratic Republic of the Congo
 division	Haut-Katanga
@@ -3327,6 +3358,11 @@ division	Kalyoubia
 
 ### Uganda
 division	Uganda
+
+### Mozambique
+division	Gaza
+division	Manica
+division	Cabo Delgado
 
 ### Kenya
 division	Kwale
@@ -3480,6 +3516,7 @@ division	Verviers
 division	Mepel
 
 ### Netherlands
+division	St Eustatius
 division	Zeeland
 division	Leiden
 division	South Holland
@@ -3489,7 +3526,6 @@ division	North Brabant
 division	Netherlands
 division	Flevoland
 division	Friesland
-division	Milheeze
 division	Limburg
 division	Gelderland
 division	Overijssel
@@ -3539,7 +3575,8 @@ division	Trondheim
 division	Innlandet
 division	Oslo
 division	Norway
-division	Tromsogfinnmark
+division	Nordland
+division	Troms Og Finnmark
 
 ### Denmark
 division	Faroe Islands
@@ -3555,6 +3592,7 @@ division	Copenhagen
 division	Bavaria
 division	Baden-Wuerttemberg
 division	Hesse
+division	Thuringia
 division	Germany
 division	North Rhine Westphalia
 division	Berlin
@@ -3923,7 +3961,7 @@ division	Biobío
 division	Ñuble
 division	Maule
 division	O'Higgins
-division	Santiago
+division	Region Metropolitana de Santiago
 division	Valparaiso
 division	Atacama
 division	Antofagasta
@@ -4284,6 +4322,7 @@ country	Zambia
 country	Rwanda
 country	Egypt
 country	Uganda
+country	Mozambique
 country	Kenya
 country	Madagascar
 country	Somalia
