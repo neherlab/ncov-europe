@@ -1,6 +1,7 @@
 localrules: clade_files, colors, download
 
 ruleorder: adjust_metadata_regions_ecdc > adjust_metadata_regions
+ruleorder: download_masked > mask
 
 rule reassign_metadata:
     input:
