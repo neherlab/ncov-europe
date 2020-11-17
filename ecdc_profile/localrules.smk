@@ -1,4 +1,4 @@
-localrules: clade_files, colors, download
+localrules: clade_files, colors, download, download_masked
 
 ruleorder: adjust_metadata_regions_ecdc > adjust_metadata_regions
 ruleorder: download_masked > mask

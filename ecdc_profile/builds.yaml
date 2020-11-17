@@ -297,7 +297,7 @@ subsampling:
     # excluding the current region to avoid resampling.
     global_early:
       group_by: "country year month"
-      max_sequences: 250
+      seq_per_group: 1
       exclude: "--exclude-where 'region={region}'"
       priorities:
         type: "proximity"
