@@ -2,8 +2,64 @@
 # Asia
 
 ### Israel
+# South District
+location	South Coast District
+location	Beer-Sheva
+location	Netivot
+location	Kiryat Gat
+location	Orot
+location	Ashdod
+location	Yeruham
+location	Kfar Habad
+location	Beni Brak
+location	Petah Tikva
+location	Maalot Tarshicha
+
+# Jerusalem District
+location	Beit Shemesh
+
 # Central District
+location	Gedera
+location	Sdema
+location	Yavne
+location	Modiin
+location	Ramla
+location	Lod
+location	Nir-Tzvi
+location	Rishon-Letsion
+location	Shoham
+location	Yehud
+location	Beerot-Itzhak
+location	Elad
+location	Gani Tikva
+location	Petah Tikva
+location	Kefar Sava
 location	Kfar Saba
+location	Raanana
+location	Rishpon
+location	Pardesia
+location	Netanya
+
+# Tel Aviv District
+location	Bat Yam
+location	Holon
+location	Or-Yehuda
+location	Kiryat Ono
+location	Ramat Gan
+location	Tel-Aviv
+location	Ramat-Hasharon
+
+# Haifa District
+location	Ceasaria
+location	Haifa
+
+# North District
+location	Tirat Zvi
+location	Tveria
+location	Chaspin
+location	Hukuk
+location	Yuvalim
+location	Zefat
 
 ### Palestine
 # Hebron
@@ -13,6 +69,11 @@ location	al-Arroub
 
 # Ramallah
 location	Jalazone
+
+# West Bank
+location	Tkoa
+location	Maale-Edumim
+location	Elkana
 
 # Nablus
 location	Majdal Bani Fadil
@@ -504,6 +565,15 @@ location	Velingara
 ### Ghana
 # Greater Accra
 location	Accra
+
+### Equatorial Guinea
+# Litoral
+location	Mbini
+location	Bata
+
+# Bioko Norte
+location	Malabo
+location	Baney
 
 ### South Africa
 # Western Cape Province
@@ -1062,6 +1132,8 @@ location	Carentan
 location	Rouen
 
 # Nouvelle-Aquitaine
+location	Bordeaux
+location	Poitiers
 location	Limoges
 
 # Centre-Val de Loire
@@ -1122,11 +1194,13 @@ location	Toulouse
 location	Caraman
 location	Saint-Gely-Du-Fesc
 location	Montpellier
+location	Nîmes
 
 # Auvergne-Rhône-Alpes
 location	Clermont-Ferrand
 location	Mazet-Saint-Voy
 location	Andrezieux-Boutheon
+location	Saint-Etienne
 location	Tarare
 location	Privas
 location	Pollionnay
@@ -1198,6 +1272,7 @@ location	Marseille
 location	Draguignan
 location	Embrun
 location	Saint-Vallier-de-Thiey
+location	Nice
 
 ### Belgium
 # Veurne
@@ -1644,6 +1719,11 @@ location	Munich
 location	Erlangen
 
 # Baden-Wuerttemberg
+location	Konstanz
+location	Tuttlingen
+location	Villingen-Schwenningen
+location	Sigmaringen
+location	Rottweil
 location	Tuebingen
 
 # Hesse
@@ -1919,8 +1999,8 @@ location	Severomorsk
 # Kaluga
 location	Tovarkovo
 
-# Orel
-location	Orel
+# Oryol
+location	Oryol
 
 # Moscow Oblast
 location	Uvarovka
@@ -2050,8 +2130,15 @@ location	San Carlos de Bariloche
 
 # Buenos Aires
 location	Bahia Blanca
+location	Cañuelas
+location	Máximo Paz
+location	Gregorio de Laferrere
 location	Lomas de Zamora
+location	La Matanza
 location	Quilmes
+
+# Santa Fe
+location	Totoras
 
 ### Chile
 # Magallanes
@@ -2612,6 +2699,7 @@ location	Kern County
 location	Los Angeles County
 location	Orange County CA
 location	San Diego
+location	Riverside County
 location	San Diego County
 location	San Bernardino County
 location	Imperial County
@@ -2734,6 +2822,7 @@ location	St Tammany Parish
 location	St Bernard Parish
 
 # Missouri
+location	Gasconade County
 location	Saint Louis County
 location	St. Louis MO
 
@@ -2800,7 +2889,6 @@ location	Racine County
 location	Door County
 
 # Illinois
-location	Saline County
 location	Jackson County IL
 location	Cook County
 location	Chicago
@@ -2812,12 +2900,16 @@ location	Jo Daviess County
 # Indiana
 location	Marion County IN
 
+# Georgia
+location	Cobb
+
 # Ohio
 location	Columbus OH
 location	Cuyahoga County
 
 # Florida
 location	Walton County
+location	Alachua County
 location	Orange County FL
 location	Miami-Dade County
 location	Palm Beach County
@@ -2846,8 +2938,6 @@ location	Prince George'S County
 location	Sussex County
 location	Kent County
 location	New Castle County
-location	Prospect
-location	Cheshire
 
 # New Jersey
 location	Camden County
@@ -2935,48 +3025,21 @@ location	Lanaudière
 # Asia
 
 ### Israel
-division	South Coast District
 division	South District
-division	Netivot
 division	Israel
-division	Kiryat Gat
-division	Beit Shemesh
 division	Jerusalem District
-division	Ashdod
-division	Gedera
-division	Yavne
-division	Ramla
 division	Central District
-division	Kfar Habad
-division	Shoam
-division	Bat Yam
-division	Holon
-division	Yehud
-division	Elad
-division	Kiryat Ono
-division	Gani Tikva
-division	Ramat Gan
-division	Petah Tikva
-division	Beni Brak
 division	Tel Aviv District
-division	Elkana
-division	Raanana
-division	Pardesia
-division	Netanya
-division	Tirat Zvi
+division	Jerusalem
 division	Haifa District
-division	Haifa
-division	Tveria
-division	Hukuk
 division	North District
-division	Zefat
-division	Maalot Tarshicha
 
 ### Palestine
 division	Hebron
 division	Bethlehem
 division	Jericho
 division	Ramallah
+division	West Bank
 division	Jerusalem
 division	Nablus
 division	Tulkarem
@@ -3040,6 +3103,9 @@ division	North Sharqiyah
 ### Uzbekistan
 division	Uzbekistan
 
+### Afghanistan
+division	Kabul
+
 ### Kazakhstan
 division	Nur-Sultan
 
@@ -3076,6 +3142,7 @@ division	Delhi
 division	Haryana
 division	Uttarakhand
 division	Punjab
+division	Himachal Pradesh
 division	Jammu and Kashmir
 division	Ladakh
 
@@ -3352,6 +3419,11 @@ division	Bizerte
 ### Niger
 division	Niger
 
+### Equatorial Guinea
+division	Litoral
+division	Equatorial Guinea
+division	Bioko Norte
+
 ### Gabon
 division	Libreville
 
@@ -3388,6 +3460,9 @@ division	KwaZulu-Natal
 
 ### Zambia
 division	Lusaka
+
+### Zimbabwe
+division	Zimbabwe
 
 ### Rwanda
 division	Rwanda
@@ -3449,6 +3524,7 @@ division	Tipperary
 division	Leitrim
 division	Ireland
 division	Offaly
+division	Longford
 division	Laois
 division	Westmeath
 division	Cavan
@@ -3678,6 +3754,7 @@ division	Slovenia
 ### Sweden
 division	Skane
 division	Kalmar
+division	Kronoberg
 division	Halland
 division	Gotland
 division	Småland
@@ -3941,7 +4018,7 @@ division	Karelia
 division	Tver
 division	Murmansk
 division	Kaluga
-division	Orel
+division	Oryol
 division	Moscow Oblast
 division	Yaroslavl
 division	Lipetsk
@@ -3992,6 +4069,7 @@ division	Rio Negro
 division	Buenos Aires
 division	Argentina
 division	Cordoba AR
+division	Santa Fe
 division	Tucuman
 
 ### Uruguay
@@ -4312,6 +4390,7 @@ country	Iran
 country	United Arab Emirates
 country	Oman
 country	Uzbekistan
+country	Afghanistan
 country	Kazakhstan
 country	Pakistan
 country	Maldives
@@ -4359,6 +4438,7 @@ country	Algeria
 country	Nigeria
 country	Tunisia
 country	Niger
+country	Equatorial Guinea
 country	Gabon
 country	Cameroon
 country	Republic of the Congo
@@ -4366,6 +4446,7 @@ country	Democratic Republic of the Congo
 country	Botswana
 country	South Africa
 country	Zambia
+country	Zimbabwe
 country	Rwanda
 country	Egypt
 country	Uganda
