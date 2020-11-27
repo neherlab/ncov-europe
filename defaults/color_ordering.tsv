@@ -7,18 +7,15 @@ location	South Coast District
 location	Beer-Sheva
 location	Netivot
 location	Kiryat Gat
-location	Orot
 location	Ashdod
 location	Yeruham
-location	Kfar Habad
 location	Beni Brak
-location	Petah Tikva
-location	Maalot Tarshicha
 
 # Jerusalem District
 location	Beit Shemesh
 
 # Central District
+location	Orot
 location	Gedera
 location	Sdema
 location	Yavne
@@ -27,6 +24,7 @@ location	Ramla
 location	Lod
 location	Nir-Tzvi
 location	Rishon-Letsion
+location	Kfar Habad
 location	Shoham
 location	Yehud
 location	Beerot-Itzhak
@@ -60,6 +58,7 @@ location	Chaspin
 location	Hukuk
 location	Yuvalim
 location	Zefat
+location	Maalot Tarshicha
 
 ### Palestine
 # Hebron
@@ -287,8 +286,9 @@ location	Barabanki
 location	Azamgarh
 
 # Delhi
-location	Tughlakabad
+location	West Delhi
 location	New Delhi
+location	Tughlakabad
 
 # Haryana
 location	Palwal
@@ -562,14 +562,36 @@ location	Touba
 # Kolda
 location	Velingara
 
+### Burkina Faso
+# Cascades
+location	Banfora
+
+# Hauts-Bassins
+location	Orodara
+location	N'Dorola
+location	Bobo Dioulasso
+location	Houndé
+
+# Sud-Ouest
+location	Batié
+location	Gaoua
+location	Dano
+
 ### Ghana
 # Greater Accra
 location	Accra
+
+### Tunisia
+# Tunis
+location	La Marsa
 
 ### Equatorial Guinea
 # Litoral
 location	Mbini
 location	Bata
+
+# Bioko Sur
+location	Riaba
 
 # Bioko Norte
 location	Malabo
@@ -577,6 +599,7 @@ location	Baney
 
 ### South Africa
 # Western Cape Province
+location	Cape Town
 location	Klipfontein
 location	Cape Town Metro
 location	Mitchells Plain
@@ -718,6 +741,20 @@ location	Villanueva de la Vera
 location	Pueblonuevo de Miramontes
 location	Herrera del Duque
 
+# Asturias
+location	Tineo
+location	Somiedo
+location	Pravia
+location	Grado
+location	Oviedo
+location	Mieres
+location	Langreo
+location	Gijon
+location	Siero
+location	Bimenes
+location	Laviana
+location	Panes
+
 # Andalusia
 location	Rota
 location	Puerto Santa Maria
@@ -760,6 +797,7 @@ location	Atarfe
 location	Benalua de las Villas
 location	Cullar Vega
 location	Albolote
+location	Alhendin
 location	Churriana de la Vega
 location	Otura
 location	Maracena
@@ -855,9 +893,13 @@ location	Ampuero
 location	Castro Urdiales
 
 # Madrid
+location	Galapagar
+location	Mostoles
 location	Fuenlabrada
+location	Soto del Real
 location	Parla
 location	Leganés
+location	Getafe
 location	Madrid
 location	Alcobendas
 location	Rivas-Vaciamadrid
@@ -865,6 +907,7 @@ location	San Fernando de Henares
 location	Arganda del Rey
 location	Campo Real
 location	Alcala de Henares
+location	Las Rozas
 location	Valdaracete
 location	Ambite
 location	Estremera
@@ -873,6 +916,7 @@ location	Estremera
 location	Ayna
 location	Cuenca ES
 location	Socuellamos
+location	Belmonte
 location	Villarrobledo
 location	San Clemente
 location	Riopar
@@ -988,6 +1032,7 @@ location	Fraga
 location	Zaragoza
 location	Tamarite de Litera
 location	Monzon
+location	Ayerbe
 
 # Comunitat Valenciana
 location	Miramar
@@ -1053,21 +1098,40 @@ location	Puzol
 # Catalunya
 location	Cambrils
 location	Jorba
+location	Bellavista
+location	Navas
 location	Vallirana
+location	Terrassa
 location	Santa Coloma de Cervello
 location	San Cugat del Valles
 location	El Prat de Llobregat
+location	Moia
 location	L'Hospitalet de Llobregat
 location	Sabadell
+location	Cerdanyola del Valles
 location	Barcelona
+location	Palau Solita i Plegamans
+location	Santa Perpetua de Mogoda
+location	Moncada y Reixach
+location	La Llagosta
+location	Santa Coloma de Gramenet
+location	Bigues I Riells
 location	Mollet del Valles
+location	Sant Adria del Besos
+location	Lliça de Vall
 location	Badalona
 location	Vic
 location	Tiana
+location	Canovelles
 location	Granollers
 location	El Masnou
+location	Teia
+location	Cardedeu
+location	Premia de Mar
 location	Vilasar de Mar
+location	Llinars del Valles
 location	Mataro
+location	Arenys de Munt
 location	Gerona
 location	Palamos
 
@@ -1778,10 +1842,13 @@ location	Benevento
 
 # Basilicata
 location	Potenza
+location	Matera
 
 # Apulia
+location	Foggia
 location	Bari
 location	Taranto
+location	Martina Franca
 location	Brindisi
 location	Lecce
 
@@ -2352,6 +2419,12 @@ location	Chiclayo
 # Galapagos
 location	Puerto Baquerizo Moreno
 
+# Tungurahua
+location	Ambato
+
+# Cotopaxi
+location	Latacunga
+
 # Manabi
 location	Pajan
 location	Puerto Lopez
@@ -2365,6 +2438,9 @@ location	Sucre
 location	General Villamil Playas
 location	Guayaquil
 location	San Jacinto de Yaguachi
+
+# El Oro
+location	Machala
 
 # Loja
 location	Macara
@@ -2406,6 +2482,9 @@ location	Awa Reserve
 
 # Napo
 location	Tena
+
+# Pastaza
+location	Puyo
 
 # Orellana
 location	Coca
@@ -2728,23 +2807,31 @@ location	Minnehaha County
 # Texas
 location	El Paso County
 location	Brewster County
+location	Bailey County
+location	Oldham County
 location	Deaf Smith County
 location	Ector County
 location	Crosby County
 location	Val Verde County
 location	Ochiltree County
+location	Gray County
+location	Wheeler County
 location	Taylor County TX
 location	Webb County
+location	Bandera County
+location	Brown County TX
 location	Llano County
 location	Comanche County
 location	Bexar County
 location	Comal County
 location	Hidalgo County
+location	Wilson County
 location	Jim Wells County
 location	Live Oak County
 location	Hays County
 location	Parker County
 location	Travis County
+location	Bee County
 location	Nueces County
 location	Williamson County
 location	San Patricio County
@@ -2754,20 +2841,29 @@ location	Mclennan County
 location	Victoria County
 location	Lavaca County
 location	Dallas County
+location	Calhoun County
 location	Burleson County
 location	Limestone County
 location	Washington County TX
 location	Kaufman County
 location	Wharton County
+location	Hunt County
 location	Waller County
 location	Grimes County
+location	Van Zandt County
 location	Lamar County
 location	Montgomery County TX
 location	Harris County
 location	Greater Houston Area
+location	Smith County
 location	Red River County
 location	Galveston County
 location	Titus County
+location	Upshur County
+location	Gregg County
+location	Angelina County
+location	Nacogdoches County
+location	Bowie County
 location	Cass County
 location	Panola County
 location	Jefferson County TX
@@ -3030,7 +3126,6 @@ division	Israel
 division	Jerusalem District
 division	Central District
 division	Tel Aviv District
-division	Jerusalem
 division	Haifa District
 division	North District
 
@@ -3375,6 +3470,9 @@ division	Mopti
 division	Mali
 
 ### Burkina Faso
+division	Cascades
+division	Hauts-Bassins
+division	Sud-Ouest
 division	Burkina Faso
 
 ### Ghana
@@ -3422,6 +3520,7 @@ division	Niger
 ### Equatorial Guinea
 division	Litoral
 division	Equatorial Guinea
+division	Bioko Sur
 division	Bioko Norte
 
 ### Gabon
@@ -3972,6 +4071,7 @@ division	Soroca
 ### Ukraine
 division	Ivano-Frankivsk
 division	Volyn
+division	Chernivtsi
 division	Kyiv
 division	Ukraine
 division	Kharkiv
@@ -4141,9 +4241,12 @@ division	Loreto
 ### Ecuador
 division	Galapagos
 division	Santa Elena
+division	Tungurahua
+division	Cotopaxi
 division	Manabi
 division	Guayas
 division	Daule
+division	El Oro
 division	Loja
 division	Los Rios
 division	Esmeraldas
@@ -4155,6 +4258,7 @@ division	Pichincha
 division	Imbabura
 division	Carchi
 division	Napo
+division	Pastaza
 division	Orellana
 
 ### Colombia
