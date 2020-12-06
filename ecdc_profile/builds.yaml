@@ -8,9 +8,9 @@
 custom_rules:
   - nextstrain_profiles/nextstrain/subsampling_ranges.smk
   - ecdc_profile/localrules.smk
+  - nextstrain_profiles/nextstrain/ruleorders.smk
 
 builds:
-
   europe:
     subsampling_scheme: custom_region
     geographic_scale: region
@@ -234,12 +234,10 @@ exposure:
     trait: "region"
     exposure: "region_exposure"
 
-
 files:
   colors: "ecdc_profile/colors.tsv"
   auspice_config: "ecdc_profile/auspice_config_ecdc.json"
   description: "ecdc_profile/description.md"
-
 
 subsampling:
   # Custom subsampling logic for regions like Europe where grouping by country
@@ -272,7 +270,6 @@ subsampling:
       priorities:
         type: "proximity"
         focus: "region_late"
-
 
   # Default subsampling logic for countries
   custom_country:
