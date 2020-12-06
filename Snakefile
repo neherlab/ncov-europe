@@ -7,6 +7,12 @@ from snakemake.logging import logger
 from snakemake.utils import validate
 import time
 
+ruleorder: align>download_aligned
+ruleorder: filter>download_filtered
+ruleorder: refilter>download_refiltered
+ruleorder: mask>download_masked
+ruleorder: diagnostic>download_diagnostic
+
 # Store the user's configuration prior to loading defaults, so we can check for
 # reused subsampling scheme names in the user's config. We need to make a deep
 # copy because Snakemake will deep merge the subsampling dictionary later,
@@ -71,7 +77,7 @@ wildcard_constraints:
     build_name = r'(?:[_a-zA-Z-](?!(tip-frequencies|gisaid|zh)))+',
     date = r"[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]"
 
-localrules: download
+localrules: download, download_metadata, download_sequences
 
 # Create a standard ncov build for auspice, by default.
 rule all:
