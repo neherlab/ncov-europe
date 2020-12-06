@@ -1,0 +1,287 @@
+# Define locations for which builds should be created.
+# For each build we specify a subsampling scheme via an explicit key.
+# If the name of the focal geography differs from the build name this needs to
+# be specified explicity as geographic_name. In addition, we require the
+# geographic scale the build focuses on. Together name and scale serve a look-up
+# in the geo_hierarchy to define region, country, division, etc
+# Define custom rules for pre- or post-standard workflow processing of data.
+custom_rules:
+  - nextstrain_profiles/nextstrain/subsampling_ranges.smk
+  - ecdc_profile/localrules.smk
+  - nextstrain_profiles/nextstrain/ruleorders.smk
+
+builds:
+  europe_firstwave:
+    subsampling_scheme: custom_region
+    geographic_scale: region
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    region: Europe
+
+  russia_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    country: Russia
+  serbia_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    country: Serbia
+  bosnia_and_herzegovina_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    country: "Bosnia and Herzegovina"
+  bulgaria_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    country: Bulgaria
+  latvia_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    country: Latvia
+  slovakia_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    country: Slovakia
+  slovenia_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    country: Slovenia
+  poland_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    country: Poland
+  belarus_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    country: Belarus
+  estonia_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    country: Estonia
+  lithuania_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    country: Lithuania
+  hungary_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    country: Hungary
+  croatia_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    country: Croatia
+  france_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    country: France
+  iceland_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    country: Iceland
+  norway_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    country: Norway
+  denmark_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    subclades: "ecdc_profile/subclades_denmark.tsv"
+    country: Denmark
+  netherlands_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    country: Netherlands
+  belgium_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    country: Belgium
+  luxembourg_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    country: Luxembourg
+  germany_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    region: Europe
+    country: Germany
+  austria_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    country: Austria
+  switzerland_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    country: Switzerland
+  italy_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    country: Italy
+  spain_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    country: Spain
+  czech-republic_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    country: Czech Republic
+  united-kingdom_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+    country: United Kingdom
+  ireland_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    country: Ireland
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+  finland_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    country: Finland
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+  sweden_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    country: Sweden
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+  portugal_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    country: Portugal
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+  greece_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    country: Greece
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+  israel_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    country: Israel
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+  romania_firstwave:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Europe
+    country: Romania
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+
+title: "Phylogenetic analysis of SARS-CoV-2 diversity in Europe"
+
+traits:
+  default:
+    sampling_bias_correction: 2.5
+    columns: ["region_exposure"]
+
+exposure:
+  default:
+    trait: "region"
+    exposure: "region_exposure"
+
+files:
+  colors: "ecdc_profile/colors.tsv"
+  auspice_config: "ecdc_profile/auspice_config_ecdc.json"
+  description: "ecdc_profile/description.md"
+
+subsampling:
+  # Custom subsampling logic for regions like Europe where grouping by country
+  # is the smallest resolution required.
+  custom_region:
+    # Focal samples for region
+    region:
+      group_by: "country year month"
+      max_sequences: 3000
+      max_date: "--max-date 2020-05-31"
+      exclude: "--exclude-where 'region!={region}'"
+    # Contextual samples for region from the rest of the world
+    global:
+      group_by: "country year month"
+      max_sequences: 2000
+      max_date: "--max-date 2020-05-31"
+      exclude: "--exclude-where 'region={region}'"
+      priorities:
+        type: "proximity"
+        focus: "region"
+
+  # Default subsampling logic for countries
+  custom_country:
+    # Focal samples for country
+    country:
+      group_by: "division year month"
+      max_sequences: 2000
+      max_date: "--max-date 2020-05-31"
+      exclude: "--exclude-where 'country!={country}'"
+    region:
+      group_by: "country year month"
+      max_sequences: 2000
+      max_date: "--max-date 2020-05-31"
+      exclude: "--exclude-where 'country={country}' 'region!={region}'"
+      priorities:
+        type: "proximity"
+        focus: "country"
+    # Contextual samples from the rest of the world,
+    # excluding the current region to avoid resampling.
+    global:
+      group_by: "country year month"
+      max_sequences: 1000
+      max_date: "--max-date 2020-05-31"
+      exclude: "--exclude-where 'region={region}'"
+      priorities:
+        type: "proximity"
+        focus: "country"
