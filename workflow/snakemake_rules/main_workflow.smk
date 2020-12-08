@@ -1,5 +1,5 @@
 rule download_sequences:
-    message: "Downloading sequences from S3"
+    message: "Downloading sequences from S3 bucket {params.s3_bucket}"
     output:
         sequences = config["sequences"]
     conda: config["conda_environment"]
@@ -11,7 +11,7 @@ rule download_sequences:
         """
 
 rule download_metadata:
-    message: "Downloading metadata from S3"
+    message: "Downloading metadata from S3 bucket {params.s3_bucket}"
     output:
         metadata = config["metadata"]
     conda: config["conda_environment"]
@@ -21,21 +21,6 @@ rule download_metadata:
         """
         aws s3 cp s3://{params.s3_bucket}/metadata.tsv.gz - | gunzip -cq >{output.metadata:q}
         """
-
-rule upload:
-    input:
-        "results/masked.fasta",
-        "results/aligned.fasta",
-        "results/filtered.fasta",
-        "results/sequence-diagnostics.tsv",
-        "results/flagged-sequences.tsv",
-        "results/to-exclude.txt"
-    params:
-        s3_bucket = config["S3_BUCKET"],
-        compression = config["preprocess"]["compression"]
-    run:
-        for fname in input:
-            shell(f"./scripts/upload-to-s3 {fname} s3://{params.s3_bucket}/{os.path.basename(fname)}.{params.compression}")
 
 rule download:
     input:
@@ -121,11 +106,10 @@ rule diagnose_excluded:
             --output-exclusion-list {output.to_exclude} 2>&1 | tee {log}
         """
 
-
 rule prefilter:
     message:
         """
-        Filtering for minimal length
+        Pre-filtering sequences for minimal length (before aligning)
         """
     input:
         sequences = config["sequences"],
@@ -146,19 +130,6 @@ rule prefilter:
             --output {output.sequences} 2>&1 | tee {log}
         """
 
-rule download_aligned:
-    message: "Downloading metadata and fasta files from S3"
-    output:
-        sequences = "results/aligned.fasta"
-    conda: config["conda_environment"]
-    params:
-        compression = config['preprocess']['compression'],
-        deflate = config['preprocess']['deflate']
-    shell:
-        """
-        aws s3 cp s3://nextstrain-ncov-private/aligned.fasta.{params.compression} - | {params.deflate} > {output.sequences:q}
-        """
-
 rule align:
     message:
         """
@@ -174,7 +145,7 @@ rule align:
         "logs/align.txt"
     benchmark:
         "benchmarks/align.txt"
-    threads: 8
+    threads: 16
     conda: config["conda_environment"]
     shell:
         """
@@ -187,25 +158,6 @@ rule align:
             {input.sequences} \
             {input.reference} > {output} 2> {log}
         """
-
-
-rule download_diagnostic:
-    message: "Downloading metadata and fasta files from S3"
-    output:
-        diagnostics = "results/sequence-diagnostics.tsv",
-        flagged = "results/flagged-sequences.tsv",
-        to_exclude = "results/to-exclude.txt"
-    conda: config["conda_environment"]
-    params:
-        compression = config['preprocess']['compression'],
-        deflate = config['preprocess']['deflate']
-    shell:
-        """
-        aws s3 cp s3://nextstrain-ncov-private/sequence-diagnostics.tsv.{params.compression} - | {params.deflate} > {output.diagnostics:q}
-        aws s3 cp s3://nextstrain-ncov-private/flagged-sequences.tsv.{params.compression} - | {params.deflate} > {output.flagged:q}
-        aws s3 cp s3://nextstrain-ncov-private/to-exclude.txt.{params.compression} - | {params.deflate} > {output.to_exclude:q}
-        """
-
 
 rule diagnostic:
     message: "Scanning aligned sequences {input.alignment} for problematic sequences"
@@ -236,19 +188,6 @@ rule diagnostic:
             --output-exclusion-list {output.to_exclude} 2>&1 | tee {log}
         """
 
-rule download_refiltered:
-    message: "Downloading metadata and fasta files from S3"
-    output:
-        sequences = "results/aligned-filtered.fasta"
-    conda: config["conda_environment"]
-    params:
-        compression = config['preprocess']['compression'],
-        deflate = config['preprocess']['deflate']
-    shell:
-        """
-        aws s3 cp s3://nextstrain-ncov-private/aligned-filtered.fasta.{params.compression} - | {params.deflate} > {output.sequences:q}
-        """
-
 rule refilter:
     message:
         """
@@ -270,19 +209,6 @@ rule refilter:
             --metadata {input.metadata} \
             --exclude {input.exclude} \
             --output {output.sequences} 2>&1 | tee {log}
-        """
-
-rule download_masked:
-    message: "Downloading metadata and fasta files from S3"
-    output:
-        sequences = "results/masked.fasta"
-    conda: config["conda_environment"]
-    params:
-        compression = config['preprocess']['compression'],
-        deflate = config['preprocess']['deflate']
-    shell:
-        """
-        aws s3 cp s3://nextstrain-ncov-private/masked.fasta.{params.compression} - | {params.deflate} > {output.sequences:q}
         """
 
 rule mask:
@@ -348,19 +274,6 @@ rule filter:
             --exclude-where {params.exclude_where}\
             --min-length {params.min_length} \
             --output {output.sequences} 2>&1 | tee {log}
-        """
-
-rule download_filtered:
-    message: "Downloading metadata and fasta files from S3"
-    output:
-        sequences = "results/filtered.fasta"
-    conda: config["conda_environment"]
-    params:
-        compression = config['preprocess']['compression'],
-        deflate = config['preprocess']['deflate']
-    shell:
-        """
-        aws s3 cp s3://nextstrain-ncov-private/filtered.fasta.{params.compression} - | {params.deflate} > {output.sequences:q}
         """
 
 def _get_subsampling_settings(wildcards):
