@@ -8,7 +8,7 @@
 custom_rules:
   - nextstrain_profiles/nextstrain/subsampling_ranges.smk
   - ecdc_profile/localrules.smk
-  - nextstrain_profiles/nextstrain/ruleorders.smk
+  - nextstrain_profiles/nextstrain/download_preprocessed.smk
 
 builds:
   europe:
