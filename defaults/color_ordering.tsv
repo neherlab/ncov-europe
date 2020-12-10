@@ -81,6 +81,10 @@ location	Balata
 location	Deir al-Hatab
 location	Dahieh
 
+### Saudi Arabia
+# Eastern Province
+location	Qatif
+
 ### Kuwait
 # Kuwait
 location	Hawali
@@ -562,6 +566,10 @@ location	Touba
 # Kolda
 location	Velingara
 
+### Côte d'Ivoire
+# Bouaké
+location	Brobo
+
 ### Burkina Faso
 # Cascades
 location	Banfora
@@ -617,8 +625,9 @@ location	Knysna
 location	Siyathemba
 
 # Eastern Cape
-location	Nelson Mandela Bay
 location	Sarah Baartman
+location	Nelson Mandela Bay
+location	Chris Hani
 
 # KwaZulu-Natal
 location	uMkhanyakude
@@ -698,6 +707,10 @@ location	Santarem
 # Coimbra
 location	Penacova
 
+### Ireland
+# Limerick
+location	Limerick City
+
 ### Spain
 # Canary Islands
 location	Las Palmas de Gran Canaria
@@ -773,7 +786,7 @@ location	Sevilla
 location	Cordoba ES
 location	Tarifa
 location	Algeciras
-location	San Roque
+location	San Roque ES
 location	La Linea de la Concepcion
 location	Benalmadena
 location	Antequera
@@ -1114,6 +1127,7 @@ location	L'Hospitalet de Llobregat
 location	Sabadell
 location	Cerdanyola del Valles
 location	Barcelona
+location	Ripollet
 location	Palau Solita i Plegamans
 location	Santa Perpetua de Mogoda
 location	Moncada y Reixach
@@ -1122,20 +1136,26 @@ location	Santa Coloma de Gramenet
 location	Bigues I Riells
 location	Mollet del Valles
 location	Sant Adria del Besos
+location	Parets del Valles
 location	Lliça de Vall
 location	Badalona
 location	Vic
 location	Tiana
 location	Canovelles
 location	Granollers
+location	Alella
 location	El Masnou
 location	Teia
+location	La Roca del Valles
 location	Cardedeu
 location	Premia de Mar
 location	Vilasar de Mar
 location	Llinars del Valles
 location	Mataro
 location	Arenys de Munt
+location	Calella
+location	Pineda de Mar
+location	Malgrat de Mar
 location	Gerona
 location	Palamos
 
@@ -2043,33 +2063,50 @@ location	Cuprija
 location	Kragujevac
 
 # Srem District
+location	Sremska Mitrovica
 location	Ruma
 
 # South Banat District
 location	Pancevo
 location	Vrsac
 
+# Central Banat District
+location	Zrenjanin
+
 # South Bačka District
 location	Backa Palanka
 location	Vrbas
 location	Srbobran
 location	Novi Sad
+location	Titel
 
 # North Banat District
 location	Kikinda
 
 # North Bačka District
-location	Suubotica
+location	Backa Topola
+location	Subotica
 
 ### North Macedonia
+# Southwestern Region
+location	Struga
+location	Ohrid
+
 # Pelagonia
+location	Bitola
 location	Prilep
+
+# Vardar
+location	Veles
 
 # Northeastern Region
 location	Kumanovo
 
 # Eastern Region
 location	Shtip
+
+# Southeastern Region
+location	Strumica
 
 ### Greece
 # Central Greece
@@ -2708,38 +2745,63 @@ location	La Cruz
 
 # Puntarenas
 location	Garabito
+location	Piedras Blancas
 location	Corredores
+location	Corredor
 location	Coto Brus
+location	Laurel
 
 # Alajuela
 location	Orotina
 location	San Rafael de Alajuela
 location	Alajuela
 location	Grecia
+location	San Roque CO
+location	Quesada
 location	San Carlos
 
 # Heredia
+location	San Pablo
+location	San Francisco CR
 location	Heredia
 location	San Rafael Heredia
 location	Barva
 
 # San Jose
-location	Perez Zeledon
-location	Tarrazu
-location	Aserri
-location	Alajuelita
-location	Desamparados
-location	Curridabat
-location	Escazu
+location	Picagres
+location	Santiago de Puriscal
+location	Pozos
 location	Santa Ana CR
+location	Escazu
+location	San Antonio
+location	Pavas
+location	San Rafael de Escazú
+location	San Felipe
+location	Alajuelita
 location	San Jose
-location	Montes de Oca
+location	Aserri
 location	Tibas
-location	Goicoechea
+location	Tarrazu
+location	Desamparados
+location	Zapote
+location	Los Guido
+location	Curridabat
+location	Montes de Oca
+location	Purral
+location	San Jerónimo
 location	Moravia
+location	Goicoechea
+location	Perez Zeledon
 
 # Cartago CR
+location	San Diego CR
 location	La Union
+location	Tres Rios
+location	San Isidro
+location	Llanos de Santa Lucia
+location	Carmen
+location	La Suiza
+location	Dulce Nombre
 
 # Limon
 location	Siquirres
@@ -2764,6 +2826,7 @@ location	Fairbanks
 location	Southeast Alaska
 
 # Oregon
+location	Coos County
 location	Yamhill County
 location	Douglas County OR
 location	Columbia County OR
@@ -2771,8 +2834,10 @@ location	Washington County OR
 location	Lane County OR
 location	Jackson County OR
 location	Marion County OR
+location	Linn County
 location	Multnomah County
 location	Clackamas County
+location	Klamath County
 location	Hood River County
 location	Wasco County
 location	Sherman County
@@ -2786,6 +2851,7 @@ location	San Juan County
 location	Thurston County
 location	Cowlitz County
 location	Clark County WA
+location	Mercer Island
 location	Pierce County WA
 location	Snohomish County
 location	King County
@@ -2845,7 +2911,7 @@ location	Riverside
 location	Clark County NV
 
 # Idaho
-location	Madison County
+location	Madison County ID
 
 # Arizona
 location	Yuma
@@ -2860,6 +2926,9 @@ location	Denver County
 
 # South Dakota
 location	Minnehaha County
+
+# Nebraska
+location	Lancaster County
 
 # Texas
 location	El Paso County
@@ -2918,6 +2987,7 @@ location	Galveston County
 location	Titus County
 location	Upshur County
 location	Gregg County
+location	Morris County TX
 location	Angelina County
 location	Nacogdoches County
 location	Bowie County
@@ -2996,7 +3066,7 @@ location	Vernon County
 location	Jackson County WI
 location	Grant County WI
 location	Ashland County
-location	Monroe County
+location	Monroe County WI
 location	Taylor County WI
 location	Richland County WI
 location	Lafayette County
@@ -3048,14 +3118,19 @@ location	Jackson County IL
 location	Cook County
 location	Chicago
 location	Kane County
+location	Ogle County IL
+location	Ogle County
+location	Boone County
 location	Winnebago County IL
 location	Lake County IL
+location	Stephenson County
 location	Jo Daviess County
 
 # Indiana
 location	Marion County IN
 
 # Georgia
+location	Atlanta
 location	Cobb
 
 # Ohio
@@ -3068,6 +3143,7 @@ location	Alachua County
 location	Orange County FL
 location	Miami-Dade County
 location	Palm Beach County
+location	Miami Gardens
 
 # South Carolina
 location	Fairfield County SC
@@ -3077,6 +3153,9 @@ location	Berkeley County
 location	Williamsburg County
 location	Georgetown County
 location	Horry County
+
+# West Virginia
+location	Kanawha
 
 # Pennsylvania
 location	Pittsburgh
@@ -3097,42 +3176,84 @@ location	New Castle County
 # New Jersey
 location	Camden County
 location	Burlington County
+location	New Jersey
+location	Trenton
+location	Fair Haven
+location	Jersey City
 location	Hudson County
-location	Essex County
-location	Morris County
+location	East Orange
+location	Secaucus
+location	Essex County NJ
+location	Guttenberg
+location	Bloomfield
+location	Morris County NJ
+location	Paterson
 location	Bergen County
 
 # New York
+location	Chautauqua County
+location	Niagara County
+location	Erie County
+location	Cattaraugus County
+location	Wyoming County
+location	Orleans County
+location	Monroe County NY
+location	Steuben County
+location	Ontario County
+location	Wayne County
+location	Seneca County
+location	Chemung County
+location	Cayuga County
+location	Tompkins County
+location	Tioga County
+location	Onondaga County
+location	Oswego County
+location	Cortland County
+location	Jefferson County NY
+location	Broome County
+location	Madison County NY
+location	Chenango County
+location	Lewis County
+location	Oneida County
+location	St. Lawrence County
+location	Otsego County
+location	Delaware County
+location	Herkimer County
+location	Wanakena
+location	Sullivan County
+location	Hamilton County
+location	Fulton County
+location	Schoharie County
+location	Montgomery County NY
+location	Franklin County NY
+location	Ulster County
+location	Orange County NY
+location	Passaic County
 location	Richmond County
 location	Staten Island
-location	Brooklyn
+location	Greene County
+location	Schenectady County
 location	New York City
-location	Queens
-location	Nassau County
+location	Rockland County
+location	Albany County
 location	Manhattan
 location	New York County
+location	Brooklyn
+location	Saratoga County
 location	Bronx
-location	New Rochelle
-location	Passaic County
-location	Suffolk County
+location	Warren County
+location	Queens
 location	Westchester County
-location	Rockland County
-location	Orange County NY
+location	New Rochelle
+location	Essex County NY
 location	Putnam County
 location	Dutchess County
-location	Ulster County
-location	Broome County
-location	Chenango County
-location	Albany County
-location	Schenectady County
-location	Montgomery County NY
-location	Cayuga County
-location	Onondaga County
-location	Saratoga County
-location	Washington County NY
-location	Jefferson County NY
-location	Franklin County NY
 location	Clinton County
+location	Columbia County NY
+location	Nassau County
+location	Rensselaer County
+location	Washington County NY
+location	Suffolk County
 
 # Connecticut
 location	Hartford County
@@ -3153,6 +3274,7 @@ location	Meriden
 location	Northford
 location	Madison CT
 location	Tolland County
+location	Gales Ferry
 
 # Massachusetts
 location	Middlesex County
@@ -3201,6 +3323,7 @@ division	Jenin
 
 ### Lebanon
 division	Beirut
+division	Lebanon
 
 ### Jordan
 division	Irbid
@@ -3214,12 +3337,16 @@ division	Tbilisi
 ### Iraq
 division	Al-Muthanna Province
 
+### Armenia
+division	Armenia
+
 ### Saudi Arabia
 division	Jeddah
 division	Madinah
 division	Makkah
 division	Saudi Arabia
 division	Riyadh
+division	Eastern Province
 
 ### Kuwait
 division	Kuwait
@@ -3270,6 +3397,9 @@ division	Rawalpindi
 division	Khyber Pakhtunkhwa
 division	Islamabad
 division	Gilgit Baltistan
+
+### Tajikistan
+division	Tajikistan
 
 ### Maldives
 division	Maldives
@@ -3375,6 +3505,7 @@ division	Heilongjiang
 
 ### Cambodia
 division	Sihanoukville
+division	Phnom Penh
 
 ### Vietnam
 division	Ho Chi Minh City
@@ -3510,12 +3641,14 @@ division	Sierra Leone
 division	Conakry
 
 ### Côte d'Ivoire
-division	Yamoussoukro
+division	Guiglo
+division	Séguéla
 division	Bouafle
 division	Beoumi
-division	Bouaké
 division	Côte d'Ivoire
+division	Yamoussoukro
 division	Katiola
+division	Bouaké
 
 ### Morocco
 division	Casablanca
@@ -3526,6 +3659,7 @@ division	Ouarzazate
 ### Mali
 division	Bamako
 division	Mopti
+division	Timbuktu
 division	Mali
 
 ### Burkina Faso
@@ -3646,6 +3780,9 @@ division	Mombasa
 division	Taita Taveta
 division	Kilifi
 division	Kenya
+
+### Ethiopia
+division	Ethiopia
 
 ### Madagascar
 division	Analamanga
@@ -4029,8 +4166,11 @@ division	Kosice
 division	Montenegro
 
 ### Hungary
+division	Győr-Moson-Sopron County
+division	Somogy County
 division	Balatonfured
-division	Baranya
+division	Veszprém County
+division	Baranya County
 division	Central Hungary
 division	Balassagyarmat
 division	Pest County
@@ -4044,6 +4184,7 @@ division	Jász-Nagykun-Szolnok County
 division	Oroshaza
 division	Borsod-Abaúj-Zemplén County
 division	Békés County
+division	Hajdú-Bihar County
 division	Debrecen
 division	Szabolcs-Szatmár-Bereg County
 
@@ -4055,8 +4196,10 @@ division	Serbia
 division	Moravica District
 division	Pomoravlje District
 division	Šumadija District
+division	Sabac
 division	Srem District
 division	South Banat District
+division	Central Banat District
 division	South Bačka District
 division	North Banat District
 division	North Bačka District
@@ -4066,11 +4209,14 @@ division	Kosovo
 division	Kosovska Mitrovica
 
 ### North Macedonia
+division	Southwestern Region
 division	Skopje
 division	Pelagonia
 division	North Macedonia
+division	Vardar
 division	Northeastern Region
 division	Eastern Region
+division	Southeastern Region
 
 ### Greece
 division	Athens
@@ -4100,14 +4246,15 @@ division	Buzau
 division	Constanta
 
 ### Bulgaria
-division	Smolyan
-division	Blagoevgrad
-division	Pazardzhik
-division	Dupnitza
 division	Kyustendil
-division	Sofia
-division	Pleven
 division	Vidin
+division	Blagoevgrad
+division	Dupnitza
+division	Sofia
+division	Pazardzhik
+division	Pleven
+division	Smolyan
+division	Bulgaria
 
 ### Latvia
 division	Riga
@@ -4128,6 +4275,7 @@ division	Belarus
 division	Cahul
 division	Chisinau
 division	Straseni
+division	Moldova
 division	Rezina
 division	Balti
 division	Soroca
@@ -4196,9 +4344,11 @@ division	Karachay-Cherkess
 division	Kabardino-Balkaria
 division	Stavropol
 division	Nizhny Novgorod
+division	Penza
 division	Ingushetia
 division	Kalmykia
 division	Chechen Republic
+division	Saratov
 division	Dagestan
 division	Mari El
 division	Samara
@@ -4314,6 +4464,7 @@ division	El Oro
 division	Loja
 division	Los Rios
 division	Esmeraldas
+division	Ecuador
 division	Azuay
 division	Bolivar EC
 division	Zamora-Chinchipe
@@ -4394,6 +4545,9 @@ division	Limon
 ### Nicaragua
 division	Nicaragua
 
+### El Salvador
+division	San Salvador
+
 ### Guatemala
 division	Guatemala
 
@@ -4467,6 +4621,9 @@ division	Quintana Roo
 
 ### Cuba
 division	Cuba
+
+### North America
+division	North America
 
 ### USA
 division	Hawaii
@@ -4550,6 +4707,7 @@ country	Lebanon
 country	Jordan
 country	Georgia
 country	Iraq
+country	Armenia
 country	Saudi Arabia
 country	Kuwait
 country	Bahrain
@@ -4561,6 +4719,7 @@ country	Uzbekistan
 country	Afghanistan
 country	Kazakhstan
 country	Pakistan
+country	Tajikistan
 country	Maldives
 country	Kyrgyzstan
 country	India
@@ -4620,6 +4779,7 @@ country	Egypt
 country	Uganda
 country	Mozambique
 country	Kenya
+country	Ethiopia
 country	Madagascar
 country	Somalia
 
@@ -4687,6 +4847,7 @@ country	Aruba
 country	Panama
 country	Costa Rica
 country	Nicaragua
+country	El Salvador
 country	Guatemala
 country	Guadeloupe
 country	Belize
@@ -4696,6 +4857,7 @@ country	Jamaica
 country	Dominican Republic
 country	Mexico
 country	Cuba
+country	North America
 country	USA
 country	Canada
 
