@@ -280,6 +280,26 @@ rule deploy_to_staging:
         fi
         """
 
+rule upload:
+    message: "Uploading intermediate files to {params.s3_bucket}"
+    input:
+        "results/masked.fasta",
+        "results/aligned.fasta",
+        "results/filtered.fasta",
+        "results/sequence-diagnostics.tsv",
+        "results/flagged-sequences.tsv",
+        "results/to-exclude.txt"
+    params:
+        s3_bucket = config["S3_BUCKET"],
+        compression = config["preprocess"]["compression"]
+    log:
+        "logs/upload.txt"
+    run:
+        for fname in input:
+            cmd = f"./scripts/upload-to-s3 {fname} s3://{params.s3_bucket}/{os.path.basename(fname)}.{params.compression} | tee -a {log}"
+            print("upload command:", cmd)
+            shell(cmd)
+
 onstart:
     slack_message = f"Build {deploy_origin} started."
 
