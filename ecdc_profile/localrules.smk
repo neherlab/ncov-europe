@@ -67,9 +67,11 @@ rule finalize_ecdc:
     message: "Remove extraneous colorings for main build and move frequencies"
     input:
         auspice_json = rules.add_labels.output.auspice_json,
+        root_json = rules.export.output.root_sequence_json,
         frequencies = rules.tip_frequencies.output.tip_frequencies_json
     output:
         auspice_json = "auspice/ncov_{build_name}.json",
+        root_json = "auspice/ncov_{build_name}_root-sequence.json",
         tip_frequency_json = "auspice/ncov_{build_name}_tip-frequencies.json"
     log:
         "logs/fix_colorings_{build_name}.txt"
@@ -79,5 +81,6 @@ rule finalize_ecdc:
         python3 scripts/fix-colorings.py \
             --input {input.auspice_json} \
             --output {output.auspice_json} 2>&1 | tee {log} &&
-        cp {input.frequencies} {output.tip_frequency_json}
+        cp {input.frequencies} {output.tip_frequency_json} &&
+        cp {input.root_json} {output.root_json}
         """
