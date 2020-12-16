@@ -10,6 +10,8 @@ custom_rules:
   - ecdc_profile/localrules.smk
   - nextstrain_profiles/nextstrain/download_preprocessed.smk
 
+S3_BUCKET: "nextstrain-ncov-private"
+
 builds:
   europe:
     subsampling_scheme: custom_region
