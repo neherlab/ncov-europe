@@ -396,6 +396,7 @@ rule subsample:
             --metadata {input.metadata} \
             --include {input.include} \
             --exclude {input.exclude} \
+            --probabilistic-sampling \
             {params.min_date} \
             {params.max_date} \
             {params.exclude_argument} \
