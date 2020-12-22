@@ -368,6 +368,7 @@ location	Bury	50.541909	3.593710
 location	Buzet	50.419853	4.773861
 location	Cabezon de la Sal	43.3080667	-4.2358532
 location	Cabo de Santo Agostinho	-8.2838945	-35.0320984
+location	Cabo Frio	-22.8804369	-42.0189227
 location	Cacak	43.8913319	20.3501125
 location	Cacem	38.7704429	-9.30908972918529
 location	Caceres	39.4745175	-6.3716761
@@ -503,6 +504,7 @@ location	Clackamas County	45.1608821	-122.2305038
 location	Claiborne Parish	32.8218607	-93.0097229
 location	Clark County NV	36.3467726	-115.0907378
 location	Clark County WA	45.7669047	-122.4940866
+location	Clark County WI	44.7188146	-90.6214928
 location	Clavijo	42.3494671	-2.4262521
 location	Clayton AU	-37.9173212	145.1304242
 location	Clayton County	42.8547706	-91.3667151
@@ -604,6 +606,7 @@ location	Deforest	43.244858	-89.351873
 location	Dehradun	30.3255646	78.0436813
 location	Deinze	50.9875	3.5236
 location	Deir al-Hatab	32.217222	35.320833
+location	Dekalb County	41.8903447	-88.7713953
 location	Delaware County	42.194917	-75.0016302
 location	Delft	52.0116	4.3571
 location	Denton County	33.1838787	-97.1413417
@@ -860,6 +863,7 @@ location	Guadalupe	8.859217	-79.808174
 location	Guadassuar	39.1859294	-0.4769464
 location	Guadix	37.3011	-3.1403
 location	Guangzhou	23.123972	113.292889
+location	Guapimirim	-22.5266308	-42.9790687
 location	Guaranda	-1.590027	-78.999653
 location	Guarujá	-23.9927768	-46.2558332
 location	Guarulhos	-23.4430602	-46.524459
@@ -991,8 +995,10 @@ location	Ipojuca	-8.3980773	-35.0611068
 location	Irun	43.3383176	-1.7888095
 location	Ischgl	47.011789	10.289683
 location	Itaborai	-22.7570	-42.8643
+location	Itaguaí	-22.8629597	-43.775322
 location	Itagui	6.174822	-75.607579
 location	Itapecerica Da Serra	-23.734665	-46.857835
+location	Itaperuna	-21.2048	-41.88801
 location	Itaporanga Dajuda	-10.9961671	-37.3045841
 location	Itariri	-24.2900711	-47.176151
 location	Itatiba	-22.9965861	-46.8412042
@@ -1303,6 +1309,7 @@ location	Lyubertsy	55.6783142	37.89377
 location	Lyubinsky	55.156715	72.699005
 location	Maale-Edumim	31.7705643	35.2987457
 location	Maalot Tarshicha	33.0150	35.2760
+location	Macaé	-22.3712958	-41.7866922
 location	Macara	-4.3490568	-79.91614162495434
 location	Maceio	-9.586654	-35.721537
 location	Machala	-3.262571666551047	-79.95848682428372
@@ -1357,6 +1364,7 @@ location	Marange Silvange	49.2160771	6.1164164
 location	Marathon County	44.8914036	-89.7748098
 location	Marcinelle	50.394727	4.427537
 location	Mariakerke	51.072918	3.680642
+location	Maricá	-22.9196772	-42.8184375
 location	Maricopa County	33.34883	-112.49123
 location	Marignane	43.4162729	5.2146275
 location	Marin County	38.077277	-122.719060
@@ -1561,6 +1569,7 @@ location	Nice	43.7009358	7.2683912
 location	Nicoya	10.147393	-85.452562
 location	Nieuwendijk	51.7774	4.8743
 location	Nieuwerkerken	50.882291	5.20403
+location	Nilópolis	-22.8080114	-43.4138222
 location	Nilphamari	25.9339275	88.8534588
 location	Nîmes	43.8374249	4.3600687
 location	Nir-Tzvi	31.9525352	34.8625062
@@ -1589,6 +1598,7 @@ location	Nossa Senhora Da Gloria	-10.2188811	-37.4199759
 location	Nossa Senhora do Socorro	-10.8553115	-37.1264863
 location	Nossegem	50.877645	4.507645
 location	Nottinghamshire	53.139677	-1.027527
+location	Nova Friburgo	-22.2800004	-42.5325303
 location	Nova Iguacu	-22.7561	-43.4607
 location	Nova Odessa	-22.783186	-47.294059
 location	Novi Pazar	43.136667	20.512222
@@ -2041,6 +2051,7 @@ location	Santurtzi	43.3287527	-3.0318766
 location	Sao Bernardo do Campo	-23.735551	-46.563349
 location	São Domingos da Benfica	38.738026950000005	-9.195298604626885
 location	Sao Goncalo	-22.8219014	-43.0309252
+location	São João de Meriti	-22.8043744	-43.3724125
 location	Sao Lourenco Da Mata	-7.9959607	-35.039335
 location	São Paulo	-23.551096	-46.634874
 location	Sao Sebastiao	-23.8027866	-45.4070527
@@ -2077,6 +2088,7 @@ location	Seneffe	50.549618	4.268821
 location	Seoul	37.548278	126.990916
 location	Seraing	50.591687	5.516066
 location	Sergiyev Posad	56.3153529	38.1358208
+location	Seropédica	-22.7438887	-43.6991998
 location	Severomorsk	69.069168	33.416656
 location	Sevilla	37.379170	-5.983557
 location	Seymour	41.396164	-73.072024
@@ -3253,6 +3265,7 @@ division	Morona Santiago	-2.6232969	-78.0048106
 division	Moscow	55.7558	37.6173
 division	Moscow Oblast	55.5043158	38.0353929
 division	Moscow Region	55.3404	38.2918
+division	Mostar	43.356900	17.795491
 division	Mouscron	50.7459	3.2193
 division	Mpumalanga	-25.5653	30.5279
 division	Mumbai	19.0760	72.8777
@@ -3297,6 +3310,7 @@ division	Niedersachsen	52.8398531	9.075962
 division	Niger	18.061703	10.145544
 division	Nigeria	10	8
 division	Nile River Cruise	23.998417	32.873216
+division	Nitra	48.31295	18.0894593
 division	Nivelles	50.594427	4.331238
 division	Nizhny Novgorod	55.4718033	44.0911594
 division	Nonthaburi	13.852511	100.522791
@@ -3328,6 +3342,7 @@ division	Norway	64.574131	11.52701029
 division	Nottinghamshire	53.134734	-0.989052
 division	Nouvelle-Aquitaine	45.4039367	0.3756199
 division	Nova Scotia	44.879119	-64.020314
+division	Nove Zamky	47.9861843	18.1631415
 division	Novgorod	58.2843833	32.5169757
 division	Novi Pazar	43.1407	20.5214
 division	Novi Sad	45.269432	19.830203
@@ -3501,6 +3516,7 @@ division	Santiago de Veraguas	8.0989867	-80.9803978
 division	São Paulo	-23.59806	-46.660537
 division	Sarajevo	43.8563	18.4131
 division	Saratov	51.530018	46.034683
+division	Sarawak	2.5023855	112.9547283
 division	Sardinia	40.1209	9.0129
 division	Saskatchewan	53.934278	-106.16006
 division	Saudi Arabia	25	45
