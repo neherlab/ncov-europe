@@ -260,6 +260,7 @@ rule filter:
         min_length = config["filter"]["min_length"],
         exclude_where = config["filter"]["exclude_where"],
         min_date = config["filter"]["min_date"],
+        ambiguous = lambda wildcards: f"--exclude-ambiguous-dates-by {config['filter']['exclude_ambiguous_dates_by']}" if "exclude_ambiguous_dates_by" in config["filter"] else "",
         date = date.today().strftime("%Y-%m-%d")
     conda: config["conda_environment"]
     shell:
@@ -270,6 +271,7 @@ rule filter:
             --include {input.include} \
             --max-date {params.date} \
             --min-date {params.min_date} \
+            {params.ambiguous} \
             --exclude {input.exclude} \
             --exclude-where {params.exclude_where}\
             --min-length {params.min_length} \
@@ -333,6 +335,8 @@ def _get_specific_subsampling_setting(setting, optional=False):
             # build's region, country, division, etc. as needed for subsampling.
             build = config["builds"][wildcards.build_name]
             value = value.format(**build)
+            if value !="" and setting == 'exclude_ambiguous_dates_by':
+                value = f"--exclude-ambiguous-dates-by {value}"
         elif value is not None:
             # If is 'seq_per_group' or 'max_sequences' build subsampling setting,
             # need to return the 'argument' for augur
@@ -363,6 +367,7 @@ rule subsample:
          - subsample max sequences: {params.subsample_max_sequences}
          - min-date: {params.min_date}
          - max-date: {params.max_date}
+         - {params.exclude_ambiguous_dates_argument}
          - exclude: {params.exclude_argument}
          - include: {params.include_argument}
          - query: {params.query_argument}
@@ -382,9 +387,11 @@ rule subsample:
         group_by = _get_specific_subsampling_setting("group_by"),
         sequences_per_group = _get_specific_subsampling_setting("seq_per_group", optional=True),
         subsample_max_sequences = _get_specific_subsampling_setting("max_sequences", optional=True),
+        sampling_scheme = _get_specific_subsampling_setting("sampling_scheme", optional=True),
         exclude_argument = _get_specific_subsampling_setting("exclude", optional=True),
         include_argument = _get_specific_subsampling_setting("include", optional=True),
         query_argument = _get_specific_subsampling_setting("query", optional=True),
+        exclude_ambiguous_dates_argument = _get_specific_subsampling_setting("exclude_ambiguous_dates_by", optional=True),
         min_date = _get_specific_subsampling_setting("min_date", optional=True),
         max_date = _get_specific_subsampling_setting("max_date", optional=True),
         priority_argument = get_priority_argument
@@ -402,10 +409,12 @@ rule subsample:
             {params.exclude_argument} \
             {params.include_argument} \
             {params.query_argument} \
+            {params.exclude_ambiguous_dates_argument} \
             {params.priority_argument} \
             --group-by {params.group_by} \
             {params.sequences_per_group} \
             {params.subsample_max_sequences} \
+            {params.sampling_scheme} \
             --output {output.sequences} 2>&1 | tee {log}
         """
 
@@ -738,43 +747,6 @@ rule pangolin:
             --output {output.clade_data}
         """
 
-
-rule legacy_clades:
-    message: "Adding internal clade labels"
-    input:
-        tree = rules.refine.output.tree,
-        aa_muts = rules.translate.output.node_data,
-        nuc_muts = rules.ancestral.output.node_data,
-        clades = config["files"]["legacy_clades"]
-    output:
-        clade_data = "results/{build_name}/temp_legacy_clades.json"
-    log:
-        "logs/legacy_clades_{build_name}.txt"
-    conda: config["conda_environment"]
-    shell:
-        """
-        augur clades --tree {input.tree} \
-            --mutations {input.nuc_muts} {input.aa_muts} \
-            --clades {input.clades} \
-            --output-node-data {output.clade_data} 2>&1 | tee {log}
-        """
-
-rule rename_legacy_clades:
-    input:
-        node_data = rules.legacy_clades.output.clade_data
-    output:
-        clade_data = "results/{build_name}/legacy_clades.json"
-    run:
-        import json
-        with open(input.node_data, 'r', encoding='utf-8') as fh:
-            d = json.load(fh)
-            new_data = {}
-            for k,v in d['nodes'].items():
-                if "clade_membership" in v:
-                    new_data[k] = {"legacy_clade_membership": v["clade_membership"]}
-        with open(output.clade_data, "w") as fh:
-            json.dump({"nodes":new_data}, fh)
-
 rule subclades:
     message: "Adding internal clade labels"
     input:
@@ -939,7 +911,6 @@ def _get_node_data_by_wildcards(wildcards):
         rules.refine.output.node_data,
         rules.ancestral.output.node_data,
         rules.translate.output.node_data,
-        rules.rename_legacy_clades.output.clade_data,
         rules.rename_subclades.output.clade_data,
         rules.clades.output.clade_data,
         rules.recency.output.node_data,
