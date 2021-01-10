@@ -31,7 +31,7 @@ builds:
     region: Europe
     subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
     country: Serbia
-  bosnia_and_herzegovina:
+  bosnia-and-herzegovina:
     subsampling_scheme: custom_country
     geographic_scale: country
     region: Europe
