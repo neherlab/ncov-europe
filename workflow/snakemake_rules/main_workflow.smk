@@ -821,8 +821,7 @@ rule recency:
             --metadata {input.metadata} \
             --output {output} 2>&1 | tee {log}
         """
-import datetime
-from treetime.utils import numeric_date
+
 rule tip_frequencies:
     message: "Estimating censored KDE frequencies for tips"
     input:
@@ -837,8 +836,7 @@ rule tip_frequencies:
         max_date = _get_max_date_for_frequencies,
         pivot_interval = config["frequencies"]["pivot_interval"],
         narrow_bandwidth = config["frequencies"]["narrow_bandwidth"],
-        proportion_wide = config["frequencies"]["proportion_wide"],
-	max_date = numeric_date(datetime.datetime.fromordinal(datetime.datetime.today().toordinal()-7))
+        proportion_wide = config["frequencies"]["proportion_wide"]
     conda: config["conda_environment"]
     shell:
         """
