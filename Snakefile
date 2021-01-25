@@ -101,7 +101,6 @@ rule clean:
     shell:
         "rm -rfv {params}"
 
-
 config["nextalign_bin"] = "./nextalign_cli"
 
 rule dump_config:
