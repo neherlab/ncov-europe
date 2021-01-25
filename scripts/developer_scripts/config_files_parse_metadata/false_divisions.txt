@@ -206,3 +206,5 @@ Zelovce	Banska Bystrica
 Hurbanovo	Nitra
 Toronto	Ontario
 Bozen	South Tyrol
+Mamoudzou	Mayotte
+Alpes Maritimes	Provence-Alpes-Côte d'Azur
