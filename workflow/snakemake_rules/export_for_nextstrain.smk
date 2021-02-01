@@ -126,14 +126,14 @@ rule deploy_to_staging:
 rule upload:
     message: "Uploading intermediate files to {params.s3_bucket}"
     input:
-        "results/masked.fasta",
-        "results/nextalign/sequences.aligned.fasta",
-        "results/filtered.fasta",
+        rules.mask.output.alignment,
+        rules.align.output.alignment,
+        rules.filter.output.sequences,
         "results/sequence-diagnostics.tsv",
         "results/flagged-sequences.tsv",
         "results/to-exclude.txt"
     params:
-        s3_bucket = config["S3_BUCKET"],
+        s3_bucket = _get_first(config, "S3_DST_BUCKET", "S3_BUCKET"),
         compression = config["preprocess"]["compression"]
     log:
         "logs/upload.txt"

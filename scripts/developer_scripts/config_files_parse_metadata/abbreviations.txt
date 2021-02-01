@@ -76,3 +76,7 @@ Cordoba	AR
 Cordoba AR	AR
 Los Rios	EC
 Comunitat Valenciana	ES
+Ivanovo	(Ivanovo)
+Karelia	(Karelia)
+French Guiana	GF
+Bretagne	BRE

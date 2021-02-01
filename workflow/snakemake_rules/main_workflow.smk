@@ -4,7 +4,7 @@ rule download_sequences:
         sequences = config["sequences"]
     conda: config["conda_environment"]
     params:
-        s3_bucket = config["S3_BUCKET"]
+        s3_bucket = _get_first(config, "S3_SRC_BUCKET", "S3_BUCKET")
     shell:
         """
         aws s3 cp s3://{params.s3_bucket}/sequences.fasta.gz - | gunzip -cq > {output.sequences:q}
@@ -16,7 +16,7 @@ rule download_metadata:
         metadata = config["metadata"]
     conda: config["conda_environment"]
     params:
-        s3_bucket = config["S3_BUCKET"]
+        s3_bucket = _get_first(config, "S3_SRC_BUCKET", "S3_BUCKET")
     shell:
         """
         aws s3 cp s3://{params.s3_bucket}/metadata.tsv.gz - | gunzip -cq >{output.metadata:q}
@@ -106,46 +106,75 @@ rule diagnose_excluded:
             --output-exclusion-list {output.to_exclude} 2>&1 | tee {log}
         """
 
-
-rule align:
-    message:
-        """
-        Aligning sequences to {input.reference}
-          - gaps relative to reference are considered real
-        """
-    input:
-        sequences = config["sequences"],
-        reference = config["files"]["alignment_reference"],
-        gene_map = config["files"]["gene_map"]
-    output:
-        alignment = "results/nextalign/sequences.aligned.fasta",
-        translations = expand("results/nextalign/sequences.gene.{gene}.fasta", gene=config["genes"])
-    params:
-        outdir = "results/nextalign",
-        bin = config["nextalign_bin"],
-        genes = ",".join(config["genes"]),
-	basename = "sequences"
-    log:
-        "logs/align.txt"
-    benchmark:
-        "benchmarks/align.txt"
-    threads: 16
-    conda: config["conda_environment"]
-    shell:
-        """
-        {params.bin} \
-            --jobs={threads} \
-            --genemap {input.gene_map} \
-            --genes {params.genes} \
-            --reference {input.reference} \
-            --sequences {input.sequences} \
-            --output-basename {params.basename} --output-dir {params.outdir} 2> {log}
-        """
+if "use_nextalign" in config and config["use_nextalign"]:
+    rule align:
+        message:
+            """
+            Aligning sequences to {input.reference}
+              - gaps relative to reference are considered real
+            """
+        input:
+            sequences = config["sequences"],
+            reference = config["files"]["alignment_reference"],
+            gene_map = config["files"]["gene_map"]
+        output:
+            alignment = "results/nextalign/sequences.aligned.fasta",
+            translations = expand("results/nextalign/sequences.gene.{gene}.fasta", gene=config.get('genes', ['S']))
+        params:
+            outdir = "results/nextalign",
+            bin = config["nextalign_bin"],
+            genes = ','.join(config.get('genes', ['S'])),
+        	basename = "sequences"
+        log:
+            "logs/align.txt"
+        benchmark:
+            "benchmarks/align.txt"
+        threads: 16
+        conda: config["conda_environment"]
+        shell:
+            """
+            {params.bin} \
+                --jobs={threads} \
+                --genemap {input.gene_map} \
+                --genes {params.genes} \
+                --reference {input.reference} \
+                --sequences {input.sequences} \
+                --output-basename {params.basename} --output-dir {params.outdir} > {log} 2>&1
+            """
+else:
+    rule align:
+        message:
+            """
+            Aligning sequences to {input.reference}
+              - gaps relative to reference are considered real
+            """
+        input:
+            sequences = config["sequences"],
+            reference = config["files"]["alignment_reference"]
+        output:
+            alignment = "results/aligned.fasta",
+            translations = []
+        log:
+            "logs/align.txt"
+        benchmark:
+            "benchmarks/align.txt"
+        threads: 16
+        conda: config["conda_environment"]
+        shell:
+            """
+            mafft \
+                --auto \
+                --thread {threads} \
+                --keeplength \
+                --addfragments \
+                {input.sequences} \
+                {input.reference} > {output} 2> {log}
+            """
 
 rule diagnostic:
     message: "Scanning aligned sequences {input.alignment} for problematic sequences"
     input:
-        alignment = "results/nextalign/sequences.aligned.fasta",
+        alignment = rules.align.output.alignment,
         metadata = config["metadata"],
         reference = config["files"]["reference"]
     output:
@@ -195,7 +224,7 @@ rule mask:
           - masking other sites: {params.mask_sites}
         """
     input:
-        alignment = "results/nextalign/sequences.aligned.fasta"
+        alignment = rules.align.output.alignment
     output:
         alignment = "results/masked.fasta"
     log:
@@ -644,11 +673,12 @@ rule aa_muts_explicit:
     message: "Translating amino acid sequences"
     input:
         tree = rules.refine.output.tree,
-        translation = rules.align.output.translations
+        translations = rules.align.output.translations
     output:
         node_data = "results/{build_name}/aa_muts_explicit.json"
     params:
-        gene = config["genes"]
+        genes = config.get('genes', 'S')
+
     log:
         "logs/aamuts_{build_name}.txt"
     conda: config["conda_environment"]
@@ -656,8 +686,8 @@ rule aa_muts_explicit:
         """
         python3 scripts/explicit_translation.py \
             --tree {input.tree} \
-            --translation {input.translation:q} \
-            --gene {params.gene} \
+            --translations {input.translations:q} \
+            --genes {params.genes} \
             --output {output.node_data} 2>&1 | tee {log}
 
         """
@@ -916,9 +946,10 @@ def _get_node_data_by_wildcards(wildcards):
         rules.rename_subclades.output.clade_data,
         rules.clades.output.clade_data,
         rules.recency.output.node_data,
-        rules.traits.output.node_data,
-        rules.aa_muts_explicit.output.node_data
+        rules.traits.output.node_data
     ]
+    if "use_nextalign" in config and config["use_nextalign"]:
+        inputs.append(rules.aa_muts_explicit.output.node_data)
 
     # Convert input files from wildcard strings to real file names.
     inputs = [input_file.format(**wildcards_dict) for input_file in inputs]

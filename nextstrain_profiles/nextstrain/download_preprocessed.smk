@@ -16,7 +16,7 @@ rule download_aligned:
     params:
         compression = config['preprocess']['compression'],
         deflate = config['preprocess']['deflate'],
-        s3_bucket = config["S3_BUCKET"]
+        s3_bucket = _get_first(config, "S3_SRC_BUCKET", "S3_BUCKET")
     shell:
         """
         aws s3 cp s3://{params.s3_bucket}/aligned.fasta.{params.compression} - | {params.deflate} > {output.sequences:q}
@@ -32,7 +32,7 @@ rule download_diagnostic:
     params:
         compression = config['preprocess']['compression'],
         deflate = config['preprocess']['deflate'],
-        s3_bucket = config["S3_BUCKET"]
+        s3_bucket = _get_first(config, "S3_SRC_BUCKET", "S3_BUCKET")
     shell:
         """
         aws s3 cp s3://{params.s3_bucket}/sequence-diagnostics.tsv.{params.compression} - | {params.deflate} > {output.diagnostics:q}
@@ -48,7 +48,7 @@ rule download_refiltered:
     params:
         compression = config['preprocess']['compression'],
         deflate = config['preprocess']['deflate'],
-        s3_bucket = config["S3_BUCKET"]
+        s3_bucket = _get_first(config, "S3_SRC_BUCKET", "S3_BUCKET")
     shell:
         """
         aws s3 cp s3://{params.s3_bucket}/aligned-filtered.fasta.{params.compression} - | {params.deflate} > {output.sequences:q}
@@ -63,7 +63,7 @@ rule download_masked:
     params:
         compression = config['preprocess']['compression'],
         deflate = config['preprocess']['deflate'],
-        s3_bucket = config["S3_BUCKET"]
+        s3_bucket = _get_first(config, "S3_SRC_BUCKET", "S3_BUCKET")
     shell:
         """
         aws s3 cp s3://{params.s3_bucket}/masked.fasta.{params.compression} - | {params.deflate} > {output.sequences:q}
@@ -78,7 +78,7 @@ rule download_filtered:
     params:
         compression = config['preprocess']['compression'],
         deflate = config['preprocess']['deflate'],
-        s3_bucket = config["S3_BUCKET"]
+        s3_bucket = _get_first(config, "S3_SRC_BUCKET", "S3_BUCKET")
     shell:
         """
         aws s3 cp s3://{params.s3_bucket}/filtered.fasta.{params.compression} - | {params.deflate} > {output.sequences:q}
