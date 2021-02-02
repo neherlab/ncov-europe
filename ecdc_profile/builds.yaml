@@ -15,6 +15,25 @@ nextalign_bin: "nextalign"
 genes: ["ORF1a", "ORF1b", "S", "ORF3a", "M", "N"]
 use_nextalign: true
 
+local_builds:
+  Germany:
+    - "Schleswig-Holstein"
+    - "Hamburg"
+    - "Bremen"
+    - "Brandenburg"
+    - "Berlin"
+    - "Thuringia"
+    - "Niedersachsen"
+    - "North Rhine Westphalia"
+    - "Saxony"
+    - "Saxony-Anhalt"
+    - "Saarland"
+    - "Hesse"
+    - "Rheinland-Pfalz"
+    - "Mecklenburg-Vorpommern"
+    - "Baden-Wuerttemberg"
+    - "Bavaria"
+
 builds:
   europe:
     subsampling_scheme: custom_region
@@ -316,6 +335,59 @@ subsampling:
     global_late:
       group_by: "country year month"
       max_sequences: 500
+      exclude: "--exclude-where 'region={region}'"
+      priorities:
+        type: "proximity"
+        focus: "country_late"
+
+  custom_division:
+    # Focal samples for division
+    division_late:
+      group_by: "year month"
+      max_sequences: 1000
+      sampling_scheme: "--probabilistic-sampling"
+      exclude: "--exclude-where 'region!={region}' 'country!={country}' 'division!={division}'"
+    country_late:
+      group_by: "division year month"
+      max_sequences: 1000
+      sampling_scheme: "--probabilistic-sampling"
+      exclude: "--exclude-where 'country!={country}'"
+    country_early:
+      group_by: "division year month"
+      max_sequences: 300
+      sampling_scheme: "--probabilistic-sampling"
+      exclude: "--exclude-where 'country!={country}'"
+    # Contextual samples from country's region
+    region_late:
+      group_by: "country year month"
+      max_sequences: 200
+      sampling_scheme: "--probabilistic-sampling"
+      exclude: "--exclude-where 'country={country}' 'region!={region}'"
+      priorities:
+        type: "proximity"
+        focus: "country_late"
+    region_early:
+      group_by: "country year month"
+      max_sequences: 200
+      sampling_scheme: "--probabilistic-sampling"
+      exclude: "--exclude-where 'country={country}' 'region!={region}'"
+      priorities:
+        type: "proximity"
+        focus: "country_late"
+    # Contextual samples from the rest of the world,
+    # excluding the current region to avoid resampling.
+    global_early:
+      group_by: "country year month"
+      max_sequences: 100
+      sampling_scheme: "--probabilistic-sampling"
+      exclude: "--exclude-where 'region={region}'"
+      priorities:
+        type: "proximity"
+        focus: "country_late"
+    global_late:
+      group_by: "country year month"
+      max_sequences: 200
+      sampling_scheme: "--probabilistic-sampling"
       exclude: "--exclude-where 'region={region}'"
       priorities:
         type: "proximity"

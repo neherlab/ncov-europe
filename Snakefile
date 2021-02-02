@@ -63,6 +63,17 @@ if "builds" not in config:
         }
     }
 
+if "local_builds" in config:
+    for country in config["local_builds"]:
+        for division in config["local_builds"][country]:
+            config["builds"][f"{country}_{division.lower().replace(' ', '-').replace('ü','u').replace('â', 'a')}"] = {
+                "subsampling_scheme": "custom_division",
+                "geographic_scale": "division",
+                "region": "Europe",
+                "country": country,
+                "division": division
+            }
+
 # Allow users to specify a list of active builds from the command line.
 if config.get("active_builds"):
     BUILD_NAMES = config["active_builds"].split(",")
