@@ -20,23 +20,25 @@ genes: ["ORF1a", "ORF1b", "S", "ORF3a", "M", "N"]
 use_nextalign: true
 
 local_builds:
-  Germany:
-    - "Schleswig-Holstein"
-    - "Hamburg"
-    - "Bremen"
-    - "Brandenburg"
-    - "Berlin"
-    - "Thuringia"
-    - "Niedersachsen"
-    - "North Rhine Westphalia"
-    - "Saxony"
-    - "Saxony-Anhalt"
-    - "Saarland"
-    - "Hesse"
-    - "Rheinland-Pfalz"
-    - "Mecklenburg-Vorpommern"
-    - "Baden-Wuerttemberg"
-    - "Bavaria"
+  germany:
+    country_name: "Germany"
+    divisions:
+      - "Schleswig-Holstein"
+      - "Hamburg"
+      - "Bremen"
+      - "Brandenburg"
+      - "Berlin"
+      - "Thuringia"
+      - "Niedersachsen"
+      - "North Rhine Westphalia"
+      - "Saxony"
+      - "Saxony-Anhalt"
+      - "Saarland"
+      - "Hesse"
+      - "Rheinland-Pfalz"
+      - "Mecklenburg-Vorpommern"
+      - "Baden-Wuerttemberg"
+      - "Bavaria"
 
 builds:
   europe:

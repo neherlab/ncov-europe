@@ -70,14 +70,14 @@ if "builds" not in config:
         }
     }
 
-if "local_builds" in config:
+if config.get("local_builds") and config.get("run_local_builds"):
     for country in config["local_builds"]:
-        for division in config["local_builds"][country]:
+        for division in config["local_builds"][country]['divisions']:
             config["builds"][f"{country}_{division.lower().replace(' ', '-').replace('ü','u').replace('â', 'a')}"] = {
                 "subsampling_scheme": "custom_division",
                 "geographic_scale": "division",
                 "region": "Europe",
-                "country": country,
+                "country": config["local_builds"][country]["country_name"],
                 "division": division
             }
 
