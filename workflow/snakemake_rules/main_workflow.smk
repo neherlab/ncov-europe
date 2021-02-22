@@ -254,7 +254,7 @@ rule filter:
         metadata = lambda wildcards: _get_path_for_input("metadata", wildcards.origin),
         # TODO - currently the include / exclude files are not input (origin) specific, but this is possible if we want
         include = config["files"]["include"],
-        exclude = "results/combined_exclude.txt"
+        exclude = "results/exclude{origin}.txt"
     output:
         sequences = "results/filtered{origin}.fasta"
     log:
@@ -653,7 +653,7 @@ rule remove_zero_branches:
         """
     input:
         tree = rules.tree.output.tree,
-        alignment = rules.combine_samples.output.alignment
+        alignment = rules.build_align.output.alignment
     output:
         tree = "results/{build_name}/tree_nozero.nwk"
     log:
@@ -792,7 +792,7 @@ rule aa_muts_explicit:
     message: "Translating amino acid sequences"
     input:
         tree = rules.refine.output.tree,
-        translations = rules.align.output.translations
+        translations = rules.build_align.output.translations
     output:
         node_data = "results/{build_name}/aa_muts_explicit.json"
     params:

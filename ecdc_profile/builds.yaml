@@ -8,7 +8,11 @@
 custom_rules:
   - nextstrain_profiles/nextstrain/subsampling_ranges.smk
   - ecdc_profile/localrules.smk
-  - nextstrain_profiles/nextstrain/download_preprocessed.smk
+
+inputs:
+  - name: gisaid
+    metadata: "s3://nextstrain-ncov-private/metadata.tsv.gz"
+    sequences: "s3://nextstrain-ncov-private/sequences.fasta.gz"
 
 S3_BUCKET: "nextstrain-ncov-private"
 nextalign_bin: "nextalign"
