@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> nextstrain/nextalign-rebased-index-seq-pr
 import argparse
 import json
 from Bio import Phylo, SeqIO
@@ -19,7 +23,10 @@ if __name__ == '__main__':
     genes = args.genes if type(args.genes)==list else [args.genes]
     translations = args.translations if type(args.translations)==list else [args.translations]
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> nextstrain/nextalign-rebased-index-seq-pr
     T = Phylo.read(args.tree, 'newick')
     leafs = {n.name for n in T.get_terminals()}
 

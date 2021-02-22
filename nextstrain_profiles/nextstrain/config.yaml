@@ -6,7 +6,12 @@ cores: 8
 keep-going: True
 printshellcmds: True
 show-failed-logs: True
+<<<<<<< HEAD
 reason: True
 restart-times: 0
+=======
+restart-times: 1
+reason: True
+>>>>>>> nextstrain/nextalign-rebased-index-seq-pr
 stats: stats.json
 set-threads: tree=4

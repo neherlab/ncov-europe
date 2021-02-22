@@ -60,8 +60,38 @@ rule export_all_regions:
             --latlong {input.lat_longs}
         """
 
+
 rule all_mutation_frequencies:
     input: expand("results/{build_name}/nucleotide_mutation_frequencies.json", build_name=BUILD_NAMES)
+
+rule mutation_summary:
+    message: "Summarizing {input.alignment}"
+    input:
+        alignment = rules.align.output.alignment,
+        insertions = rules.align.output.insertions,
+        translations = rules.align.output.translations,
+        reference = config["files"]["alignment_reference"],
+        genemap = config["files"]["annotation"]
+    output:
+        mutation_summary = "results/mutation_summary{origin}.tsv"
+    log:
+        "logs/mutation_summary{origin}.txt"
+    params:
+        outdir = "results/translations",
+        basename = "{origin}"
+    conda: config["conda_environment"]
+    shell:
+        """
+        python3 scripts/mutation_summary.py \
+            --alignment {input.alignment} \
+            --insertions {input.insertions} \
+            --directory {params.outdir} \
+            --basename {params.basename} \
+            --reference {input.reference} \
+            --genemap {input.genemap} \
+            --output {output.mutation_summary} 2>&1 | tee {log}
+        """
+
 
 #
 # Rules for custom auspice exports for the Nextstrain team.
@@ -123,20 +153,21 @@ rule deploy_to_staging:
         fi
         """
 
+
 rule upload:
-    message: "Uploading intermediate files to {params.s3_bucket}"
+    message: "Uploading intermediate files for specified origins to {params.s3_bucket}"
     input:
-        rules.mask.output.alignment,
-        rules.align.output.alignment,
-        rules.filter.output.sequences,
-        "results/sequence-diagnostics.tsv",
-        "results/flagged-sequences.tsv",
-        "results/to-exclude.txt"
+        expand("results/aligned_{origin}.fasta", origin=config["S3_DST_ORIGINS"]),              # from `rule align`
+        expand("results/sequence-diagnostics_{origin}.tsv", origin=config["S3_DST_ORIGINS"]),   # from `rule diagnostic`
+        expand("results/flagged-sequences_{origin}.tsv", origin=config["S3_DST_ORIGINS"]),      # from `rule diagnostic`
+        expand("results/to-exclude_{origin}.txt", origin=config["S3_DST_ORIGINS"]),             # from `rule diagnostic`
+        expand("results/masked_{origin}.fasta", origin=config["S3_DST_ORIGINS"]),               # from `rule mask`
+        expand("results/filtered_{origin}.fasta", origin=config["S3_DST_ORIGINS"]),             # from `rule filter`
     params:
-        s3_bucket = _get_first(config, "S3_DST_BUCKET", "S3_BUCKET"),
-        compression = config["preprocess"]["compression"]
+        s3_bucket = config["S3_DST_BUCKET"],
+        compression = config["S3_DST_COMPRESSION"]
     log:
-        "logs/upload.txt"
+        "logs/upload_gisaid.txt"
     run:
         for fname in input:
             cmd = f"./scripts/upload-to-s3 {fname} s3://{params.s3_bucket}/{os.path.basename(fname)}.{params.compression} | tee -a {log}"
