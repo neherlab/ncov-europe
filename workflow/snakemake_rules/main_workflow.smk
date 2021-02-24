@@ -121,6 +121,8 @@ if "use_nextalign" in config and config["use_nextalign"]:
             "benchmarks/align{origin}.txt"
         conda: config["conda_environment"]
         threads: 8
+        resources:
+            mem_mb = 3000
         shell:
             """
             nextalign \
@@ -254,7 +256,7 @@ rule filter:
         metadata = lambda wildcards: _get_path_for_input("metadata", wildcards.origin),
         # TODO - currently the include / exclude files are not input (origin) specific, but this is possible if we want
         include = config["files"]["include"],
-        exclude = "results/exclude{origin}.txt"
+        exclude = rules.exclude_file.output
     output:
         sequences = "results/filtered{origin}.fasta"
     log:
@@ -487,8 +489,11 @@ rule proximity_score:
         "logs/subsampling_proximity_{build_name}_{focus}.txt"
     benchmark:
         "benchmarks/proximity_score_{build_name}_{focus}.txt"
+    params:
+        chunk_size=10000
     resources:
-        mem_mb = 40000
+        # Memory scales at ~0.15 MB * chunk_size (e.g., 0.15 MB * 10000 = 1.5GB).
+        mem_mb = 4000
     conda: config["conda_environment"]
     shell:
         """
@@ -496,6 +501,7 @@ rule proximity_score:
             --reference {input.reference} \
             --alignment {input.alignment} \
             --focal-alignment {input.focal_alignment} \
+            --chunk-size {params.chunk_size} \
             --output {output.proximities} 2>&1 | tee {log}
         """
 
@@ -567,6 +573,8 @@ if "use_nextalign" in config and config["use_nextalign"]:
             "benchmarks/align_{build_name}.txt"
         conda: config["conda_environment"]
         threads: 8
+        resources:
+            mem_mb = 3000
         shell:
             """
             nextalign \
@@ -753,6 +761,8 @@ rule ancestral:
         "logs/ancestral_{build_name}.txt"
     params:
         inference = config["ancestral"]["inference"]
+    resources:
+        mem_mb = 4000
     conda: config["conda_environment"]
     shell:
         """
@@ -807,7 +817,7 @@ rule aa_muts_explicit:
     message: "Translating amino acid sequences"
     input:
         tree = rules.refine.output.tree,
-        translations = rules.build_align.output.translations
+        translations = lambda w: rules.build_align.output.translations
     output:
         node_data = "results/{build_name}/aa_muts_explicit.json"
     params:
@@ -1079,6 +1089,9 @@ def _get_node_data_by_wildcards(wildcards):
         rules.recency.output.node_data,
         rules.traits.output.node_data
     ]
+    if "use_nextalign" in config and config["use_nextalign"]:
+        inputs.append(rules.aa_muts_explicit.output.node_data)
+
     if "use_nextalign" in config and config["use_nextalign"]:
         inputs.append(rules.aa_muts_explicit.output.node_data)
 
