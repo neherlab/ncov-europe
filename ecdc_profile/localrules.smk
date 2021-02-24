@@ -5,7 +5,7 @@ ruleorder: download_masked > mask
 
 rule reassign_metadata:
     input:
-        metadata = rules.combine_input_metadata.output.metadata
+        metadata = _get_unified_metadata
     output:
         metadata = "results/metadata_with_reassignments.tsv"
     run:
