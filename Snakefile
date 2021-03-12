@@ -116,7 +116,10 @@ rule clean:
         "results ",
         "auspice",
         "data/metadata.tsv",
-        "data/sequences.fasta"
+        "data/sequences.fasta",
+        "data/download*",
+        "log/*",
+        "logs/*"
     shell:
         "rm -rfv {params}"
 
