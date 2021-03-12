@@ -12,6 +12,8 @@ rule combine_input_metadata:
         origins = lambda wildcards: list(config["inputs"].keys())
     log:
         "logs/combine_input_metadata.txt"
+    benchmark:
+        "benchmarks/combine_input_metadata.txt"
     conda: config["conda_environment"]
     shell:
         """
@@ -102,6 +104,8 @@ rule diagnostic:
     params:
         mask_from_beginning = config["mask"]["mask_from_beginning"],
         mask_from_end = config["mask"]["mask_from_end"]
+    benchmark:
+        "benchmarks/diagnostics{origin}.txt"
     conda: config["conda_environment"]
     shell:
         """
@@ -130,6 +134,8 @@ rule exclude_file:
         _collect_exclusion_files
     output:
         "results/exclude{origin}.txt"
+    benchmark:
+        "benchmarks/exclude_file{origin}.txt"
     shell:
         """
         cat {input} > {output}
@@ -149,6 +155,8 @@ rule mask:
         alignment = "results/masked{origin}.fasta"
     log:
         "logs/mask{origin}.txt"
+    benchmark:
+        "benchmarks/mask{origin}.txt"
     params:
         mask_from_beginning = config["mask"]["mask_from_beginning"],
         mask_from_end = config["mask"]["mask_from_end"],
@@ -183,6 +191,8 @@ rule filter:
         sequences = "results/filtered{origin}.fasta"
     log:
         "logs/filtered{origin}.txt"
+    benchmark:
+        "benchmarks/filter{origin}.txt"
     params:
         min_length = lambda wildcards: _get_filter_value(wildcards, "min_length"),
         exclude_where = lambda wildcards: _get_filter_value(wildcards, "exclude_where"),
@@ -305,6 +315,8 @@ rule combine_sequences_for_subsampling:
         lambda w: [_get_path_for_input("filtered", f"_{origin}") for origin in config.get("inputs", {})]
     output:
         "results/combined_sequences_for_subsampling.fasta"
+    benchmark:
+        "benchmarks/combine_sequences_for_subsampling.txt"
     conda: config["conda_environment"]
     shell:
         """
@@ -359,6 +371,8 @@ rule subsample:
         sequences = "results/{build_name}/sample-{subsample}.fasta"
     log:
         "logs/subsample_{build_name}_{subsample}.txt"
+    benchmark:
+        "benchmarks/subsample_{build_name}_{subsample}.txt"
     params:
         group_by = _get_specific_subsampling_setting("group_by", optional=True),
         sequences_per_group = _get_specific_subsampling_setting("seq_per_group", optional=True),
@@ -433,6 +447,8 @@ rule priority_score:
         sequence_index = rules.index_sequences.output.sequence_index,
     output:
         priorities = "results/{build_name}/priorities_{focus}.tsv"
+    benchmark:
+        "benchmarks/priority_score_{build_name}_{focus}.txt"
     conda: config["conda_environment"]
     shell:
         """
@@ -462,6 +478,8 @@ rule combine_samples:
         sequences = "results/{build_name}/subsampled_sequences.fasta"
     log:
         "logs/subsample_regions_{build_name}.txt"
+    benchmark:
+        "benchmarks/subsample_regions_{build_name}.txt"
     conda: config["conda_environment"]
     shell:
         """
@@ -554,6 +572,8 @@ rule adjust_metadata_regions:
         region = lambda wildcards: config["builds"][wildcards.build_name]["region"]
     log:
         "logs/adjust_metadata_regions_{build_name}.txt"
+    benchmark:
+        "benchmarks/adjust_metadata_regions_{build_name}.txt"
     conda: config["conda_environment"]
     shell:
         """
@@ -681,6 +701,8 @@ rule ancestral:
         node_data = "results/{build_name}/nt_muts.json"
     log:
         "logs/ancestral_{build_name}.txt"
+    benchmark:
+        "benchmarks/ancestral_{build_name}.txt"
     params:
         inference = config["ancestral"]["inference"]
     resources:
@@ -704,6 +726,8 @@ rule haplotype_status:
         node_data = "results/{build_name}/haplotype_status.json"
     log:
         "logs/haplotype_status_{build_name}.txt"
+    benchmark:
+        "benchmarks/haplotype_status_{build_name}.txt"
     params:
         reference_node_name = config["reference_node_name"]
     conda: config["conda_environment"]
@@ -725,6 +749,8 @@ rule translate:
         node_data = "results/{build_name}/aa_muts.json"
     log:
         "logs/translate_{build_name}.txt"
+    benchmark:
+        "benchmarks/translate_{build_name}.txt"
     conda: config["conda_environment"]
     shell:
         """
@@ -746,6 +772,8 @@ rule aa_muts_explicit:
         genes = config.get('genes', 'S')
     log:
         "logs/aamuts_{build_name}.txt"
+    benchmark:
+        "benchmarks/aamuts_{build_name}.txt"
     conda: config["conda_environment"]
     shell:
         """
@@ -769,6 +797,8 @@ rule traits:
         node_data = "results/{build_name}/traits.json"
     log:
         "logs/traits_{build_name}.txt"
+    benchmark:
+        "benchmarks/traits_{build_name}.txt"
     params:
         columns = _get_trait_columns_by_wildcards,
         sampling_bias_correction = _get_sampling_bias_correction_for_wildcards
@@ -795,6 +825,8 @@ rule clade_files:
         clade_files = _get_clade_files
     output:
         "results/{build_name}/clades.tsv"
+    benchmark:
+        "benchmarks/clade_files_{build_name}.txt"
     shell:
         '''
         cat {input.clade_files} > {output}
@@ -811,6 +843,8 @@ rule clades:
         clade_data = "results/{build_name}/clades.json"
     log:
         "logs/clades_{build_name}.txt"
+    benchmark:
+        "benchmarks/clades_{build_name}.txt"
     conda: config["conda_environment"]
     shell:
         """
@@ -834,6 +868,8 @@ rule subclades:
         clade_file = "results/{build_name}/temp_subclades.tsv"
     log:
         "logs/subclades_{build_name}.txt"
+    benchmark:
+        "benchmarks/subclades_{build_name}.txt"
     conda: config["conda_environment"]
     shell:
         """
@@ -849,6 +885,8 @@ rule rename_subclades:
         node_data = rules.subclades.output.clade_data
     output:
         clade_data = "results/{build_name}/subclades.json"
+    benchmark:
+        "benchmarks/rename_subclades_{build_name}.txt"
     run:
         import json
         with open(input.node_data, 'r', encoding='utf-8') as fh:
@@ -871,6 +909,8 @@ rule colors:
         colors = "results/{build_name}/colors.tsv"
     log:
         "logs/colors_{build_name}.txt"
+    benchmark:
+        "benchmarks/colors_{build_name}.txt"
     conda: config["conda_environment"]
     shell:
         """
@@ -889,6 +929,8 @@ rule recency:
         node_data = "results/{build_name}/recency.json"
     log:
         "logs/recency_{build_name}.txt"
+    benchmark:
+        "benchmarks/recency_{build_name}.txt"
     conda: config["conda_environment"]
     shell:
         """
@@ -906,6 +948,8 @@ rule tip_frequencies:
         tip_frequencies_json = "results/{build_name}/tip-frequencies.json"
     log:
         "logs/tip_frequencies_{build_name}.txt"
+    benchmark:
+        "benchmarks/tip_frequencies_{build_name}.txt"
     params:
         min_date = config["frequencies"]["min_date"],
         max_date = _get_max_date_for_frequencies,
@@ -938,6 +982,8 @@ rule nucleotide_mutation_frequencies:
         frequencies = "results/{build_name}/nucleotide_mutation_frequencies.json"
     log:
         "logs/nucleotide_mutation_frequencies_{build_name}.txt"
+    benchmark:
+        "benchmarks/nucleotide_mutation_frequencies_{build_name}.txt"
     params:
         min_date = config["frequencies"]["min_date"],
         minimal_frequency = config["frequencies"]["minimal_frequency"],
@@ -1021,6 +1067,8 @@ rule export:
         root_sequence_json = "results/{build_name}/ncov_with_accessions_root-sequence.json"
     log:
         "logs/export_{build_name}.txt"
+    benchmark:
+        "benchmarks/export_{build_name}.txt"
     params:
         title = export_title
     conda: config["conda_environment"]
@@ -1053,6 +1101,8 @@ rule incorporate_travel_history:
         auspice_json = "results/{build_name}/ncov_with_accessions_and_travel_branches.json"
     log:
         "logs/incorporate_travel_history_{build_name}.txt"
+    benchmark:
+        "benchmarks/incorporate_travel_history_{build_name}.txt"
     conda: config["conda_environment"]
     shell:
         """
@@ -1077,6 +1127,8 @@ rule finalize:
         root_sequence_json = "auspice/ncov_{build_name}_root-sequence.json"
     log:
         "logs/fix_colorings_{build_name}.txt"
+    benchmark:
+        "benchmarks/fix_colorings_{build_name}.txt"
     conda: config["conda_environment"]
     shell:
         """
