@@ -46,7 +46,7 @@ if "use_nextalign" in config and config["use_nextalign"]:
         conda: config["conda_environment"]
         threads: 8
         resources:
-            mem_mb = 3000
+            mem_mb=3000
         shell:
             """
             nextalign \
@@ -106,6 +106,9 @@ rule diagnostic:
         mask_from_end = config["mask"]["mask_from_end"]
     benchmark:
         "benchmarks/diagnostics{origin}.txt"
+    resources:
+        # Memory use scales primarily with the size of the metadata file.
+        mem_mb=lambda wildcards, input: 15 * int(input.metadata.size / 1024 / 1024)
     conda: config["conda_environment"]
     shell:
         """
@@ -199,6 +202,9 @@ rule filter:
         min_date = lambda wildcards: _get_filter_value(wildcards, "min_date"),
         ambiguous = lambda wildcards: f"--exclude-ambiguous-dates-by {_get_filter_value(wildcards, 'exclude_ambiguous_dates_by')}" if _get_filter_value(wildcards, "exclude_ambiguous_dates_by") else "",
         date = (date.today() + datetime.timedelta(days=1)).strftime("%Y-%m-%d")
+    resources:
+        # Memory use scales primarily with the size of the metadata file.
+        mem_mb=lambda wildcards, input: 15 * int(input.metadata.size / 1024 / 1024)
     conda: config["conda_environment"]
     shell:
         """
@@ -385,6 +391,9 @@ rule subsample:
         min_date = _get_specific_subsampling_setting("min_date", optional=True),
         max_date = _get_specific_subsampling_setting("max_date", optional=True),
         priority_argument = get_priority_argument
+    resources:
+        # Memory use scales primarily with the size of the metadata file.
+        mem_mb=lambda wildcards, input: 15 * int(input.metadata.size / 1024 / 1024)
     conda: config["conda_environment"]
     shell:
         """
@@ -429,7 +438,7 @@ rule proximity_score:
         chunk_size=10000
     resources:
         # Memory scales at ~0.15 MB * chunk_size (e.g., 0.15 MB * 10000 = 1.5GB).
-        mem_mb = 4000
+        mem_mb=4000
     conda: config["conda_environment"]
     shell:
         """
@@ -514,7 +523,7 @@ if "use_nextalign" in config and config["use_nextalign"]:
         conda: config["conda_environment"]
         threads: 8
         resources:
-            mem_mb = 3000
+            mem_mb=3000
         shell:
             """
             nextalign \
@@ -556,7 +565,6 @@ else:
                 {input.sequences} \
                 {input.reference} > {output} 2> {log}
             """
-
 
 # TODO: This will probably not work for build names like "country_usa" where we need to know the country is "USA".
 rule adjust_metadata_regions:
@@ -706,7 +714,10 @@ rule ancestral:
     params:
         inference = config["ancestral"]["inference"]
     resources:
-        mem_mb = 4000
+        # Multiple sequence alignments can use up to 15 times their disk size in
+        # memory.
+        # Note that Snakemake >5.10.0 supports input.size_mb to avoid converting from bytes to MB.
+        mem_mb=lambda wildcards, input: 15 * int(input.size / 1024 / 1024)
     conda: config["conda_environment"]
     shell:
         """
@@ -751,6 +762,9 @@ rule translate:
         "logs/translate_{build_name}.txt"
     benchmark:
         "benchmarks/translate_{build_name}.txt"
+    resources:
+        # Memory use scales primarily with size of the node data.
+        mem_mb=lambda wildcards, input: 3 * int(input.node_data.size / 1024 / 1024)
     conda: config["conda_environment"]
     shell:
         """
@@ -767,13 +781,19 @@ rule aa_muts_explicit:
         tree = rules.refine.output.tree,
         translations = lambda w: rules.build_align.output.translations
     output:
-        node_data = "results/{build_name}/aa_muts_explicit.json"
+        node_data = "results/{build_name}/aa_muts_explicit.json",
+        translations = expand("results/{{build_name}}/translations/aligned.gene.{gene}_withInternalNodes.fasta", gene=config.get('genes', ['S']))
     params:
         genes = config.get('genes', 'S')
     log:
         "logs/aamuts_{build_name}.txt"
     benchmark:
         "benchmarks/aamuts_{build_name}.txt"
+    resources:
+        # Multiple sequence alignments can use up to 15 times their disk size in
+        # memory.
+        # Note that Snakemake >5.10.0 supports input.size_mb to avoid converting from bytes to MB.
+        mem_mb=lambda wildcards, input: 15 * int(input.size / 1024 / 1024)
     conda: config["conda_environment"]
     shell:
         """
@@ -783,6 +803,57 @@ rule aa_muts_explicit:
             --genes {params.genes} \
             --output {output.node_data} 2>&1 | tee {log}
         """
+if "use_nextalign" in config and config["use_nextalign"]:
+    rule build_mutation_summary:
+        message: "Summarizing {input.alignment}"
+        input:
+            alignment = rules.build_align.output.alignment,
+            insertions = rules.build_align.output.insertions,
+            translations = rules.build_align.output.translations,
+            reference = config["files"]["alignment_reference"],
+            genemap = config["files"]["annotation"]
+        output:
+            mutation_summary = "results/{build_name}/mutation_summary.tsv"
+        log:
+            "logs/mutation_summary_{build_name}.txt"
+        params:
+            outdir = "results/{build_name}/translations",
+            basename = "aligned"
+        conda: config["conda_environment"]
+        shell:
+            """
+            python3 scripts/mutation_summary.py \
+                --alignment {input.alignment} \
+                --insertions {input.insertions} \
+                --directory {params.outdir} \
+                --basename {params.basename} \
+                --reference {input.reference} \
+                --genemap {input.genemap} \
+                --output {output.mutation_summary} 2>&1 | tee {log}
+            """
+
+    rule distances:
+        input:
+            tree = rules.refine.output.tree,
+            alignments = "results/{build_name}/translations/aligned.gene.S_withInternalNodes.fasta",
+            distance_maps = ["defaults/distance_maps/S1.json"]
+        params:
+            genes = 'S',
+            comparisons = ['root'],
+            attribute_names = ['S1_mutations']
+        output:
+            node_data = "results/{build_name}/distances.json"
+        shell:
+            """
+            python scripts/mutation_counts.py \
+                --tree {input.tree} \
+                --alignment {input.alignments} \
+                --gene-names {params.genes} \
+                --compare-to {params.comparisons} \
+                --attribute-name {params.attribute_names} \
+                --map {input.distance_maps} \
+                --output {output}
+            """
 
 rule traits:
     message:
@@ -802,6 +873,9 @@ rule traits:
     params:
         columns = _get_trait_columns_by_wildcards,
         sampling_bias_correction = _get_sampling_bias_correction_for_wildcards
+    resources:
+        # Memory use scales primarily with the size of the metadata file.
+        mem_mb=lambda wildcards, input: 15 * int(input.metadata.size / 1024 / 1024)
     conda: config["conda_environment"]
     shell:
         """
@@ -845,6 +919,9 @@ rule clades:
         "logs/clades_{build_name}.txt"
     benchmark:
         "benchmarks/clades_{build_name}.txt"
+    resources:
+        # Memory use scales primarily with size of the node data.
+        mem_mb=lambda wildcards, input: 3 * int(input.size / 1024 / 1024)
     conda: config["conda_environment"]
     shell:
         """
@@ -870,6 +947,9 @@ rule subclades:
         "logs/subclades_{build_name}.txt"
     benchmark:
         "benchmarks/subclades_{build_name}.txt"
+    resources:
+        # Memory use scales primarily with size of the node data.
+        mem_mb=lambda wildcards, input: 3 * int(input.size / 1024 / 1024)
     conda: config["conda_environment"]
     shell:
         """
@@ -911,6 +991,11 @@ rule colors:
         "logs/colors_{build_name}.txt"
     benchmark:
         "benchmarks/colors_{build_name}.txt"
+    resources:
+        # Memory use scales primarily with the size of the metadata file.
+        # Compared to other rules, this rule loads metadata as a pandas
+        # DataFrame instead of a dictionary, so it uses much less memory.
+        mem_mb=lambda wildcards, input: 5 * int(input.metadata.size / 1024 / 1024)
     conda: config["conda_environment"]
     shell:
         """
@@ -931,6 +1016,9 @@ rule recency:
         "logs/recency_{build_name}.txt"
     benchmark:
         "benchmarks/recency_{build_name}.txt"
+    resources:
+        # Memory use scales primarily with the size of the metadata file.
+        mem_mb=lambda wildcards, input: 15 * int(input.metadata.size / 1024 / 1024)
     conda: config["conda_environment"]
     shell:
         """
@@ -957,6 +1045,9 @@ rule tip_frequencies:
         pivot_interval_units = config["frequencies"]["pivot_interval_units"],
         narrow_bandwidth = config["frequencies"]["narrow_bandwidth"],
         proportion_wide = config["frequencies"]["proportion_wide"]
+    resources:
+        # Memory use scales primarily with the size of the metadata file.
+        mem_mb=lambda wildcards, input: 15 * int(input.metadata.size / 1024 / 1024)
     conda: config["conda_environment"]
     shell:
         """
@@ -990,6 +1081,9 @@ rule nucleotide_mutation_frequencies:
         pivot_interval = config["frequencies"]["pivot_interval"],
         stiffness = config["frequencies"]["stiffness"],
         inertia = config["frequencies"]["inertia"]
+    resources:
+        # Memory use scales primarily with the size of the metadata file.
+        mem_mb=lambda wildcards, input: 15 * int(input.metadata.size / 1024 / 1024)
     conda: config["conda_environment"]
     shell:
         """
@@ -1047,6 +1141,7 @@ def _get_node_data_by_wildcards(wildcards):
 
     if "use_nextalign" in config and config["use_nextalign"]:
         inputs.append(rules.aa_muts_explicit.output.node_data)
+        inputs.append(rules.distances.output.node_data)
 
     # Convert input files from wildcard strings to real file names.
     inputs = [input_file.format(**wildcards_dict) for input_file in inputs]
@@ -1071,6 +1166,9 @@ rule export:
         "benchmarks/export_{build_name}.txt"
     params:
         title = export_title
+    resources:
+        # Memory use scales primarily with the size of the metadata file.
+        mem_mb=lambda wildcards, input: 15 * int(input.metadata.size / 1024 / 1024)
     conda: config["conda_environment"]
     shell:
         """
