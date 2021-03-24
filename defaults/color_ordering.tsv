@@ -121,25 +121,38 @@ location	Fawwar
 location	Halhul
 location	al-Arroub
 
+# Bethlehem
+location	Bethlehem
+
 # Ramallah and al-Bireh Governorate
 location	Ramallah
 location	Jalazone
 
 # West Bank
+location	Al-Khalil
 location	Tkoa
 location	Maale-Edumim
 location	Salfit
 location	Ariel
 location	Elkana
-location	Qalqilya
 location	Tulkarem
+
+# Qalqilya
+location	Qalqilya
 
 # Nablus
 location	Majdal Bani Fadil
 location	Qusra
 location	Balata
 location	Deir al-Hatab
+location	Nablus
 location	Dahieh
+
+# Tubas
+location	Tubas
+
+# Jenin
+location	Jenin
 
 ### Saudi Arabia
 # Eastern Province
@@ -506,8 +519,9 @@ location	Yongchuan
 location	Zhongxian
 
 # Hunan
-location	Huaihua
 location	Shaoyang
+location	Huaihua
+location	Changde
 
 # Hubei
 location	Jingzhou
@@ -598,6 +612,9 @@ location	Mandailing
 # South Sumatra
 location	Palembang
 
+# Lampung
+location	Pringsewu
+
 # Banten
 location	South Tangerang
 location	Tangerang Selatan
@@ -628,11 +645,17 @@ location	Sidoarjo
 location	Surabaya
 location	Gresik
 
+# Bali
+location	Denpasar
+
 # North Kalimantan
 location	Malinau
 
 # East Kalimantan
 location	Samarinda
+
+# West Sulawesi
+location	Mamuju
 
 # South Sulawesi
 location	Makassar
@@ -642,6 +665,9 @@ location	Kupang
 
 # North Sulawesi
 location	Manado
+
+# Maluku
+location	Ambon
 
 # Papua
 location	Timika
@@ -721,6 +747,7 @@ location	Yeumbeul
 location	Mbao
 location	Keur Massar
 location	Sangalkam
+location	Diamniadio
 
 # Thies
 location	Mbour
@@ -756,8 +783,24 @@ location	Gaoua
 location	Dano
 
 ### Ghana
+# Western Region
+location	Takoradi
+location	Tarkwa
+location	Tarkwa Gold Fields
+
+# Central Region
+location	Cape Coast
+
+# Eastern Region GH
+location	New Juaben South
+location	Abuakwa North
+location	Atiwa West
+location	Kwahu West
+location	Kwahu East
+
 # Greater Accra
 location	Accra
+location	Ledzokuku-Krowor
 
 ### Togo
 # Golfe
@@ -1079,6 +1122,8 @@ location	Tarifa
 location	Algeciras
 location	San Roque ES
 location	La Linea de la Concepcion
+location	Pajara
+location	Aguadulce ES
 location	Montilla
 location	Benalmadena
 location	Antequera
@@ -1108,7 +1153,6 @@ location	Atarfe
 location	Benalua de las Villas
 location	Cullar Vega
 location	Albolote
-location	Alhendin
 location	Churriana de la Vega
 location	Campillo de Arenas
 location	Otura
@@ -1135,13 +1179,35 @@ location	Fonelas
 location	Benalua
 location	Guadix
 location	Alicun de Ortega
+location	Retamar
+location	La Calahorra
+location	Adra
 location	Zujar
+location	Finana
 location	Castril
+location	Santa Maria del Aguila
 location	Baza
 location	Cortijos Nuevos
+location	Benamaurel
+location	Illar
+location	Aulago
 location	Huescar
+location	Gergal
+location	Benahadux
+location	Bacares
 location	Almeria
+location	Huercal de Almeria
 location	Puebla de Don Fadrique
+location	Viator
+location	La Canada de San Urbano
+location	Tabernas
+location	Macael
+location	El Barranquete
+location	San Isidro de Nijar
+location	Campohermoso
+location	Sorbas
+location	El Argamason
+location	Carboneras
 
 # Castilla y Leon
 location	Brazuelo
@@ -1592,6 +1658,7 @@ location	Vic
 location	L'Ametlla del Valles
 location	Montornes del Valles
 location	Tiana
+location	Figaro-Montmany
 location	Can Tries
 location	Montgat
 location	Canovelles
@@ -1611,6 +1678,7 @@ location	Orrius
 location	Cardedeu
 location	Vilassar de Dalt
 location	Premia de Mar
+location	Camprodon
 location	Cabrils
 location	Sant Pere de Vilamajor
 location	Vilassar de Mar
@@ -1630,7 +1698,10 @@ location	Sant Celoni
 location	El Maresme
 location	Vallgorguina
 location	Sant Vicenç de Montalt
+location	Sant Hilari Sacalm
+location	Arbúcies
 location	Caldes d'Estrac
+location	Montagut I Oix
 location	Riells I Viabrea
 location	Arenys de Munt
 location	Arenys de Mar
@@ -1638,24 +1709,33 @@ location	Santa Pau
 location	Canet de Mar
 location	Sant Jaume de Llierca
 location	San Pol de Mar
+location	Tortellà
+location	Angles
 location	Massanes
 location	Calella
 location	Santa Coloma de Farners
 location	Fogars de la Selva
 location	Pineda de Mar
 location	Besalu
+location	Riudarenes
 location	Tordera
 location	Macanet de la Selva
+location	Bescano
 location	Malgrat de Mar
 location	Sils
 location	Banyoles
 location	Vidreres
+location	Fontcoberta
 location	Salt
 location	Riudellots de la Selva
 location	Caldes de Malavella
 location	Cornella de Terri
 location	Girona
+location	Lloret de Mar
 location	Cassa de la Selva
+location	Llagostera
+location	Bordils
+location	Vilafant
 location	Castillo de Ferran
 location	Figueres
 location	Pubol
@@ -1663,8 +1743,11 @@ location	Sant Feliu de Guixols
 location	S'Agaro
 location	La Bisbal de l'Emporda
 location	Palamos
+location	Llanca
 location	Palafrugell
 location	Regencos
+location	La Selva de Mar
+location	El Port de la Selva
 
 # Balear Islands
 location	Formentera
@@ -1787,6 +1870,7 @@ location	Royan
 location	Le Haillan
 location	Blaye
 location	Saintes
+location	Gradignan
 location	Bordeaux
 location	Pons
 location	La Brède
@@ -1794,6 +1878,7 @@ location	Niort
 location	Pau
 location	Langon
 location	Poitiers
+location	Agen
 location	Notre-Dame-de-Sanilhac
 location	Perigueux
 location	Limoges
@@ -1811,6 +1896,7 @@ location	Abondant
 location	Romorantin
 location	Orléans
 location	Mehun sur Yevre
+location	Bourges
 location	Pannes
 location	Craon
 
@@ -1827,6 +1913,7 @@ location	Cergy Pontoise
 location	Guyancourt
 location	Saint Germain en Laye
 location	Pontoise
+location	Saint Ouen l'Aumone
 location	Le Pecq
 location	Le Chesnay
 location	Orsay
@@ -1874,6 +1961,7 @@ location	Plessis Trevise
 location	Moussy Le Neuf
 location	Compans
 location	Saint-Thibault-des-Vignes
+location	Fontainebleau
 location	Chanteloup-en-Brie
 location	Egreville
 location	Meaux
@@ -1924,6 +2012,9 @@ location	Montauban
 location	Cahors
 location	Toulouse
 location	Caraman
+location	Albi
+location	Carcassonne
+location	Rodez
 location	Narbonne
 location	Beziers
 location	Saint-Gely-Du-Fesc
@@ -1933,6 +2024,7 @@ location	Uzès
 location	Saint-Gilles FR
 
 # Auvergne-Rhône-Alpes
+location	Montlucon
 location	Clermont-Ferrand
 location	Vichy
 location	Le Puy-en-Velay
@@ -1954,6 +2046,7 @@ location	Lyon
 location	Venissieux
 location	Bourg-Lès-Valence
 location	Valence
+location	Bron
 location	Saint-Priest
 location	Decines-Charpieu
 location	Saint-Jean-de-Bournay
@@ -2038,9 +2131,12 @@ location	Reguisheim
 location	Colmar
 location	Baldersheim
 location	Folgensbourg
+location	Bartenheim
+location	Leymen
 location	Hegenheim
 location	Biesheim
 location	Village-Neuf
+location	Huningue
 location	Lingolsheim
 location	Brumath
 location	Strasbourg
@@ -2065,11 +2161,13 @@ location	Saint-Vallier-de-Thiey
 location	Mouans-Sartoux
 location	Cannes
 location	Antibes
+location	Cagnes-sur-Mer
 location	Alpes Maritimes
 location	Nice
 
 # Corse
 location	Porto-Vecchio
+location	Ajaccio
 location	Bastia
 
 # Mayotte
@@ -2077,6 +2175,7 @@ location	Mamoudzou
 
 # Réunion
 location	Saint-Denis de la Réunion
+location	Saint-Benoit
 
 ### Belgium
 # Veurne
@@ -2107,6 +2206,7 @@ location	Westende
 location	Middelkerke
 location	Schore
 location	Leffinge
+location	Zevekote
 location	Gistel
 location	Bredene
 location	Oudenburg
@@ -2120,6 +2220,7 @@ location	Bekegem
 location	Staden
 location	Moorslede
 location	Hooglede
+location	Dadizele
 location	Ledegem
 location	Lichtervelde
 location	Izegem
@@ -2156,6 +2257,7 @@ location	Hulste
 location	Harelbeke
 location	Zwevegem
 location	Deerlijk
+location	Sint-Denijs
 location	Moen
 location	Sint-Eloois-Vijve
 location	Avelgem
@@ -2251,6 +2353,7 @@ location	Bassilly
 location	Enghien
 
 # Mons
+location	Quiévrain
 location	Honnelles
 location	Thulin
 location	Dour
@@ -2309,6 +2412,7 @@ location	Serskamp
 location	Wichelen
 location	Zele
 location	Waasmunster
+location	Lebbeke
 location	Hamme
 location	Buggenhout
 
@@ -2317,7 +2421,9 @@ location	Lokeren
 location	Stekene
 location	Sint-Gillis-Waas
 location	Kieldrecht
+location	Vrasene
 location	Temse
+location	Rupelmonde
 location	Bazel
 
 # La Louvière
@@ -2395,6 +2501,7 @@ location	Neder-Over-Heembeek
 
 # Antwerpen
 location	Berchem
+location	Berendrecht - Zandvliet - Lillo
 location	Zwijndrecht
 location	Niel
 location	Schelle
@@ -2445,14 +2552,21 @@ location	Oostmalle
 location	Shape
 location	Herne
 location	Oetingen
+location	Roosdaal
 location	Affligem
+location	Lennik
+location	Ternat
 location	Opwijk
+location	Schepdaal
 location	Asse
+location	Merchtem
 location	Halle
 location	Sint-Pieters-Leeuw
 location	Itterbeek
 location	Dilbeek
+location	Zellik
 location	Huizingen
+location	Ruisbroek
 location	Londerzeel
 location	Wemmel
 location	Beersel
@@ -2614,6 +2728,7 @@ location	Geetbets
 location	Rummen
 
 # Namur
+location	Belgrade
 location	Arbre
 location	Ligny
 location	Boignée
@@ -2672,6 +2787,7 @@ location	Herentals
 location	Noorderwijk
 location	Merksplas
 location	Gierle
+location	Zoerle-Parwijs
 location	Herselt
 location	Vosselaar
 location	Olen
@@ -2950,6 +3066,7 @@ location	Fribourg
 # Jura
 location	Saignelegier
 location	Boncourt
+location	Courtetelle
 location	Delémont
 location	Courrendlin
 
@@ -2967,6 +3084,7 @@ location	Breitenbach
 location	Fehren
 location	Meltingen
 location	Himmelried
+location	Dornach
 location	Nunningen
 location	Hochwald
 location	Seewen
@@ -2983,8 +3101,10 @@ location	Kallnach
 location	Evilard
 location	Nidau
 location	Biel-Bienne
+location	Bellmund
 location	Moutier
 location	Gasel
+location	Bern
 location	Bolligen
 location	Burgdorf
 location	Oberhofen
@@ -3006,15 +3126,15 @@ location	Zwingen
 location	Allschwil
 location	Brislach
 location	Ettingen
-location	Oberwil
+location	Oberwil BL
 location	Therwil
 location	Binningen
 location	Bottmingen
+location	Grellingen
 location	Pfeffingen
 location	Reinach
 location	Aesch
 location	Duggingen
-location	Dornach
 location	Münchenstein
 location	Arlesheim
 location	Birsfelden
@@ -3031,6 +3151,7 @@ location	Oberdorf
 location	Zunzgen
 location	Sissach
 location	Gelterkinden
+location	Ormalingen
 location	Rothenfluh
 
 # Aargau
@@ -3045,11 +3166,16 @@ location	Wallbach
 location	Oftringen
 location	Wegenstetten
 location	Zofingen
+location	Sisseln
 location	Frick
 location	Staffelbach
+location	Laufenburg
 location	Suhr
 location	Riniken
+location	Windisch
+location	Gebenstorf
 location	Dottikon
+location	Doettingen
 location	Untersiggenthal
 location	Spreitenbach
 
@@ -3058,6 +3184,7 @@ location	Grosswangen
 location	Wolhusen
 location	Gunzwil
 location	Horw
+location	Meggen
 
 # Uri
 location	Bauen
@@ -3077,15 +3204,19 @@ location	Wallisellen
 location	Lufingen
 location	Embrach
 location	Horgen
+location	Dietlikon
 location	Dubendorf
 location	Bassersdorf
 location	Brüttisellen
 location	Wangen
+location	Wangen-Brüttisellen
+location	Nürensdorf
 location	Brütten
 location	Volketswil
 location	Nanikon
 location	Winterthur
 location	Seuzach
+location	Neschwil
 location	Wetzikon
 location	Wolfhausen
 location	Hinwil
@@ -3093,6 +3224,7 @@ location	Hinwil
 # Schwyz
 location	Merlischachen
 location	Küssnacht Am Rigi
+location	Ingenbohl
 location	Rickenbach CH
 location	Wollerau
 
@@ -3104,15 +3236,19 @@ location	Canobbio
 location	Pregassona
 
 # Glarus
-location	Bilten
-location	Niederurnen
+location	Glarus
+location	Mollis
 location	Filzbach
+location	Niederurnen
+location	Bilten
 
 # Thurgau
 location	Gachnang
 location	Frauenfeld
+location	Matzingen
 location	Felben-Wellhausen
 location	Wangi
+location	Steckborn
 location	Munchwilen
 location	Wilen bei Wil
 location	Erlen
@@ -3120,17 +3256,20 @@ location	Erlen
 # Sankt Gallen
 location	Niederuzwil
 location	Grub
+location	Au
 location	Gossau
 location	Walenstadt
 location	St Gallen
 location	Mels
 location	Mörschwil
 location	Gams
+location	Grabs
 location	Buchs
 location	Sevelen
 location	Rheintal
 location	Bad Ragaz
 location	Altstatten
+location	Oberriet
 location	Rebstein
 location	Kriessern
 location	Widnau
@@ -3143,6 +3282,7 @@ location	Landquart
 location	Trimmis
 location	Jenaz
 location	Champfer
+location	St. Moritz
 location	Zernez
 
 ### Norway
@@ -3262,6 +3402,7 @@ location	Schlusselfeld
 location	Gerhardshofen
 location	Fuerth
 location	Erlangen
+location	Schwabach
 location	Nuremberg
 location	Starnberg
 location	Munich
@@ -3447,7 +3588,7 @@ location	Velden Am Wörther See
 location	Wachsenberg
 location	Feldkirchen
 location	Glödnitz
-location	Klagenfurt
+location	Klagenfurt Am Wörthersee
 location	Sankt Veit An Der Glan
 location	Guttaring
 location	Pörtschach
@@ -3681,21 +3822,33 @@ location	Cesky Tesin
 
 ### Poland
 # Lubuskie
+location	Kostrzyn
+location	Lubsko
 location	Dabrowka
 
 # Zachodniopomorskie
-location	Mysliborz
-location	Stare Brynki
-location	Witkowo Drugie
+location	Gryfino
+location	Nowe Brynki
 location	Szczecin
+location	Stare Brynki
+location	Kukułowo
+location	Mysliborz
+location	Witkowo Drugie
+location	Płoty
+location	Szczecinek
 
 # Dolnośląskie
 location	Ząbkowice Śląskie
+location	Wojnowice
+location	Kamieniec Wrocławski
 location	Wroclaw
 
 # Wielkopolskie
 location	Nowy Tomysl
+location	Wielen
+location	Wielichowo
 location	Duszniki
+location	Wilkowo Polskie
 location	Buk
 location	Kobylniki
 location	Jeziorki
@@ -3704,7 +3857,10 @@ location	Niepruszewo
 location	Zydowo
 location	Strykowo
 location	Tarnowo Podgorne
+location	Popowko
 location	Sierosław
+location	Lusowo
+location	Mrowino
 location	Sady
 location	Debienko
 location	Paledzie
@@ -3713,14 +3869,20 @@ location	Dabrowa
 location	Dąbrowa
 location	Goluski
 location	Rogierowko
+location	Uscikowo
+location	Wysogotowo
 location	Przeźmierowo
 location	Skórzewo
+location	Pecna
 location	Komorniki
 location	Plewiska
 location	Oborniki
 location	Ludomki
 location	Orlowo
 location	Zlotniki
+location	Mosina
+location	Kowanowko
+location	Wiry
 location	Puszczykowo
 location	Maniewo
 location	Lubon
@@ -3733,25 +3895,44 @@ location	Gora
 location	Koziegłowy
 location	Rogozno
 location	Murowana Goslina
+location	Srem
+location	Przebedowo
 location	Zalasewo
+location	Swarzedz
 location	Wysławice
+location	Gorzewo
 location	Krotoszyn
 location	Jarocin
 location	Kalisz
+location	Czajkow
 
 # Opolskie
 location	Kedzierzyn Kozle
 location	Opole
+location	Olesno
 
 # Pomorskie
+location	Słupsk
+location	Objazda
+location	Lubkowo
+location	Jeleńska Huta
 location	Gdynia
 location	Gdansk
+location	Hel
 
 # Kujawsko-Pomorskie
 location	Bydgoszcz
+location	Dziarnowo
+location	Pruszcz
+location	Bobrowo
 
 # Slaskie
+location	Bielsko-Biała
+location	Pawłowice
+location	Suszec
 location	Katowice
+location	Ruda Śląska
+location	Wojska
 
 # Łódzkie
 location	Pajeczno County
@@ -3760,13 +3941,18 @@ location	Lodz
 location	Skierniewice County
 
 # Malopolskie
+location	Olkusz
+location	Olewin
 location	Kraków
 
 # Swietokrzyskie
 location	Kielce
+location	Modliszewice
 
 # Warminsko-Mazurskie
+location	Elbląg
 location	Ilawski
+location	Nowomiejski
 location	Ostrodzki
 location	Elblaski
 location	Braniewski
@@ -3775,12 +3961,16 @@ location	Lidzbarski
 location	Olsztyn
 location	Nidzicki
 location	Bartoszycki
+location	Wólka
 location	Szczycienski
+location	Korsze
 location	Ketrzynski
 location	Mragowski
+location	Piski
 location	Gizycki
 location	Orzysz
 location	Goldapski
+location	Olecki
 
 # Mazowieckie
 location	Plock
@@ -3791,10 +3981,18 @@ location	Radom
 location	Sokolow Podlaski
 
 # Podkarpackie
+location	Siedliska-Bogusz
+location	Nagoszyn
 location	Rzeszow
+location	Bachórzec
+location	Ustrzyki Dolne
 
 # Lubelskie
+location	Zamość
+location	Chełm
 location	Lublin
+location	Milejów-Osada
+location	Hanna
 
 # Podlaskie
 location	Twarogi-Mazury
@@ -3824,6 +4022,7 @@ location	Chodorówka Stara
 location	Hamulka
 location	Rajgród
 location	Suwałki
+location	Sejny
 
 ### Slovakia
 # Malacky
@@ -3957,13 +4156,13 @@ location	Prilep
 # Vardar
 location	Veles
 
-# Northeastern Region
+# Northeastern Region MK
 location	Kumanovo
 
 # Kavadarci
 location	Kavadarci
 
-# Eastern Region
+# Eastern Region MK
 location	Shtip
 location	Kochani
 
@@ -3985,7 +4184,7 @@ location	Jonava
 location	Širvintų rajono savivaldybė
 location	Ukmerge
 
-# Utena
+# Utena Apskritis
 location	Molėtų rajono savivaldybės
 location	Zarasų rajono savivaldybė
 location	Ignalina
@@ -4440,6 +4639,8 @@ location	Puerto Montt
 location	Panguipulli
 
 # Araucanía
+location	Villarrica
+location	Cunco
 location	Padre las Casas
 location	Temuco
 location	Lautaro
@@ -4449,11 +4650,16 @@ location	Angol
 # Biobío
 location	Talcahuano
 location	San Pedro de la Paz
+location	Hualpen
 location	Concepcion CL
+location	Chiguayante
 location	Los Angeles
 
 # Ñuble
 location	Treguaco
+location	Quillon
+location	Ninhue
+location	Bulnes
 location	Chillan
 
 # Maule
@@ -4530,6 +4736,9 @@ location	Iquique
 location	Arica
 
 ### Bolivia
+# Chuquisaca
+location	Sucre BO
+
 # Santa Cruz
 location	El Torno
 location	Pailon
@@ -4564,6 +4773,7 @@ location	Barreirinha
 location	Parintins
 
 # Rondonia
+location	Sao Miguel do Guapore
 location	Jaru
 location	Porto Velho
 
@@ -4630,7 +4840,7 @@ location	São Leopoldo
 location	Novo Cabrais
 location	Vera Cruz (Rio Grande do Sul)
 location	Novo Hamburgo
-location	Santa Maria
+location	Santa Maria RS
 location	Taquara
 location	Sapiranga
 location	Parobe
@@ -4744,11 +4954,17 @@ location	Florianopolis
 
 # Goiás
 location	Jatai
+location	Britania
+location	Sanclerlandia
+location	Turvania
 location	Santa Barbara de Goias
 location	Ceres BR
+location	Jaragua
+location	Mangueira
 location	Goiania
 location	Aparecida de Goiania
 location	Senador Canedo
+location	Cidade Ocidental
 
 # Tocantins
 location	Sandolandia
@@ -4760,10 +4976,13 @@ location	Paraiso do Tacantins
 location	Guarai
 location	Presidente Kennedy
 location	Araguaiana
+location	Araguaina
 location	Araguatins
 
 # Distrito Federal
+location	Santa Maria DF
 location	Brasilia
+location	Planaltina
 
 # São Paulo
 location	Euclides Da Cunha Paulista
@@ -4791,6 +5010,7 @@ location	Adamantina
 location	Oswaldo Cruz
 location	Taruma
 location	Auriflama
+location	Jales
 location	Tupa
 location	Araçatuba
 location	Assis
@@ -4800,20 +5020,32 @@ location	Birigui
 location	Quintana
 location	Fernandopolis
 location	Echapora
+location	Meridiano
+location	Mira Estrela
 location	Oriente
+location	Votuporanga
 location	Marilia
 location	Ribeirao do Sul
+location	Cardoso
 location	Ourinhos
 location	Vera Cruz (São Paulo)
 location	Lins
 location	Sao Pedro do Turvo
+location	Ubarana
 location	Garca
 location	Santa Cruz do Rio Pardo
+location	Mirassolandia
+location	Ipigua
+location	Sao Jose do Rio Preto
+location	Potirendaba
 location	Itarare
 location	Uru
 location	Aguas de Santa Barbara
+location	Guapiacu
+location	Itabera
 location	Bauru
 location	Borebi
+location	Catanduva
 location	Avare
 location	Lencois Paulista
 location	Jau
@@ -4821,14 +5053,18 @@ location	Igaracu do Tiete
 location	Guapiara
 location	Bocaina
 location	Taquaritinga
+location	Angatuba
 location	Dois Corregos
 location	Araraquara
 location	Cajati
 location	Itapetininga
+location	Sao Miguel Arcanjo
 location	Cesário Lange
 location	Sete Barras
 location	Pariquera-Acu
+location	Tatui
 location	Ribeirao Preto
+location	Tiete
 location	Piracicaba
 location	Juquia
 location	Rio Claro SP
@@ -4836,12 +5072,16 @@ location	Iguape
 location	Porto Feliz
 location	Porto Ferreira
 location	Sorocaba
+location	Votorantim
 location	Santa Barbara D'Oeste
 location	Limeira
 location	Araras
 location	Americana
+location	Itu
 location	Nova Odessa
+location	Salto
 location	Sumare
+location	Ibiuna
 location	Indaiatuba
 location	Hortolandia
 location	Itariri
@@ -5163,7 +5403,7 @@ location	Jipijapa
 location	Portoviejo
 location	Manta
 location	Calceta
-location	Sucre
+location	Sucre EC
 location	Chone
 
 # Guayas
@@ -5333,6 +5573,7 @@ location	Bucaramanga
 location	Cucuta
 
 # Cordoba CO
+location	El Bagre Antioquia
 location	Tierralta
 location	Monteria
 location	Cienaga de Oro
@@ -5672,6 +5913,7 @@ location	Southeast Alaska
 
 # Oregon
 location	Coos County
+location	Lincoln County OR
 location	Clatsop County
 location	Josephine County
 location	Polk County OR
@@ -5820,6 +6062,7 @@ location	Pinal County
 location	Gila County
 location	Navajo County
 location	Graham County
+location	Cochise County
 location	Apache County
 
 # Montana
@@ -5827,13 +6070,14 @@ location	Ravalli County
 location	Lewis and Clark County
 location	Ennis
 location	Big Sky
-location	Belgrade
+location	Gallatin County MT
 location	West Yellowstone
 location	Bozeman
 
 # Colorado
-location	Colorado Springs
+location	Mesa County
 location	Denver County
+location	Colorado Springs
 
 # South Dakota
 location	Beadle County
@@ -5854,10 +6098,12 @@ location	Parmer County
 location	Oldham County
 location	Deaf Smith County
 location	Ector County
+location	Lamb County
 location	Terry County
 location	Hockley County
 location	Castro County
 location	Lubbock County
+location	Swisher County
 location	Crosby County
 location	Crosby
 location	Val Verde County
@@ -5889,6 +6135,7 @@ location	Wilson County
 location	Jim Wells County
 location	Live Oak County
 location	Hays County
+location	Karnes County
 location	Copperas Cove
 location	Hood County
 location	Guadalupe County
@@ -5903,12 +6150,14 @@ location	Round Rock
 location	Wise County
 location	Georgetown TX
 location	Nueces County
+location	Caldwell County
 location	Williamson County TX
 location	Willacy County
 location	San Patricio County
 location	Gonzales County
 location	Belton
 location	Bell County
+location	Bell County TX
 location	Cameron County
 location	Kleberg County
 location	Moody
@@ -5927,6 +6176,8 @@ location	Denton County
 location	Victoria County
 location	Rosebud
 location	Lee County TX
+location	Fayette County TX
+location	Aransas County
 location	Giddings
 location	Lavaca County
 location	Falls County
@@ -5935,13 +6186,17 @@ location	Mart
 location	Frisco
 location	Ellis County
 location	Dallas County TX
+location	Dawson
 location	Caldwell
 location	Calhoun County TX
+location	Grayson County TX
 location	Burleson County
 location	Collin County
 location	Hearne
 location	Limestone County TX
+location	Colorado County
 location	Robertson County
+location	Rockwall County
 location	Washington County TX
 location	Brazos County
 location	College Station
@@ -5953,9 +6208,12 @@ location	Hunt County
 location	Waller County
 location	Leon County
 location	Grimes County
+location	Madison County TX
+location	Walton
 location	Van Zandt County
 location	Fort Bend County
 location	Lamar County
+location	Walker County TX
 location	Montgomery County TX
 location	Brazoria County
 location	Houston
@@ -5963,6 +6221,7 @@ location	Wood County TX
 location	Harris County
 location	Greater Houston Area
 location	Smith County
+location	San Jacinto County
 location	Trinity County
 location	Red River County
 location	Galveston County
@@ -5971,6 +6230,7 @@ location	Upshur County
 location	Gregg County
 location	Polk County TX
 location	Rusk County
+location	Clark
 location	Morris County TX
 location	Angelina County
 location	Nacogdoches County
@@ -5980,6 +6240,8 @@ location	Cass County TX
 location	Panola County
 location	Jefferson County TX
 location	Jasper County
+location	Orange County TX
+location	Calcasieu County
 
 # Minnesota
 location	Fillmore County
@@ -5996,6 +6258,7 @@ location	Polk County IA
 location	Howard County
 location	Chickasaw County
 location	Bremer County
+location	Black Hawk County
 location	Buchanan County
 location	Fayette County IA
 location	Winneshiek County
@@ -6010,6 +6273,7 @@ location	Caddo Parish
 location	DeSoto Parish
 location	Bossier Parish
 location	Sabine Parish
+location	Calcasieu Parish
 location	Webster Parish
 location	Red River Parish
 location	Natchitoches Parish
@@ -6020,6 +6284,7 @@ location	Grant Parish
 location	Rapides Parish
 location	Union Parish
 location	Ouachita Parish
+location	St Landry Parish
 location	Avoyelles Parish
 location	Richland Parish
 location	Morehouse Parish
@@ -6097,6 +6362,7 @@ location	Waupaca County
 location	Jefferson County WI
 location	Dodge County
 location	Shawano County
+location	Menominee County
 location	Winnebago County WI
 location	Walworth County
 location	Fond Du Lac County
@@ -6127,7 +6393,7 @@ location	Johnson County IL
 location	Union County IL
 location	Williamson County IL
 location	Saline County
-location	Gallatin County
+location	Gallatin County IL
 location	Jackson County IL
 location	Franklin County IL
 location	Randolph County IL
@@ -6243,7 +6509,7 @@ location	Cleburne County
 location	St. Clair County AL
 location	Fayette County AL
 location	Calhoun County AL
-location	Walker County
+location	Walker County AL
 location	Blount County
 location	Etowah County
 location	Marion County AL
@@ -6284,13 +6550,19 @@ location	Thomas County
 location	Cobb
 
 # Ohio
+location	Williams County OH
+location	Montgomery County OH
 location	Greene County OH
+location	Marion County OH
+location	Pickaway County
 location	Franklin County OH
 location	Columbus OH
+location	Hocking County
 location	Cuyahoga County
 
 # Florida
-location	Walton County
+location	Walton County FL
+location	Levy County
 location	Alachua County
 location	Lee County FL
 location	Duval County
@@ -6304,14 +6576,18 @@ location	Miami
 # South Carolina
 location	Pickens County SC
 location	Anderson County
+location	Abbeville County
 location	Greenville County
+location	Greenwood County
 location	Spartanburg County
+location	Laurens County SC
 location	Aiken
 location	York County
 location	Hampton County
 location	Fairfield County SC
 location	Columbia SC
 location	Richland County SC
+location	Orangeburg County
 location	Lancaster County SC
 location	Beaufort County
 location	Colleton County
@@ -6321,6 +6597,7 @@ location	Berkeley County
 location	Charleston County
 location	Williamsburg County
 location	Florence County
+location	Marion County SC
 location	Georgetown County
 location	Horry County
 
@@ -6337,6 +6614,7 @@ location	Allegheny County
 location	Chester County
 location	Delaware County PA
 location	Montgomery County PA
+location	Monroe County PA
 location	Philadelphia County
 
 # Washington DC
@@ -6429,10 +6707,10 @@ location	New York County
 location	Kings County NY
 location	Brooklyn
 location	Saratoga County
-location	Bronx
+location	Bronx County
 location	Warren County NY
-location	Queens
 location	Westchester County
+location	Queens County
 location	New Rochelle
 location	Putnam County NY
 location	Essex County NY
@@ -6514,7 +6792,9 @@ division	Jericho
 division	Ramallah and al-Bireh Governorate
 division	West Bank
 division	Jerusalem
+division	Qalqilya
 division	Nablus
+division	Tubas
 division	Jenin
 
 ### Lebanon
@@ -6717,6 +6997,7 @@ division	Nakhonnayok
 division	Ang Thong
 division	Thailand
 division	Singburi
+division	Khon Kaen
 division	Phitsanulok
 division	Chiang Rai
 
@@ -6802,10 +7083,12 @@ division	South Kalimantan
 division	North Kalimantan
 division	East Kalimantan
 division	West Nusa Tenggara
+division	West Sulawesi
 division	South Sulawesi
 division	East Nusa Tenggara
 division	North Sulawesi
 division	North Maluku
+division	Maluku
 division	West Papua
 division	Papua
 
@@ -6976,9 +7259,16 @@ division	Sud-Ouest
 division	Burkina Faso
 
 ### Ghana
+division	Western North Region
+division	Bono Region
+division	Western Region
+division	Ashanti Region
+division	Central Region
+division	Ghana
+division	Eastern Region GH
+division	Lower Manya Krobo
 division	Greater Accra
 division	Volta
-division	Ghana
 
 ### Togo
 division	Golfe
@@ -7120,6 +7410,16 @@ division	Lusaka
 division	Zambia
 division	Central
 division	Copperbelt
+
+### Lesotho
+division	Quthing
+division	Mohale's Hoek
+division	Qacha's Nek
+division	Mafeteng
+division	Maseru
+division	Berea
+division	Leribe
+division	Botha Bothe
 
 ### Zimbabwe
 division	Zimbabwe
@@ -7426,9 +7726,11 @@ division	Liechtenstein
 division	Schaan
 division	Planken
 division	Eschen
+division	Schaanwald
 division	Gamprin-Bendern
 division	Mauren
 division	Schellenberg
+division	Ruggell
 
 ### Germany
 division	Herzogenrath
@@ -7542,6 +7844,7 @@ division	Burgenland
 division	Pula
 division	Istria
 division	Croatia
+division	Karlovac County
 division	Krapina-Zagorje County
 division	Zagreb
 division	Sibenik-Knin County
@@ -7563,7 +7866,11 @@ division	Osijek-Baranja
 division	Vukovar-Srijem County
 
 ### Czech Republic
+division	Cheb
+division	Carlsbad
 division	Plzeň Region
+division	Ustecky Region
+division	Stredocesky Region
 division	Usti nad Labem
 division	Litomerice-Brnay
 division	Prague
@@ -7574,8 +7881,10 @@ division	Liberec Region
 division	Czech Republic
 division	Jihlava
 division	Vysocina Region
+division	Kralovehradecky Region
 division	Pardubice Region
 division	Hradec Králové Region
+division	Nachod
 division	South Moravian Region
 division	Olomouc Region
 division	Zlín Region
@@ -7590,6 +7899,7 @@ division	Čelinac
 division	Gornji Vakuf
 division	Prnjavor
 division	Novi Travnik
+division	Travnik
 division	Bosnia and Herzegovina
 division	Vitez
 division	Mostar
@@ -7597,6 +7907,8 @@ division	Zenica
 division	Zepce
 division	Maglaj
 division	Kakanj
+division	Zavidovici
+division	Hadžići
 division	Breza
 division	Ilijas
 division	Ilidza
@@ -7760,10 +8072,10 @@ division	Skopje
 division	Pelagonia
 division	North Macedonia
 division	Vardar
-division	Northeastern Region
+division	Northeastern Region MK
 division	Kavadarci
+division	Eastern Region MK
 division	Gevgelija
-division	Eastern Region
 division	Southeastern Region
 
 ### Greece
@@ -7781,26 +8093,32 @@ division	Drama
 
 ### Lithuania
 division	Klaipedos Apskritis
-division	Telsiai
+division	Telsiai Apskritis
 division	Taurages Apskritis
+division	Vilkaviskis
 division	Marijampoles Apskritis
 division	Siauliu Apskritis
 division	Radviliskio Apskritis
+division	Prienai
+division	Kedainiai
 division	Lithuania
 division	Alytaus Apskritis
 division	Kauno Apskritis
 division	Jonavos Apskritis
+division	Kaisiadorys
 division	Panevezio Apskritis
 division	Vilniaus Apskritis
 division	Vilnius
-division	Utena
+division	Utena Apskritis
 
 ### Romania
 division	Sanmihaiu Roman
 division	Bihor
 division	Vrancea
 division	Hunedoara
+division	Gorj
 division	Cluj Napoca
+division	Dolj
 division	Cluj
 division	Mures
 division	Romania
@@ -7840,6 +8158,7 @@ division	Smolyan
 division	Plovdiv
 division	Gabrovo
 division	Bulgaria
+division	Stara Zagora
 division	Haskovo
 division	Ruse
 division	Sliven
@@ -7847,6 +8166,7 @@ division	Yambol
 division	Razgrad
 division	Targovishte
 division	Burgas
+division	Dobrich
 division	Varna
 
 ### Latvia
@@ -8039,9 +8359,12 @@ division	Arica and Parinacota
 
 ### Bolivia
 division	Tarija
+division	Potosi
+division	Chuquisaca
 division	Oruro
 division	Santa Cruz
 division	Bolivia
+division	La Paz
 division	Beni
 division	Pando
 
@@ -8469,6 +8792,7 @@ country	Democratic Republic of the Congo
 country	Botswana
 country	South Africa
 country	Zambia
+country	Lesotho
 country	Zimbabwe
 country	Rwanda
 country	Egypt
