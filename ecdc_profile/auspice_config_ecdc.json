@@ -2,8 +2,13 @@
   "title": "Genomic epidemiology of SARS-CoV-2 in Europe",
   "build_url": "https://github.com/neherlab/ncov-europe",
   "maintainers": [
-    {"name": "Emma Hodcroft", "url": "https://neherlab.org"},
-    {"name": "Richard Neher", "url": "https://neherlab.org"}
+    { "name": "Emma Hodcroft", "url": "https://neherlab.org" },
+    { "name": "Richard Neher", "url": "https://neherlab.org" }
+  ],
+  "data_provenance": [
+    {
+      "name": "GISAID"
+    }
   ],
   "colorings": [
     {
@@ -20,6 +25,11 @@
       "key": "pangolin_lineage",
       "title": "Pangolin Lineage",
       "type": "categorical"
+    },
+    {
+      "key": "S1_mutations",
+      "title": "S1 mutations",
+      "type": "continuous"
     },
     {
       "key": "GISAID_clade",
@@ -100,12 +110,7 @@
       "type": "categorical"
     }
   ],
-  "geo_resolutions": [
-    "location",
-    "division",
-    "country",
-    "region"
-  ],
+  "geo_resolutions": ["location", "division", "country", "region"],
   "display_defaults": {
     "color_by": "clade_membership",
     "distance_measure": "num_date",
@@ -123,10 +128,5 @@
     "host",
     "author"
   ],
-  "panels": [
-    "tree",
-    "map",
-    "entropy",
-    "frequencies"
-  ]
+  "panels": ["tree", "map", "entropy", "frequencies"]
 }
