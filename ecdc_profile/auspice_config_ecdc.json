@@ -22,8 +22,8 @@
       "type": "categorical"
     },
     {
-      "key": "pangolin_lineage",
-      "title": "Pangolin Lineage",
+      "key": "pango_lineage",
+      "title": "PANGO Lineage",
       "type": "categorical"
     },
     {
@@ -39,11 +39,6 @@
     {
       "key": "subclade_membership",
       "title": "Emerging clade",
-      "type": "categorical"
-    },
-    {
-      "key": "legacy_clade_membership",
-      "title": "Old Nextstrain clades",
       "type": "categorical"
     },
     {
@@ -84,14 +79,6 @@
     {
       "key": "recency",
       "title": "Submission Date",
-      "type": "categorical"
-    },
-    {
-      "key": "gisaid_epi_isl",
-      "type": "categorical"
-    },
-    {
-      "key": "genbank_accession",
       "type": "categorical"
     },
     {
