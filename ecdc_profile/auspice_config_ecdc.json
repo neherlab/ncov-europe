@@ -113,6 +113,7 @@
     "division",
     "location",
     "host",
+    "pango_lineage",
     "author"
   ],
   "panels": ["tree", "map", "entropy", "frequencies"]
