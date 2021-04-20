@@ -81,6 +81,8 @@ if config.get("local_builds") and config.get("run_local_builds"):
                 "division": division
             }
 
+include: "workflow/snakemake_rules/reference_build_definitions.smk"
+
 # Allow users to specify a list of active builds from the command line.
 if config.get("active_builds"):
     BUILD_NAMES = config["active_builds"].split(",")
