@@ -96,6 +96,7 @@ def read_data(path):
     return (data, list_of_strains)
 
 def check_for_recency(counts, list_of_strains, lab_collection, path_to_metadata, table_file_name):
+    print("\n----------------------------------------------\n")
 
     countries = {}
     subm_labs = {}
@@ -112,6 +113,8 @@ def check_for_recency(counts, list_of_strains, lab_collection, path_to_metadata,
         orig_lab_i = header.index("originating_lab")
         author_i = header.index("authors")
 
+
+        print("Collecting all labs from the last month from metadata... (this may take a while)")
 
         line = f.readline()
         while line:
@@ -149,6 +152,8 @@ def check_for_recency(counts, list_of_strains, lab_collection, path_to_metadata,
                         origlab_authors[country][orig_lab] += 1
             line = f.readline()
 
+    print("\nSearching for twitter handles... ")
+
     rare_countries = []
     for c in counts:
         if c != "United Kingdom":
@@ -183,8 +188,6 @@ def check_for_recency(counts, list_of_strains, lab_collection, path_to_metadata,
 
     lab_collection_present["United Kingdom"] = {"@CovidGenomicsUK": 1000}
 
-    print(lab_collection_present)
-
     rare_labs = {}
     for region in lab_collection:
         for country in lab_collection[region]:
@@ -196,7 +199,10 @@ def check_for_recency(counts, list_of_strains, lab_collection, path_to_metadata,
                         rare_labs[region][country] = []
                     rare_labs[region][country].append(lab)
 
+    print("\nCountries that have submitted < 20 sequences last month (all of these will be included in the tweet):")
     print(rare_countries)
+
+    print("\nSubmitters that have not submitted last month (all of these will be included in the tweet):")
     print(rare_labs)
 
     return rare_countries, rare_labs
@@ -436,13 +442,13 @@ def collect_labs(data, table_file_name):
             print(s)
 
     print("----------------------------------------------\n")
-    print("Originating labs (only printed if different from submitting lab):\n")
+    print("Originating labs (only printed if found in excel sheet):\n")
     for region in originating_labs:
         for country in originating_labs[region]:
             s = country + ":\n"
             for lab in originating_labs[region][country]:
-                s += lab
                 if country in lab_dictionary and lab.lower() in lab_dictionary[country]:
+                    s += lab
                     s += ": "
                     k = lab_dictionary[country][lab.lower()]
                     if country == "United Kingdom":
@@ -451,17 +457,19 @@ def collect_labs(data, table_file_name):
                     for l in lab_dictionary[country][lab.lower()].split(", "):
                         if l not in lab_collection[region][country]:
                             lab_collection[region][country].append(l)
-                s += "\n"
-            #print(s)
+                    s += "\n"
+            if s != country + ":\n":
+                print(s)
+
 
     print("----------------------------------------------\n")
-    print("Authors:\n")
+    print("Authors (only printed if found in excel sheet):\n")
     for region in authors:
         for country in authors[region]:
             s = country + ":\n"
             for author in authors[region][country]:
-                s += author
                 if country in lab_dictionary and author.lower() in lab_dictionary[country]:
+                    s += author
                     s += ": "
                     k = lab_dictionary[country][author.lower()]
                     if country == "United Kingdom":
@@ -470,8 +478,9 @@ def collect_labs(data, table_file_name):
                     for a in lab_dictionary[country][author.lower()].split(", "):
                         if a not in lab_collection[region][country]:
                             lab_collection[region][country].append(a)
-                s += "\n"
-            #print(s)
+                    s += "\n"
+            if s != country + ":\n":
+                print(s)
 
 
     if "Europe" in lab_collection:
