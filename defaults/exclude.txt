@@ -2047,3 +2047,23 @@ Switzerland/GE-ETHZ-200011/2020
 Egypt/MASRI-C4-025/2020
 Gambia/22138/2020
 Ireland/G-NVRL-72IRL10884/2020
+
+# Date before clade
+USA/CA-SEARCH-17627/2020
+
+# Duplicate
+EPI_ISL_1804614
+
+# divergence; see https://bedfordlab.slack.com/archives/CTZKJC7PZ/p1620068808435700
+Indonesia/SG-NIHRD-PME21007997/2020
+Morocco/ouar254/2020
+USA/CA-CDC-1/2020
+USA/CO-CDPHE-2007152328/2020
+
+# divergence; see https://bedfordlab.slack.com/archives/CTZKJC7PZ/p1620169932446500
+Germany/BAV-PL-virotum_B6HEM/2020
+SaudiArabia/545/2020
+Senegal/THI-KHO-0333/2020
+Ireland/D-NVRL-g20IRL77933/2020
+CzechRepublic/VIR-64/2021
+Netherlands/ZH-EMC-1943/2020
