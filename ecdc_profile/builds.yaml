@@ -20,6 +20,18 @@ genes: ["ORF1a", "ORF1b", "S", "ORF3a", "M", "N"]
 use_nextalign: true
 
 local_builds:
+  austria:
+    country_name: "Austria"
+    divisions:
+      - "Tyrol"
+      - "Vorarlberg"
+      - "Vienna"
+      - "Styria"
+      - "Carinthia"
+      - "Upper Austria"
+      - "Lower Austria"
+      - "Salzburg"
+      - "Burgenland"
   germany:
     country_name: "Germany"
     divisions:
@@ -256,6 +268,12 @@ builds:
     geographic_scale: country
     region: Europe
     country: Turkey
+    subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
+  india:
+    subsampling_scheme: custom_country
+    geographic_scale: country
+    region: Asia
+    country: India
     subclades: "nextstrain_profiles/nextstrain/subclades_EU.tsv"
 
 title: "Phylogenetic analysis of SARS-CoV-2 diversity in Europe"
