@@ -312,9 +312,14 @@ subsampling:
         focus: "region_late"
 
     # Focal samples for region
+    region_recent:
+      group_by: "country year month"
+      max_sequences: 500
+      exclude: "--exclude-where 'region!={region}'"
+    # Contextual samples for region from the rest of the world
     region_late:
       group_by: "country year month"
-      max_sequences: 1500
+      max_sequences: 500
       exclude: "--exclude-where 'region!={region}'"
     # Contextual samples for region from the rest of the world
     global_late:
@@ -334,7 +339,11 @@ subsampling:
       exclude: "--exclude-where 'country!={country}'"
     country_late:
       group_by: "division year month"
-      max_sequences: 1000
+      max_sequences: 800
+      exclude: "--exclude-where 'country!={country}'"
+    country_recent:
+      group_by: "division year month"
+      max_sequences: 700
       exclude: "--exclude-where 'country!={country}'"
     # Contextual samples from country's region
     region_early:
@@ -372,14 +381,25 @@ subsampling:
 
   custom_division:
     # Focal samples for division
-    division_late:
+    division_recent:
       group_by: "year month"
       max_sequences: 1000
       sampling_scheme: "--probabilistic-sampling"
       exclude: "--exclude-where 'region!={region}' 'country!={country}' 'division!={division}'"
-    country_late:
+    country_recent:
       group_by: "division year month"
       max_sequences: 1000
+      sampling_scheme: "--probabilistic-sampling"
+      exclude: "--exclude-where 'country!={country}'"
+    # Focal samples for division
+    division_late:
+      group_by: "year month"
+      max_sequences: 500
+      sampling_scheme: "--probabilistic-sampling"
+      exclude: "--exclude-where 'region!={region}' 'country!={country}' 'division!={division}'"
+    country_late:
+      group_by: "division year month"
+      max_sequences: 500
       sampling_scheme: "--probabilistic-sampling"
       exclude: "--exclude-where 'country!={country}'"
     country_early:
