@@ -5,7 +5,7 @@ today = datetime.date.today()
 
 # Set the earliest date to roughly 4 months ago (18 weeks).
 early_late_cutoff = today - datetime.timedelta(weeks=18)
-recent_late_cutoff = today - datetime.timedelta(weeks=16)
+recent_late_cutoff = today - datetime.timedelta(weeks=4)
 
 for build in config["subsampling"]:
     for scheme in config["subsampling"][build]:
