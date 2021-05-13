@@ -863,7 +863,7 @@ rule distances:
                          "defaults/distance_maps/ace2.json" ]
     params:
         genes = 'S',
-        comparisons = ['root'],
+        comparisons = ['root', 'root', 'root', 'root', 'root', 'root'],
         attribute_names = ['S1_mutations', 'DMS_convalescent_serum', 'DMS_Class_1', 'DMS_Class_2', 'DMS_Class_3', 'ACE2_binding_site_mutations']
     output:
         node_data = "results/{build_name}/distances.json"
