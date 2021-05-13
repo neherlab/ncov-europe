@@ -3,20 +3,25 @@
 As of April 2021, we use major version numbers (e.g. v2) to reflect backward incompatible changes to the workflow that likely require you to update your Nextstrain installation.
 We also use this change log to document new features that maintain backward compatibility, indicating these features by the date they were added.
 
+## New features since last version update
+
+ - 12 May 2021: Include S1 mutations and nextalign-based ancestral amino acid mutations in Auspice JSONs by default instead of requiring the now-unnecessary `use_nextalign` configuration parameter. ([#630](https://github.com/nextstrain/ncov/pull/630))
+ - 12 May 2021: [Document all available workflow configuration parameters](https://nextstrain.github.io/ncov/configuration). ([#633](https://github.com/nextstrain/ncov/pull/633))
+
 ## v5 (7 May 2021)
 
 [See the corresponding pull request](https://github.com/nextstrain/ncov/pull/615) for more details about this release.
 
 ### Major changes
 
-- Drop support for old sequence/metadata inputs
-- Use nextalign for alignment instead of mafft
+- Drop support for old sequence/metadata inputs. This change removes support for the `config["sequences"]` and `config["metadata"]` starting points for the workflow in favor of the more flexible [`config["inputs"]` format](https://nextstrain.github.io/ncov/configuration.html#inputs).
+- Use `nextalign` for alignment instead of `mafft`. This change completely removes support for `mafft` in favor of `nextalign`. Future versions may reinstate `mafft` support as part of `augur align` updates.
 
 ### Minor changes
 
 - Drop unused haplotype status rule and script
 - Remove unused nucleotide mutation frequencies rule
-- Use augur distance for mutation counts
+- Use `augur distance` for mutation counts instead of a custom script in the ncov repository. [Recent improvements to `augur distance` in v12.0.0](https://github.com/nextstrain/augur/blob/master/CHANGES.md#1200-13-april-2021) enable this change by properly accounting for insertion/deletion events.
 
 ## v4 (5 May 2021)
 
